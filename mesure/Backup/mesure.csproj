@@ -1,0 +1,507 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9CE00D49-20A6-4946-891D-E893FA790742}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>mesure</RootNamespace>
+    <AssemblyName>mesure</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ManifestCertificateThumbprint>CC925CCBC9B407B6FB2FDF7BB5EE78F7B5A9832D</ManifestCertificateThumbprint>
+    <ManifestKeyFile>mesure_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>true</SignManifests>
+    <ApplicationIcon>videomotion2.ico</ApplicationIcon>
+    <StartupObject>mesure.MainForm</StartupObject>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>motion</ProductName>
+    <PublisherName>motion</PublisherName>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.2.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>bin\Debug\mesure.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>bin\Debug\mesure.XML</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>
+    </DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="clrclassimgutil, Version=1.2.3973.16666, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dlls\clrclassimgutil.dll</HintPath>
+    </Reference>
+    <Reference Include="clsimgutils, Version=1.3.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dlls\clsimgutils.dll</HintPath>
+    </Reference>
+    <Reference Include="DirectShowLib-2005, Version=2.0.0.0, Culture=neutral, PublicKeyToken=67e7b740cdfc2d3f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dlls\DirectShowLib-2005.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DirectX, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.DirectX.Direct3D, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VistaMenu, Version=1.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\VistaMenu\Control\bin\Release\VistaMenu.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ByteArrayUtils.cs" />
+    <Compile Include="Camera.cs" />
+    <Compile Include="mesureur\GenericCalculator.cs" />
+    <Compile Include="mesureur\horMesure.cs" />
+    <Compile Include="mesureur\ICalculator.cs" />
+    <Compile Include="mesureur\LineCalculator.cs" />
+    <Compile Include="mesureur\logger.cs" />
+    <Compile Include="mesureur\MesureEvent.cs" />
+    <Compile Include="mesureur\VertMesure.cs" />
+    <Compile Include="mesureur\XMLSerialisable.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="CoreSystem.cs" />
+    <Compile Include="GesEtal.cs" />
+    <Compile Include="CameraEvents.cs" />
+    <Compile Include="CameraWindow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CaptureDeviceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Center.cs" />
+    <Compile Include="ClippingEngine.cs" />
+    <Compile Include="EnregFichierParam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnregFichierParam.Designer.cs">
+      <DependentUpon>EnregFichierParam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EtalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EtalForm.designer.cs">
+      <DependentUpon>EtalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="etalonnage.cs" />
+    <Compile Include="FormResu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormResu.Designer.cs">
+      <DependentUpon>FormResu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gesres.cs" />
+    <Compile Include="IBagSavXml.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainformbags.cs" />
+    <Compile Include="mainformclicksource.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFormDx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MesureForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MesureForm.Designer.cs">
+      <DependentUpon>MesureForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CameraWindow.resx">
+      <DependentUpon>CameraWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CaptureDeviceForm.resx">
+      <DependentUpon>CaptureDeviceForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EtalForm.resx">
+      <DependentUpon>EtalForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource1.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="mesure_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ReglageAutoSauv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReglageAutoSauv.designer.cs">
+      <DependentUpon>ReglageAutoSauv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReglagesMesure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReglagesMesure.Designer.cs">
+      <DependentUpon>ReglagesMesure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="rulerscale.cs" />
+    <Compile Include="serialcode\GesCodForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="serialcode\GesCodForm.Designer.cs">
+      <DependentUpon>GesCodForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="serialcode\Sample_ManagementObjectSearcher.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="splashscreen\SplashScreen.cs" />
+    <Compile Include="splashscreen\SplashScreenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="splashscreen\SplashScreenForm.designer.cs">
+      <DependentUpon>SplashScreenForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TDPanel.cs" />
+    <Compile Include="URLForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="videosource\CaptureDevice.cs" />
+    <Compile Include="videosource\IMGStream.cs" />
+    <Compile Include="videosource\ipcamdial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="videosource\ipcamdial.Designer.cs">
+      <DependentUpon>ipcamdial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="videosource\IVideoSource.cs" />
+    <Compile Include="videosource\JPEGStream.cs" />
+    <Compile Include="videosource\MJPEGStream.cs" />
+    <Compile Include="videosource\TwainDevice.cs" />
+    <Compile Include="videosource\VideoFileSource.cs" />
+    <Compile Include="XMLEngine.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\addobj.Image.bmp" />
+    <Content Include="Resources\camera-photo-5.ico" />
+    <Content Include="Resources\camera-web.ico" />
+    <Content Include="Resources\clipscr.bmp" />
+    <Content Include="Resources\configure-3.ico" />
+    <Content Include="Resources\delobjmic.bmp" />
+    <Content Include="Resources\fulscr.bmp" />
+    <Content Include="Resources\icomoinmic.bmp" />
+    <Content Include="Resources\icoplumic.bmp" />
+    <Content Include="Resources\img-objchk.bmp" />
+    <Content Include="Resources\img-objnotset.bmp" />
+    <Content Include="Resources\img-objunchk.bmp" />
+    <EmbeddedResource Include="EnregFichierParam.resx">
+      <DependentUpon>EnregFichierParam.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormResu.resx">
+      <DependentUpon>FormResu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MesureForm.resx">
+      <DependentUpon>MesureForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReglageAutoSauv.resx">
+      <DependentUpon>ReglageAutoSauv.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReglagesMesure.resx">
+      <DependentUpon>ReglagesMesure.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\dnmove.cur" />
+    <EmbeddedResource Include="Resources\addobj.bmp" />
+    <Content Include="Resources\imgbuttsetetal.bmp" />
+    <EmbeddedResource Include="Resources\upmove.cur" />
+    <EmbeddedResource Include="Resources\periscop.cur" />
+    <EmbeddedResource Include="Resources\regle.cur" />
+    <EmbeddedResource Include="Resources\lignehor.ico" />
+    <EmbeddedResource Include="Resources\lignepente.ico" />
+    <EmbeddedResource Include="Resources\lignevert.ico" />
+    <EmbeddedResource Include="Resources\supobj-ina.bmp" />
+    <EmbeddedResource Include="Resources\supobj.bmp" />
+    <EmbeddedResource Include="Resources\ok-green.ico" />
+    <EmbeddedResource Include="Resources\RepeatBlue.ico" />
+    <EmbeddedResource Include="Resources\leftmov.cur" />
+    <EmbeddedResource Include="Resources\rightmov.cur" />
+    <EmbeddedResource Include="serialcode\GesCodForm.resx">
+      <DependentUpon>GesCodForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="splashscreen\Properties\Resources.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="splashscreen\SplashScreenForm.resx">
+      <DependentUpon>SplashScreenForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="videosource\ipcamdial.resx">
+      <DependentUpon>ipcamdial.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="splashscreen\logodecoup.jpg" />
+    <Content Include="upmove.ico" />
+    <Content Include="aaversion.txt" />
+    <Content Include="videomotion2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ruler\ruler.csproj">
+      <Project>{658BE15C-93AB-44DF-9693-E086A49FAF4D}</Project>
+      <Name>ruler</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\twainlib\twainlib.csproj">
+      <Project>{95B180F9-4776-426F-BC05-472968CE6F0B}</Project>
+      <Name>twainlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\vfw\vfw.csproj">
+      <Project>{110E4504-2443-4116-9255-53D1F723BED7}</Project>
+      <Name>vfw</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="aaversion.txt">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\clipscr.bmp">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\delobjmic.bmp">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\fulscr.bmp">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\icomoinmic.bmp">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\icoplumic.bmp">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\img-objchk.bmp">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\img-objnotset.bmp">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\img-objunchk.bmp">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\imgbuttsetetal.bmp">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="upmove.ico">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="videomotion2.ico">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

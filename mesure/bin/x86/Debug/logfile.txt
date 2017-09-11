@@ -1,0 +1,2079 @@
+15/12/2010 22:22:50	dll1
+15/12/2010 22:22:50	dll2
+15/12/2010 22:22:50	init td panels
+15/12/2010 22:22:50	1
+15/12/2010 22:22:50	1a
+15/12/2010 22:22:50	dll1
+15/12/2010 22:22:50	dll2
+15/12/2010 22:22:50	1b
+15/12/2010 22:22:50	tdpanel add
+15/12/2010 22:22:50	1a
+15/12/2010 22:22:50	dll1
+15/12/2010 22:22:50	dll2
+15/12/2010 22:22:50	1b
+15/12/2010 22:22:50	tdpanel add
+15/12/2010 22:22:50	1a
+15/12/2010 22:22:50	dll1
+15/12/2010 22:22:50	dll2
+15/12/2010 22:22:50	1b
+15/12/2010 22:22:50	tdpanel add
+15/12/2010 22:23:05	dll1
+15/12/2010 22:23:05	dll2
+15/12/2010 22:23:05	dll1
+15/12/2010 22:23:05	dll2
+15/12/2010 22:23:05	ouverture de [Webcam Classic]
+15/12/2010 22:23:05	device = Conexant 2388x Video Capture
+15/12/2010 22:23:05	device = Webcam Classic
+15/12/2010 22:23:05	bind to [System.__ComObject]
+15/12/2010 22:23:05	... pin ID = 0[Capturer]
+15/12/2010 22:23:05	... pin ID = 0[Capturer]
+15/12/2010 22:23:05	... pin ID = 0[Capturer]
+15/12/2010 22:23:05	... pin ID = 0[Capturer]
+15/12/2010 22:23:05	... pin ID = 0[Capturer]
+15/12/2010 22:23:05	... pin ID = 0[Capturer]
+15/12/2010 22:23:05	... pin ID = 0[Capturer]
+15/12/2010 22:23:05	... pin ID = 0[Capturer]
+15/12/2010 22:23:05	... pin ID = 0[Capturer]
+15/12/2010 22:23:05	... pin ID = 0[Capturer]
+15/12/2010 22:23:05	... pin ID = 0[Capturer]
+15/12/2010 22:23:05	grab pin in [System.__ComObject]
+15/12/2010 22:23:05	setmediatype
+15/12/2010 22:23:05	add source filter
+15/12/2010 22:23:05	add grabber
+15/12/2010 22:23:05	cap pin out 0
+15/12/2010 22:23:05	grab source pin out [System.__ComObject]
+15/12/2010 22:23:09	connect pins
+15/12/2010 22:23:09	connection ok
+15/12/2010 22:23:09	install callback
+15/12/2010 22:23:09	install callback ok
+15/12/2010 22:23:33	dll1
+15/12/2010 22:23:33	dll2
+15/12/2010 22:23:33	init td panels
+15/12/2010 22:23:33	1
+15/12/2010 22:23:33	1a
+15/12/2010 22:23:33	dll1
+15/12/2010 22:23:33	dll2
+15/12/2010 22:23:33	1b
+15/12/2010 22:23:33	tdpanel add
+15/12/2010 22:23:33	1a
+15/12/2010 22:23:33	dll1
+15/12/2010 22:23:33	dll2
+15/12/2010 22:23:33	1b
+15/12/2010 22:23:33	tdpanel add
+15/12/2010 22:23:33	1a
+15/12/2010 22:23:33	dll1
+15/12/2010 22:23:33	dll2
+15/12/2010 22:23:33	1b
+15/12/2010 22:23:33	tdpanel add
+15/12/2010 22:23:46	dll1
+15/12/2010 22:23:46	dll2
+15/12/2010 22:23:47	dll1
+15/12/2010 22:23:47	dll2
+15/12/2010 22:23:47	ouverture de [Webcam Classic]
+15/12/2010 22:23:47	device = Conexant 2388x Video Capture
+15/12/2010 22:23:47	device = Webcam Classic
+15/12/2010 22:23:47	bind to [System.__ComObject]
+15/12/2010 22:23:47	... pin ID = 0[Capturer]
+15/12/2010 22:23:47	... pin ID = 0[Capturer]
+15/12/2010 22:23:47	... pin ID = 0[Capturer]
+15/12/2010 22:23:47	... pin ID = 0[Capturer]
+15/12/2010 22:23:47	... pin ID = 0[Capturer]
+15/12/2010 22:23:47	... pin ID = 0[Capturer]
+15/12/2010 22:23:47	... pin ID = 0[Capturer]
+15/12/2010 22:23:47	... pin ID = 0[Capturer]
+15/12/2010 22:23:47	... pin ID = 0[Capturer]
+15/12/2010 22:23:47	... pin ID = 0[Capturer]
+15/12/2010 22:23:47	... pin ID = 0[Capturer]
+15/12/2010 22:23:47	grab pin in [System.__ComObject]
+15/12/2010 22:23:47	setmediatype
+15/12/2010 22:23:47	add source filter
+15/12/2010 22:23:47	add grabber
+15/12/2010 22:23:47	cap pin out 0
+15/12/2010 22:23:47	grab source pin out [System.__ComObject]
+15/12/2010 22:23:48	connect pins
+15/12/2010 22:23:48	connection ok
+15/12/2010 22:23:48	install callback
+15/12/2010 22:23:48	install callback ok
+15/12/2010 22:25:04	avt question
+15/12/2010 22:25:05	mainfrm clos
+15/12/2010 22:25:05	mainfrm close
+15/12/2010 22:25:05	savxml in
+15/12/2010 22:25:05	call savxml
+15/12/2010 22:25:05	call savxml ok
+15/12/2010 22:25:05	savxml ok
+15/12/2010 22:25:05	close file camera
+15/12/2010 22:25:05	signaltostop
+15/12/2010 22:25:06	camera stop
+15/12/2010 22:25:06	camera stop ok
+15/12/2010 22:25:06	camera null
+15/12/2010 22:25:06	camera null
+15/12/2010 22:25:06	closefile ok
+17/12/2010 22:21:09	dll1
+17/12/2010 22:21:09	dll2
+17/12/2010 22:21:10	init td panels
+17/12/2010 22:21:10	1
+17/12/2010 22:21:10	1a
+17/12/2010 22:21:10	dll1
+17/12/2010 22:21:10	dll2
+17/12/2010 22:21:10	1b
+17/12/2010 22:21:10	tdpanel add
+17/12/2010 22:21:10	1a
+17/12/2010 22:21:10	dll1
+17/12/2010 22:21:10	dll2
+17/12/2010 22:21:10	1b
+17/12/2010 22:21:10	tdpanel add
+17/12/2010 22:21:10	1a
+17/12/2010 22:21:10	dll1
+17/12/2010 22:21:10	dll2
+17/12/2010 22:21:10	1b
+17/12/2010 22:21:10	tdpanel add
+17/12/2010 22:21:14	dll1
+17/12/2010 22:21:14	dll2
+17/12/2010 22:21:14	dll1
+17/12/2010 22:21:14	dll2
+17/12/2010 22:21:14	ouverture de [Webcam Classic]
+17/12/2010 22:21:14	device = Conexant 2388x Video Capture
+17/12/2010 22:21:14	device = Webcam Classic
+17/12/2010 22:21:14	bind to [System.__ComObject]
+17/12/2010 22:21:14	... pin ID = 0[Capturer]
+17/12/2010 22:21:14	... pin ID = 0[Capturer]
+17/12/2010 22:21:14	... pin ID = 0[Capturer]
+17/12/2010 22:21:14	... pin ID = 0[Capturer]
+17/12/2010 22:21:14	... pin ID = 0[Capturer]
+17/12/2010 22:21:14	... pin ID = 0[Capturer]
+17/12/2010 22:21:14	... pin ID = 0[Capturer]
+17/12/2010 22:21:14	... pin ID = 0[Capturer]
+17/12/2010 22:21:14	... pin ID = 0[Capturer]
+17/12/2010 22:21:14	... pin ID = 0[Capturer]
+17/12/2010 22:21:14	... pin ID = 0[Capturer]
+17/12/2010 22:21:14	grab pin in [System.__ComObject]
+17/12/2010 22:21:14	setmediatype
+17/12/2010 22:21:14	add source filter
+17/12/2010 22:21:14	add grabber
+17/12/2010 22:21:14	cap pin out 0
+17/12/2010 22:21:14	grab source pin out [System.__ComObject]
+17/12/2010 22:21:14	connect pins
+17/12/2010 22:21:15	connection ok
+17/12/2010 22:21:15	install callback
+17/12/2010 22:21:15	install callback ok
+17/12/2010 22:29:05	dll1
+17/12/2010 22:29:05	dll2
+17/12/2010 22:29:06	init td panels
+17/12/2010 22:29:06	1
+17/12/2010 22:29:06	1a
+17/12/2010 22:29:06	dll1
+17/12/2010 22:29:06	dll2
+17/12/2010 22:29:06	1b
+17/12/2010 22:29:06	tdpanel add
+17/12/2010 22:29:06	1a
+17/12/2010 22:29:06	dll1
+17/12/2010 22:29:06	dll2
+17/12/2010 22:29:06	1b
+17/12/2010 22:29:06	tdpanel add
+17/12/2010 22:29:06	1a
+17/12/2010 22:29:06	dll1
+17/12/2010 22:29:06	dll2
+17/12/2010 22:29:06	1b
+17/12/2010 22:29:06	tdpanel add
+17/12/2010 22:29:10	dll1
+17/12/2010 22:29:10	dll2
+17/12/2010 22:29:10	dll1
+17/12/2010 22:29:10	dll2
+17/12/2010 22:29:10	ouverture de [Webcam Classic]
+17/12/2010 22:29:10	device = Conexant 2388x Video Capture
+17/12/2010 22:29:10	device = Webcam Classic
+17/12/2010 22:29:10	bind to [System.__ComObject]
+17/12/2010 22:29:10	... pin ID = 0[Capturer]
+17/12/2010 22:29:10	... pin ID = 0[Capturer]
+17/12/2010 22:29:10	... pin ID = 0[Capturer]
+17/12/2010 22:29:10	... pin ID = 0[Capturer]
+17/12/2010 22:29:10	... pin ID = 0[Capturer]
+17/12/2010 22:29:10	... pin ID = 0[Capturer]
+17/12/2010 22:29:10	... pin ID = 0[Capturer]
+17/12/2010 22:29:10	... pin ID = 0[Capturer]
+17/12/2010 22:29:10	... pin ID = 0[Capturer]
+17/12/2010 22:29:10	... pin ID = 0[Capturer]
+17/12/2010 22:29:10	... pin ID = 0[Capturer]
+17/12/2010 22:29:10	grab pin in [System.__ComObject]
+17/12/2010 22:29:10	setmediatype
+17/12/2010 22:29:10	add source filter
+17/12/2010 22:29:10	add grabber
+17/12/2010 22:29:10	cap pin out 0
+17/12/2010 22:29:10	grab source pin out [System.__ComObject]
+17/12/2010 22:29:10	connect pins
+17/12/2010 22:29:10	connection ok
+17/12/2010 22:29:10	install callback
+17/12/2010 22:29:10	install callback ok
+17/12/2010 22:30:16	dll1
+17/12/2010 22:30:16	dll2
+17/12/2010 22:30:16	init td panels
+17/12/2010 22:30:16	1
+17/12/2010 22:30:16	1a
+17/12/2010 22:30:16	dll1
+17/12/2010 22:30:16	dll2
+17/12/2010 22:30:16	1b
+17/12/2010 22:30:16	tdpanel add
+17/12/2010 22:30:16	1a
+17/12/2010 22:30:16	dll1
+17/12/2010 22:30:16	dll2
+17/12/2010 22:30:16	1b
+17/12/2010 22:30:16	tdpanel add
+17/12/2010 22:30:16	1a
+17/12/2010 22:30:16	dll1
+17/12/2010 22:30:16	dll2
+17/12/2010 22:30:16	1b
+17/12/2010 22:30:16	tdpanel add
+17/12/2010 22:30:20	dll1
+17/12/2010 22:30:20	dll2
+17/12/2010 22:30:20	dll1
+17/12/2010 22:30:20	dll2
+17/12/2010 22:30:21	ouverture de [Webcam Classic]
+17/12/2010 22:30:21	device = Conexant 2388x Video Capture
+17/12/2010 22:30:21	device = Webcam Classic
+17/12/2010 22:30:21	bind to [System.__ComObject]
+17/12/2010 22:30:21	... pin ID = 0[Capturer]
+17/12/2010 22:30:21	... pin ID = 0[Capturer]
+17/12/2010 22:30:21	... pin ID = 0[Capturer]
+17/12/2010 22:30:21	... pin ID = 0[Capturer]
+17/12/2010 22:30:21	... pin ID = 0[Capturer]
+17/12/2010 22:30:21	... pin ID = 0[Capturer]
+17/12/2010 22:30:21	... pin ID = 0[Capturer]
+17/12/2010 22:30:21	... pin ID = 0[Capturer]
+17/12/2010 22:30:21	... pin ID = 0[Capturer]
+17/12/2010 22:30:21	... pin ID = 0[Capturer]
+17/12/2010 22:30:21	... pin ID = 0[Capturer]
+17/12/2010 22:30:21	grab pin in [System.__ComObject]
+17/12/2010 22:30:21	setmediatype
+17/12/2010 22:30:21	add source filter
+17/12/2010 22:30:21	add grabber
+17/12/2010 22:30:21	cap pin out 0
+17/12/2010 22:30:21	grab source pin out [System.__ComObject]
+17/12/2010 22:30:21	connect pins
+17/12/2010 22:30:21	connection ok
+17/12/2010 22:30:21	install callback
+17/12/2010 22:30:21	install callback ok
+17/12/2010 22:34:00	dll1
+17/12/2010 22:34:00	dll2
+17/12/2010 22:34:01	init td panels
+17/12/2010 22:34:01	1
+17/12/2010 22:34:01	1a
+17/12/2010 22:34:01	dll1
+17/12/2010 22:34:01	dll2
+17/12/2010 22:34:01	1b
+17/12/2010 22:34:01	tdpanel add
+17/12/2010 22:34:01	1a
+17/12/2010 22:34:01	dll1
+17/12/2010 22:34:01	dll2
+17/12/2010 22:34:01	1b
+17/12/2010 22:34:01	tdpanel add
+17/12/2010 22:34:01	1a
+17/12/2010 22:34:01	dll1
+17/12/2010 22:34:01	dll2
+17/12/2010 22:34:01	1b
+17/12/2010 22:34:01	tdpanel add
+17/12/2010 22:34:05	dll1
+17/12/2010 22:34:05	dll2
+17/12/2010 22:34:05	dll1
+17/12/2010 22:34:05	dll2
+17/12/2010 22:34:05	ouverture de [Webcam Classic]
+17/12/2010 22:34:05	device = Conexant 2388x Video Capture
+17/12/2010 22:34:05	device = Webcam Classic
+17/12/2010 22:34:05	bind to [System.__ComObject]
+17/12/2010 22:34:05	... pin ID = 0[Capturer]
+17/12/2010 22:34:05	... pin ID = 0[Capturer]
+17/12/2010 22:34:05	... pin ID = 0[Capturer]
+17/12/2010 22:34:05	... pin ID = 0[Capturer]
+17/12/2010 22:34:05	... pin ID = 0[Capturer]
+17/12/2010 22:34:05	... pin ID = 0[Capturer]
+17/12/2010 22:34:05	... pin ID = 0[Capturer]
+17/12/2010 22:34:05	... pin ID = 0[Capturer]
+17/12/2010 22:34:05	... pin ID = 0[Capturer]
+17/12/2010 22:34:05	... pin ID = 0[Capturer]
+17/12/2010 22:34:05	... pin ID = 0[Capturer]
+17/12/2010 22:34:05	grab pin in [System.__ComObject]
+17/12/2010 22:34:05	setmediatype
+17/12/2010 22:34:05	add source filter
+17/12/2010 22:34:05	add grabber
+17/12/2010 22:34:05	cap pin out 0
+17/12/2010 22:34:05	grab source pin out [System.__ComObject]
+17/12/2010 22:34:05	connect pins
+17/12/2010 22:34:05	connection ok
+17/12/2010 22:34:05	install callback
+17/12/2010 22:34:05	install callback ok
+17/12/2010 22:34:38	dll1
+17/12/2010 22:34:38	dll2
+17/12/2010 22:34:39	init td panels
+17/12/2010 22:34:39	1
+17/12/2010 22:34:39	1a
+17/12/2010 22:34:39	dll1
+17/12/2010 22:34:39	dll2
+17/12/2010 22:34:39	1b
+17/12/2010 22:34:39	tdpanel add
+17/12/2010 22:34:39	1a
+17/12/2010 22:34:39	dll1
+17/12/2010 22:34:39	dll2
+17/12/2010 22:34:39	1b
+17/12/2010 22:34:39	tdpanel add
+17/12/2010 22:34:39	1a
+17/12/2010 22:34:39	dll1
+17/12/2010 22:34:39	dll2
+17/12/2010 22:34:39	1b
+17/12/2010 22:34:39	tdpanel add
+17/12/2010 22:34:43	dll1
+17/12/2010 22:34:43	dll2
+17/12/2010 22:34:43	dll1
+17/12/2010 22:34:43	dll2
+17/12/2010 22:34:43	ouverture de [Webcam Classic]
+17/12/2010 22:34:43	device = Conexant 2388x Video Capture
+17/12/2010 22:34:43	device = Webcam Classic
+17/12/2010 22:34:43	bind to [System.__ComObject]
+17/12/2010 22:34:43	... pin ID = 0[Capturer]
+17/12/2010 22:34:43	... pin ID = 0[Capturer]
+17/12/2010 22:34:43	... pin ID = 0[Capturer]
+17/12/2010 22:34:43	... pin ID = 0[Capturer]
+17/12/2010 22:34:43	... pin ID = 0[Capturer]
+17/12/2010 22:34:43	... pin ID = 0[Capturer]
+17/12/2010 22:34:43	... pin ID = 0[Capturer]
+17/12/2010 22:34:43	... pin ID = 0[Capturer]
+17/12/2010 22:34:43	... pin ID = 0[Capturer]
+17/12/2010 22:34:43	... pin ID = 0[Capturer]
+17/12/2010 22:34:43	... pin ID = 0[Capturer]
+17/12/2010 22:34:43	grab pin in [System.__ComObject]
+17/12/2010 22:34:43	setmediatype
+17/12/2010 22:34:43	add source filter
+17/12/2010 22:34:43	add grabber
+17/12/2010 22:34:43	cap pin out 0
+17/12/2010 22:34:43	grab source pin out [System.__ComObject]
+17/12/2010 22:34:43	connect pins
+17/12/2010 22:34:43	connection ok
+17/12/2010 22:34:43	install callback
+17/12/2010 22:34:43	install callback ok
+17/12/2010 22:36:11	avt question
+17/12/2010 22:36:12	mainfrm clos
+17/12/2010 22:36:12	mainfrm close
+17/12/2010 22:36:12	savxml in
+17/12/2010 22:36:12	call savxml
+17/12/2010 22:36:12	call savxml ok
+17/12/2010 22:36:12	savxml ok
+17/12/2010 22:36:12	close file camera
+17/12/2010 22:36:12	signaltostop
+17/12/2010 22:36:12	camera stop
+17/12/2010 22:36:12	camera stop ok
+17/12/2010 22:36:12	camera null
+17/12/2010 22:36:12	camera null
+17/12/2010 22:36:12	closefile ok
+17/12/2010 22:36:45	dll1
+17/12/2010 22:36:45	dll2
+17/12/2010 22:36:45	init td panels
+17/12/2010 22:36:45	1
+17/12/2010 22:36:45	1a
+17/12/2010 22:36:45	dll1
+17/12/2010 22:36:45	dll2
+17/12/2010 22:36:45	1b
+17/12/2010 22:36:45	tdpanel add
+17/12/2010 22:36:45	1a
+17/12/2010 22:36:45	dll1
+17/12/2010 22:36:45	dll2
+17/12/2010 22:36:45	1b
+17/12/2010 22:36:45	tdpanel add
+17/12/2010 22:36:45	1a
+17/12/2010 22:36:45	dll1
+17/12/2010 22:36:45	dll2
+17/12/2010 22:36:45	1b
+17/12/2010 22:36:45	tdpanel add
+17/12/2010 22:36:50	dll1
+17/12/2010 22:36:50	dll2
+17/12/2010 22:36:50	dll1
+17/12/2010 22:36:50	dll2
+17/12/2010 22:36:50	ouverture de [Webcam Classic]
+17/12/2010 22:36:50	device = Conexant 2388x Video Capture
+17/12/2010 22:36:50	device = Webcam Classic
+17/12/2010 22:36:50	bind to [System.__ComObject]
+17/12/2010 22:36:50	... pin ID = 0[Capturer]
+17/12/2010 22:36:50	... pin ID = 0[Capturer]
+17/12/2010 22:36:50	... pin ID = 0[Capturer]
+17/12/2010 22:36:50	... pin ID = 0[Capturer]
+17/12/2010 22:36:50	... pin ID = 0[Capturer]
+17/12/2010 22:36:50	... pin ID = 0[Capturer]
+17/12/2010 22:36:50	... pin ID = 0[Capturer]
+17/12/2010 22:36:50	... pin ID = 0[Capturer]
+17/12/2010 22:36:50	... pin ID = 0[Capturer]
+17/12/2010 22:36:50	... pin ID = 0[Capturer]
+17/12/2010 22:36:50	... pin ID = 0[Capturer]
+17/12/2010 22:36:50	grab pin in [System.__ComObject]
+17/12/2010 22:36:50	setmediatype
+17/12/2010 22:36:50	add source filter
+17/12/2010 22:36:50	add grabber
+17/12/2010 22:36:50	cap pin out 0
+17/12/2010 22:36:50	grab source pin out [System.__ComObject]
+17/12/2010 22:36:50	connect pins
+17/12/2010 22:36:50	connection ok
+17/12/2010 22:36:50	install callback
+17/12/2010 22:36:50	install callback ok
+17/12/2010 22:39:26	avt question
+17/12/2010 22:39:27	mainfrm clos
+17/12/2010 22:39:27	mainfrm close
+17/12/2010 22:39:27	savxml in
+17/12/2010 22:39:27	call savxml
+17/12/2010 22:39:27	call savxml ok
+17/12/2010 22:39:27	savxml ok
+17/12/2010 22:39:27	close file camera
+17/12/2010 22:39:27	signaltostop
+17/12/2010 22:39:27	camera stop
+17/12/2010 22:39:27	camera stop ok
+17/12/2010 22:39:27	camera null
+17/12/2010 22:39:27	camera null
+17/12/2010 22:39:27	closefile ok
+17/12/2010 22:42:20	dll1
+17/12/2010 22:42:20	dll2
+17/12/2010 22:42:21	init td panels
+17/12/2010 22:42:21	1
+17/12/2010 22:42:21	1a
+17/12/2010 22:42:21	dll1
+17/12/2010 22:42:21	dll2
+17/12/2010 22:42:21	1b
+17/12/2010 22:42:21	tdpanel add
+17/12/2010 22:42:21	1a
+17/12/2010 22:42:21	dll1
+17/12/2010 22:42:21	dll2
+17/12/2010 22:42:21	1b
+17/12/2010 22:42:21	tdpanel add
+17/12/2010 22:42:21	1a
+17/12/2010 22:42:21	dll1
+17/12/2010 22:42:21	dll2
+17/12/2010 22:42:21	1b
+17/12/2010 22:42:21	tdpanel add
+17/12/2010 22:42:25	dll1
+17/12/2010 22:42:25	dll2
+17/12/2010 22:42:25	dll1
+17/12/2010 22:42:25	dll2
+17/12/2010 22:42:25	ouverture de [Webcam Classic]
+17/12/2010 22:42:25	device = Conexant 2388x Video Capture
+17/12/2010 22:42:25	device = Webcam Classic
+17/12/2010 22:42:25	bind to [System.__ComObject]
+17/12/2010 22:42:25	... pin ID = 0[Capturer]
+17/12/2010 22:42:25	... pin ID = 0[Capturer]
+17/12/2010 22:42:25	... pin ID = 0[Capturer]
+17/12/2010 22:42:25	... pin ID = 0[Capturer]
+17/12/2010 22:42:25	... pin ID = 0[Capturer]
+17/12/2010 22:42:25	... pin ID = 0[Capturer]
+17/12/2010 22:42:25	... pin ID = 0[Capturer]
+17/12/2010 22:42:25	... pin ID = 0[Capturer]
+17/12/2010 22:42:25	... pin ID = 0[Capturer]
+17/12/2010 22:42:25	... pin ID = 0[Capturer]
+17/12/2010 22:42:25	... pin ID = 0[Capturer]
+17/12/2010 22:42:25	grab pin in [System.__ComObject]
+17/12/2010 22:42:25	setmediatype
+17/12/2010 22:42:25	add source filter
+17/12/2010 22:42:25	add grabber
+17/12/2010 22:42:25	cap pin out 0
+17/12/2010 22:42:25	grab source pin out [System.__ComObject]
+17/12/2010 22:42:25	connect pins
+17/12/2010 22:42:25	connection ok
+17/12/2010 22:42:25	install callback
+17/12/2010 22:42:25	install callback ok
+17/12/2010 22:57:45	dll1
+17/12/2010 22:57:45	dll2
+17/12/2010 22:57:45	init td panels
+17/12/2010 22:57:45	1
+17/12/2010 22:57:45	1a
+17/12/2010 22:57:45	dll1
+17/12/2010 22:57:45	dll2
+17/12/2010 22:57:45	1b
+17/12/2010 22:57:45	tdpanel add
+17/12/2010 22:57:45	1a
+17/12/2010 22:57:45	dll1
+17/12/2010 22:57:45	dll2
+17/12/2010 22:57:45	1b
+17/12/2010 22:57:45	tdpanel add
+17/12/2010 22:57:45	1a
+17/12/2010 22:57:45	dll1
+17/12/2010 22:57:45	dll2
+17/12/2010 22:57:45	1b
+17/12/2010 22:57:45	tdpanel add
+17/12/2010 22:57:50	dll1
+17/12/2010 22:57:50	dll2
+17/12/2010 22:57:50	dll1
+17/12/2010 22:57:50	dll2
+17/12/2010 22:57:50	ouverture de [Webcam Classic]
+17/12/2010 22:57:50	device = Conexant 2388x Video Capture
+17/12/2010 22:57:50	device = Webcam Classic
+17/12/2010 22:57:50	bind to [System.__ComObject]
+17/12/2010 22:57:50	... pin ID = 0[Capturer]
+17/12/2010 22:57:50	... pin ID = 0[Capturer]
+17/12/2010 22:57:50	... pin ID = 0[Capturer]
+17/12/2010 22:57:50	... pin ID = 0[Capturer]
+17/12/2010 22:57:50	... pin ID = 0[Capturer]
+17/12/2010 22:57:50	... pin ID = 0[Capturer]
+17/12/2010 22:57:50	... pin ID = 0[Capturer]
+17/12/2010 22:57:50	... pin ID = 0[Capturer]
+17/12/2010 22:57:50	... pin ID = 0[Capturer]
+17/12/2010 22:57:50	... pin ID = 0[Capturer]
+17/12/2010 22:57:50	... pin ID = 0[Capturer]
+17/12/2010 22:57:50	grab pin in [System.__ComObject]
+17/12/2010 22:57:50	setmediatype
+17/12/2010 22:57:50	add source filter
+17/12/2010 22:57:50	add grabber
+17/12/2010 22:57:50	cap pin out 0
+17/12/2010 22:57:50	grab source pin out [System.__ComObject]
+17/12/2010 22:57:50	connect pins
+17/12/2010 22:57:50	connection ok
+17/12/2010 22:57:50	install callback
+17/12/2010 22:57:50	install callback ok
+17/12/2010 22:58:43	avt question
+17/12/2010 22:58:45	mainfrm clos
+17/12/2010 22:58:45	mainfrm close
+17/12/2010 22:58:45	savxml in
+17/12/2010 22:58:45	call savxml
+17/12/2010 22:58:45	call savxml ok
+17/12/2010 22:58:45	savxml ok
+17/12/2010 22:58:45	close file camera
+17/12/2010 22:58:45	signaltostop
+17/12/2010 22:58:45	camera stop
+17/12/2010 22:58:45	camera stop ok
+17/12/2010 22:58:45	camera null
+17/12/2010 22:58:45	camera null
+17/12/2010 22:58:45	closefile ok
+17/12/2010 23:02:01	dll1
+17/12/2010 23:02:01	dll2
+17/12/2010 23:02:02	init td panels
+17/12/2010 23:02:02	1
+17/12/2010 23:02:02	1a
+17/12/2010 23:02:02	dll1
+17/12/2010 23:02:02	dll2
+17/12/2010 23:02:02	1b
+17/12/2010 23:02:02	tdpanel add
+17/12/2010 23:02:02	1a
+17/12/2010 23:02:02	dll1
+17/12/2010 23:02:02	dll2
+17/12/2010 23:02:02	1b
+17/12/2010 23:02:02	tdpanel add
+17/12/2010 23:02:02	1a
+17/12/2010 23:02:02	dll1
+17/12/2010 23:02:02	dll2
+17/12/2010 23:02:02	1b
+17/12/2010 23:02:02	tdpanel add
+17/12/2010 23:02:06	dll1
+17/12/2010 23:02:06	dll2
+17/12/2010 23:02:06	dll1
+17/12/2010 23:02:06	dll2
+17/12/2010 23:02:07	ouverture de [Webcam Classic]
+17/12/2010 23:02:07	device = Conexant 2388x Video Capture
+17/12/2010 23:02:07	device = Webcam Classic
+17/12/2010 23:02:07	bind to [System.__ComObject]
+17/12/2010 23:02:07	... pin ID = 0[Capturer]
+17/12/2010 23:02:07	... pin ID = 0[Capturer]
+17/12/2010 23:02:07	... pin ID = 0[Capturer]
+17/12/2010 23:02:07	... pin ID = 0[Capturer]
+17/12/2010 23:02:07	... pin ID = 0[Capturer]
+17/12/2010 23:02:07	... pin ID = 0[Capturer]
+17/12/2010 23:02:07	... pin ID = 0[Capturer]
+17/12/2010 23:02:07	... pin ID = 0[Capturer]
+17/12/2010 23:02:07	... pin ID = 0[Capturer]
+17/12/2010 23:02:07	... pin ID = 0[Capturer]
+17/12/2010 23:02:07	... pin ID = 0[Capturer]
+17/12/2010 23:02:07	grab pin in [System.__ComObject]
+17/12/2010 23:02:07	setmediatype
+17/12/2010 23:02:07	add source filter
+17/12/2010 23:02:07	add grabber
+17/12/2010 23:02:07	cap pin out 0
+17/12/2010 23:02:07	grab source pin out [System.__ComObject]
+17/12/2010 23:02:07	connect pins
+17/12/2010 23:02:07	connection ok
+17/12/2010 23:02:07	install callback
+17/12/2010 23:02:07	install callback ok
+17/12/2010 23:03:00	avt question
+17/12/2010 23:03:02	mainfrm clos
+17/12/2010 23:03:02	mainfrm close
+17/12/2010 23:03:02	savxml in
+17/12/2010 23:03:02	call savxml
+17/12/2010 23:03:02	call savxml ok
+17/12/2010 23:03:02	savxml ok
+17/12/2010 23:03:02	close file camera
+17/12/2010 23:03:02	signaltostop
+17/12/2010 23:03:03	camera stop
+17/12/2010 23:03:03	camera stop ok
+17/12/2010 23:03:03	camera null
+17/12/2010 23:03:03	camera null
+17/12/2010 23:03:03	closefile ok
+17/12/2010 23:03:07	avt question
+17/12/2010 23:03:09	mainfrm clos
+17/12/2010 23:03:09	mainfrm close
+17/12/2010 23:03:09	savxml in
+17/12/2010 23:03:09	call savxml
+17/12/2010 23:03:09	call savxml ok
+17/12/2010 23:03:09	savxml ok
+17/12/2010 23:03:09	closefile ok
+17/12/2010 23:04:50	dll1
+17/12/2010 23:04:50	dll2
+17/12/2010 23:04:50	init td panels
+17/12/2010 23:04:50	1
+17/12/2010 23:04:50	1a
+17/12/2010 23:04:51	dll1
+17/12/2010 23:04:51	dll2
+17/12/2010 23:04:51	1b
+17/12/2010 23:04:51	tdpanel add
+17/12/2010 23:04:51	1a
+17/12/2010 23:04:51	dll1
+17/12/2010 23:04:51	dll2
+17/12/2010 23:04:51	1b
+17/12/2010 23:04:51	tdpanel add
+17/12/2010 23:04:51	1a
+17/12/2010 23:04:51	dll1
+17/12/2010 23:04:51	dll2
+17/12/2010 23:04:51	1b
+17/12/2010 23:04:51	tdpanel add
+17/12/2010 23:04:55	dll1
+17/12/2010 23:04:55	dll2
+17/12/2010 23:05:03	dll1
+17/12/2010 23:05:03	dll2
+17/12/2010 23:05:03	dll1
+17/12/2010 23:05:03	dll2
+17/12/2010 23:05:03	ouverture de [Webcam Classic]
+17/12/2010 23:05:03	device = Conexant 2388x Video Capture
+17/12/2010 23:05:03	device = Webcam Classic
+17/12/2010 23:05:03	bind to [System.__ComObject]
+17/12/2010 23:05:03	... pin ID = 0[Capturer]
+17/12/2010 23:05:03	... pin ID = 0[Capturer]
+17/12/2010 23:05:03	... pin ID = 0[Capturer]
+17/12/2010 23:05:03	... pin ID = 0[Capturer]
+17/12/2010 23:05:03	... pin ID = 0[Capturer]
+17/12/2010 23:05:03	... pin ID = 0[Capturer]
+17/12/2010 23:05:03	... pin ID = 0[Capturer]
+17/12/2010 23:05:03	... pin ID = 0[Capturer]
+17/12/2010 23:05:03	... pin ID = 0[Capturer]
+17/12/2010 23:05:03	... pin ID = 0[Capturer]
+17/12/2010 23:05:03	... pin ID = 0[Capturer]
+17/12/2010 23:05:03	grab pin in [System.__ComObject]
+17/12/2010 23:05:03	setmediatype
+17/12/2010 23:05:03	add source filter
+17/12/2010 23:05:03	add grabber
+17/12/2010 23:05:03	cap pin out 0
+17/12/2010 23:05:03	grab source pin out [System.__ComObject]
+17/12/2010 23:05:05	connect pins
+17/12/2010 23:05:05	connection ok
+17/12/2010 23:05:05	install callback
+17/12/2010 23:05:05	install callback ok
+17/12/2010 23:05:58	avt question
+17/12/2010 23:06:00	mainfrm clos
+17/12/2010 23:06:00	mainfrm close
+17/12/2010 23:06:00	savxml in
+17/12/2010 23:06:00	call savxml
+17/12/2010 23:06:00	call savxml ok
+17/12/2010 23:06:00	savxml ok
+17/12/2010 23:06:00	close file camera
+17/12/2010 23:06:00	signaltostop
+17/12/2010 23:06:00	camera stop
+17/12/2010 23:06:00	camera stop ok
+17/12/2010 23:06:00	camera null
+17/12/2010 23:06:00	camera null
+17/12/2010 23:06:00	closefile ok
+17/12/2010 23:07:38	dll1
+17/12/2010 23:07:38	dll2
+17/12/2010 23:07:38	init td panels
+17/12/2010 23:07:38	1
+17/12/2010 23:07:38	1a
+17/12/2010 23:07:38	dll1
+17/12/2010 23:07:38	dll2
+17/12/2010 23:07:38	1b
+17/12/2010 23:07:38	tdpanel add
+17/12/2010 23:07:38	1a
+17/12/2010 23:07:38	dll1
+17/12/2010 23:07:38	dll2
+17/12/2010 23:07:38	1b
+17/12/2010 23:07:38	tdpanel add
+17/12/2010 23:07:38	1a
+17/12/2010 23:07:38	dll1
+17/12/2010 23:07:38	dll2
+17/12/2010 23:07:38	1b
+17/12/2010 23:07:38	tdpanel add
+17/12/2010 23:07:43	dll1
+17/12/2010 23:07:43	dll2
+17/12/2010 23:07:43	dll1
+17/12/2010 23:07:43	dll2
+17/12/2010 23:07:43	ouverture de [Webcam Classic]
+17/12/2010 23:07:43	device = Conexant 2388x Video Capture
+17/12/2010 23:07:43	device = Webcam Classic
+17/12/2010 23:07:43	bind to [System.__ComObject]
+17/12/2010 23:07:43	... pin ID = 0[Capturer]
+17/12/2010 23:07:43	... pin ID = 0[Capturer]
+17/12/2010 23:07:43	... pin ID = 0[Capturer]
+17/12/2010 23:07:43	... pin ID = 0[Capturer]
+17/12/2010 23:07:43	... pin ID = 0[Capturer]
+17/12/2010 23:07:43	... pin ID = 0[Capturer]
+17/12/2010 23:07:43	... pin ID = 0[Capturer]
+17/12/2010 23:07:43	... pin ID = 0[Capturer]
+17/12/2010 23:07:43	... pin ID = 0[Capturer]
+17/12/2010 23:07:43	... pin ID = 0[Capturer]
+17/12/2010 23:07:43	... pin ID = 0[Capturer]
+17/12/2010 23:07:43	grab pin in [System.__ComObject]
+17/12/2010 23:07:43	setmediatype
+17/12/2010 23:07:43	add source filter
+17/12/2010 23:07:43	add grabber
+17/12/2010 23:07:43	cap pin out 0
+17/12/2010 23:07:43	grab source pin out [System.__ComObject]
+17/12/2010 23:07:43	connect pins
+17/12/2010 23:07:43	connection ok
+17/12/2010 23:07:43	install callback
+17/12/2010 23:07:43	install callback ok
+17/12/2010 23:10:20	avt question
+17/12/2010 23:10:22	mainfrm clos
+17/12/2010 23:10:22	mainfrm close
+17/12/2010 23:10:22	savxml in
+17/12/2010 23:10:22	call savxml
+17/12/2010 23:10:22	call savxml ok
+17/12/2010 23:10:22	savxml ok
+17/12/2010 23:10:22	close file camera
+17/12/2010 23:10:22	signaltostop
+17/12/2010 23:10:22	camera stop
+17/12/2010 23:10:22	camera stop ok
+17/12/2010 23:10:22	camera null
+17/12/2010 23:10:22	camera null
+17/12/2010 23:10:22	closefile ok
+17/12/2010 23:11:26	dll1
+17/12/2010 23:11:26	dll2
+17/12/2010 23:11:27	init td panels
+17/12/2010 23:11:27	1
+17/12/2010 23:11:27	1a
+17/12/2010 23:11:27	dll1
+17/12/2010 23:11:27	dll2
+17/12/2010 23:11:27	1b
+17/12/2010 23:11:27	tdpanel add
+17/12/2010 23:11:27	1a
+17/12/2010 23:11:27	dll1
+17/12/2010 23:11:27	dll2
+17/12/2010 23:11:27	1b
+17/12/2010 23:11:27	tdpanel add
+17/12/2010 23:11:27	1a
+17/12/2010 23:11:27	dll1
+17/12/2010 23:11:27	dll2
+17/12/2010 23:11:27	1b
+17/12/2010 23:11:27	tdpanel add
+17/12/2010 23:11:31	dll1
+17/12/2010 23:11:31	dll2
+17/12/2010 23:11:31	dll1
+17/12/2010 23:11:31	dll2
+17/12/2010 23:11:31	ouverture de [Webcam Classic]
+17/12/2010 23:11:31	device = Conexant 2388x Video Capture
+17/12/2010 23:11:31	device = Webcam Classic
+17/12/2010 23:11:31	bind to [System.__ComObject]
+17/12/2010 23:11:31	... pin ID = 0[Capturer]
+17/12/2010 23:11:31	... pin ID = 0[Capturer]
+17/12/2010 23:11:31	... pin ID = 0[Capturer]
+17/12/2010 23:11:31	... pin ID = 0[Capturer]
+17/12/2010 23:11:31	... pin ID = 0[Capturer]
+17/12/2010 23:11:31	... pin ID = 0[Capturer]
+17/12/2010 23:11:31	... pin ID = 0[Capturer]
+17/12/2010 23:11:31	... pin ID = 0[Capturer]
+17/12/2010 23:11:31	... pin ID = 0[Capturer]
+17/12/2010 23:11:31	... pin ID = 0[Capturer]
+17/12/2010 23:11:31	... pin ID = 0[Capturer]
+17/12/2010 23:11:31	grab pin in [System.__ComObject]
+17/12/2010 23:11:31	setmediatype
+17/12/2010 23:11:31	add source filter
+17/12/2010 23:11:31	add grabber
+17/12/2010 23:11:31	cap pin out 0
+17/12/2010 23:11:31	grab source pin out [System.__ComObject]
+17/12/2010 23:11:31	connect pins
+17/12/2010 23:11:31	connection ok
+17/12/2010 23:11:31	install callback
+17/12/2010 23:11:31	install callback ok
+17/12/2010 23:12:39	dll1
+17/12/2010 23:12:39	dll2
+17/12/2010 23:12:40	init td panels
+17/12/2010 23:12:40	1
+17/12/2010 23:12:40	1a
+17/12/2010 23:12:40	dll1
+17/12/2010 23:12:40	dll2
+17/12/2010 23:12:40	1b
+17/12/2010 23:12:40	tdpanel add
+17/12/2010 23:12:40	1a
+17/12/2010 23:12:40	dll1
+17/12/2010 23:12:40	dll2
+17/12/2010 23:12:40	1b
+17/12/2010 23:12:40	tdpanel add
+17/12/2010 23:12:40	1a
+17/12/2010 23:12:40	dll1
+17/12/2010 23:12:40	dll2
+17/12/2010 23:12:40	1b
+17/12/2010 23:12:40	tdpanel add
+17/12/2010 23:12:44	dll1
+17/12/2010 23:12:44	dll2
+17/12/2010 23:12:44	dll1
+17/12/2010 23:12:44	dll2
+17/12/2010 23:12:44	ouverture de [Webcam Classic]
+17/12/2010 23:12:44	device = Conexant 2388x Video Capture
+17/12/2010 23:12:44	device = Webcam Classic
+17/12/2010 23:12:44	bind to [System.__ComObject]
+17/12/2010 23:12:44	... pin ID = 0[Capturer]
+17/12/2010 23:12:44	... pin ID = 0[Capturer]
+17/12/2010 23:12:44	... pin ID = 0[Capturer]
+17/12/2010 23:12:44	... pin ID = 0[Capturer]
+17/12/2010 23:12:44	... pin ID = 0[Capturer]
+17/12/2010 23:12:44	... pin ID = 0[Capturer]
+17/12/2010 23:12:44	... pin ID = 0[Capturer]
+17/12/2010 23:12:44	... pin ID = 0[Capturer]
+17/12/2010 23:12:44	... pin ID = 0[Capturer]
+17/12/2010 23:12:44	... pin ID = 0[Capturer]
+17/12/2010 23:12:44	... pin ID = 0[Capturer]
+17/12/2010 23:12:44	grab pin in [System.__ComObject]
+17/12/2010 23:12:44	setmediatype
+17/12/2010 23:12:45	add source filter
+17/12/2010 23:12:45	add grabber
+17/12/2010 23:12:45	cap pin out 0
+17/12/2010 23:12:45	grab source pin out [System.__ComObject]
+17/12/2010 23:12:45	connect pins
+17/12/2010 23:12:45	connection ok
+17/12/2010 23:12:45	install callback
+17/12/2010 23:12:45	install callback ok
+17/12/2010 23:12:47	avt question
+17/12/2010 23:12:49	mainfrm clos
+17/12/2010 23:12:49	mainfrm close
+17/12/2010 23:12:49	savxml in
+17/12/2010 23:12:49	call savxml
+17/12/2010 23:12:49	call savxml ok
+17/12/2010 23:12:49	savxml ok
+17/12/2010 23:12:49	close file camera
+17/12/2010 23:12:49	signaltostop
+17/12/2010 23:12:49	camera stop
+17/12/2010 23:12:49	camera stop ok
+17/12/2010 23:12:49	camera null
+17/12/2010 23:12:49	camera null
+17/12/2010 23:12:49	closefile ok
+17/12/2010 23:13:55	dll1
+17/12/2010 23:13:55	dll2
+17/12/2010 23:13:56	init td panels
+17/12/2010 23:13:56	1
+17/12/2010 23:13:56	1a
+17/12/2010 23:13:56	dll1
+17/12/2010 23:13:56	dll2
+17/12/2010 23:13:56	1b
+17/12/2010 23:13:56	tdpanel add
+17/12/2010 23:13:56	1a
+17/12/2010 23:13:56	dll1
+17/12/2010 23:13:56	dll2
+17/12/2010 23:13:56	1b
+17/12/2010 23:13:56	tdpanel add
+17/12/2010 23:13:56	1a
+17/12/2010 23:13:56	dll1
+17/12/2010 23:13:56	dll2
+17/12/2010 23:13:56	1b
+17/12/2010 23:13:56	tdpanel add
+17/12/2010 23:14:00	dll1
+17/12/2010 23:14:00	dll2
+17/12/2010 23:14:00	dll1
+17/12/2010 23:14:00	dll2
+17/12/2010 23:14:00	ouverture de [Webcam Classic]
+17/12/2010 23:14:00	device = Conexant 2388x Video Capture
+17/12/2010 23:14:00	device = Webcam Classic
+17/12/2010 23:14:00	bind to [System.__ComObject]
+17/12/2010 23:14:00	... pin ID = 0[Capturer]
+17/12/2010 23:14:00	... pin ID = 0[Capturer]
+17/12/2010 23:14:00	... pin ID = 0[Capturer]
+17/12/2010 23:14:00	... pin ID = 0[Capturer]
+17/12/2010 23:14:00	... pin ID = 0[Capturer]
+17/12/2010 23:14:00	... pin ID = 0[Capturer]
+17/12/2010 23:14:00	... pin ID = 0[Capturer]
+17/12/2010 23:14:00	... pin ID = 0[Capturer]
+17/12/2010 23:14:00	... pin ID = 0[Capturer]
+17/12/2010 23:14:00	... pin ID = 0[Capturer]
+17/12/2010 23:14:00	... pin ID = 0[Capturer]
+17/12/2010 23:14:00	grab pin in [System.__ComObject]
+17/12/2010 23:14:00	setmediatype
+17/12/2010 23:14:00	add source filter
+17/12/2010 23:14:00	add grabber
+17/12/2010 23:14:00	cap pin out 0
+17/12/2010 23:14:00	grab source pin out [System.__ComObject]
+17/12/2010 23:14:00	connect pins
+17/12/2010 23:14:00	connection ok
+17/12/2010 23:14:00	install callback
+17/12/2010 23:14:00	install callback ok
+17/12/2010 23:15:14	avt question
+17/12/2010 23:15:15	mainfrm clos
+17/12/2010 23:15:15	mainfrm close
+17/12/2010 23:15:15	savxml in
+17/12/2010 23:15:15	call savxml
+17/12/2010 23:15:15	call savxml ok
+17/12/2010 23:15:15	savxml ok
+17/12/2010 23:15:15	close file camera
+17/12/2010 23:15:15	signaltostop
+17/12/2010 23:15:15	camera stop
+17/12/2010 23:15:15	camera stop ok
+17/12/2010 23:15:15	camera null
+17/12/2010 23:15:15	camera null
+17/12/2010 23:15:15	closefile ok
+17/12/2010 23:15:31	dll1
+17/12/2010 23:15:31	dll2
+17/12/2010 23:15:32	init td panels
+17/12/2010 23:15:32	1
+17/12/2010 23:15:32	1a
+17/12/2010 23:15:32	dll1
+17/12/2010 23:15:32	dll2
+17/12/2010 23:15:32	1b
+17/12/2010 23:15:32	tdpanel add
+17/12/2010 23:15:32	1a
+17/12/2010 23:15:32	dll1
+17/12/2010 23:15:32	dll2
+17/12/2010 23:15:32	1b
+17/12/2010 23:15:32	tdpanel add
+17/12/2010 23:15:32	1a
+17/12/2010 23:15:32	dll1
+17/12/2010 23:15:32	dll2
+17/12/2010 23:15:32	1b
+17/12/2010 23:15:32	tdpanel add
+17/12/2010 23:15:36	dll1
+17/12/2010 23:15:36	dll2
+17/12/2010 23:15:36	dll1
+17/12/2010 23:15:36	dll2
+17/12/2010 23:15:36	ouverture de [Webcam Classic]
+17/12/2010 23:15:36	device = Conexant 2388x Video Capture
+17/12/2010 23:15:36	device = Webcam Classic
+17/12/2010 23:15:36	bind to [System.__ComObject]
+17/12/2010 23:15:36	... pin ID = 0[Capturer]
+17/12/2010 23:15:36	... pin ID = 0[Capturer]
+17/12/2010 23:15:36	... pin ID = 0[Capturer]
+17/12/2010 23:15:36	... pin ID = 0[Capturer]
+17/12/2010 23:15:36	... pin ID = 0[Capturer]
+17/12/2010 23:15:36	... pin ID = 0[Capturer]
+17/12/2010 23:15:36	... pin ID = 0[Capturer]
+17/12/2010 23:15:36	... pin ID = 0[Capturer]
+17/12/2010 23:15:36	... pin ID = 0[Capturer]
+17/12/2010 23:15:36	... pin ID = 0[Capturer]
+17/12/2010 23:15:37	... pin ID = 0[Capturer]
+17/12/2010 23:15:37	grab pin in [System.__ComObject]
+17/12/2010 23:15:37	setmediatype
+17/12/2010 23:15:37	add source filter
+17/12/2010 23:15:37	add grabber
+17/12/2010 23:15:37	cap pin out 0
+17/12/2010 23:15:37	grab source pin out [System.__ComObject]
+17/12/2010 23:15:37	connect pins
+17/12/2010 23:15:37	connection ok
+17/12/2010 23:15:37	install callback
+17/12/2010 23:15:37	install callback ok
+17/12/2010 23:16:15	avt question
+17/12/2010 23:16:16	mainfrm clos
+17/12/2010 23:16:16	mainfrm close
+17/12/2010 23:16:16	savxml in
+17/12/2010 23:16:16	call savxml
+17/12/2010 23:16:16	call savxml ok
+17/12/2010 23:16:16	savxml ok
+17/12/2010 23:16:16	close file camera
+17/12/2010 23:16:16	signaltostop
+17/12/2010 23:16:16	camera stop
+17/12/2010 23:16:16	camera stop ok
+17/12/2010 23:16:16	camera null
+17/12/2010 23:16:16	camera null
+17/12/2010 23:16:16	closefile ok
+17/12/2010 23:16:37	dll1
+17/12/2010 23:16:37	dll2
+17/12/2010 23:16:37	init td panels
+17/12/2010 23:16:37	1
+17/12/2010 23:16:37	1a
+17/12/2010 23:16:37	dll1
+17/12/2010 23:16:37	dll2
+17/12/2010 23:16:37	1b
+17/12/2010 23:16:37	tdpanel add
+17/12/2010 23:16:37	1a
+17/12/2010 23:16:37	dll1
+17/12/2010 23:16:37	dll2
+17/12/2010 23:16:38	1b
+17/12/2010 23:16:38	tdpanel add
+17/12/2010 23:16:38	1a
+17/12/2010 23:16:38	dll1
+17/12/2010 23:16:38	dll2
+17/12/2010 23:16:38	1b
+17/12/2010 23:16:38	tdpanel add
+17/12/2010 23:16:42	dll1
+17/12/2010 23:16:42	dll2
+17/12/2010 23:16:42	dll1
+17/12/2010 23:16:42	dll2
+17/12/2010 23:16:42	ouverture de [Webcam Classic]
+17/12/2010 23:16:42	device = Conexant 2388x Video Capture
+17/12/2010 23:16:42	device = Webcam Classic
+17/12/2010 23:16:42	bind to [System.__ComObject]
+17/12/2010 23:16:42	... pin ID = 0[Capturer]
+17/12/2010 23:16:42	... pin ID = 0[Capturer]
+17/12/2010 23:16:42	... pin ID = 0[Capturer]
+17/12/2010 23:16:42	... pin ID = 0[Capturer]
+17/12/2010 23:16:42	... pin ID = 0[Capturer]
+17/12/2010 23:16:42	... pin ID = 0[Capturer]
+17/12/2010 23:16:42	... pin ID = 0[Capturer]
+17/12/2010 23:16:42	... pin ID = 0[Capturer]
+17/12/2010 23:16:42	... pin ID = 0[Capturer]
+17/12/2010 23:16:42	... pin ID = 0[Capturer]
+17/12/2010 23:16:42	... pin ID = 0[Capturer]
+17/12/2010 23:16:42	grab pin in [System.__ComObject]
+17/12/2010 23:16:42	setmediatype
+17/12/2010 23:16:42	add source filter
+17/12/2010 23:16:42	add grabber
+17/12/2010 23:16:42	cap pin out 0
+17/12/2010 23:16:42	grab source pin out [System.__ComObject]
+17/12/2010 23:16:42	connect pins
+17/12/2010 23:16:42	connection ok
+17/12/2010 23:16:42	install callback
+17/12/2010 23:16:42	install callback ok
+17/12/2010 23:16:45	avt question
+17/12/2010 23:16:46	mainfrm clos
+17/12/2010 23:16:46	mainfrm close
+17/12/2010 23:16:46	savxml in
+17/12/2010 23:16:46	call savxml
+17/12/2010 23:16:46	call savxml ok
+17/12/2010 23:16:46	savxml ok
+17/12/2010 23:16:46	close file camera
+17/12/2010 23:16:46	signaltostop
+17/12/2010 23:16:46	camera stop
+17/12/2010 23:16:46	camera stop ok
+17/12/2010 23:16:46	camera null
+17/12/2010 23:16:46	camera null
+17/12/2010 23:16:46	closefile ok
+17/12/2010 23:16:48	avt question
+17/12/2010 23:16:49	mainfrm clos
+17/12/2010 23:16:49	mainfrm close
+17/12/2010 23:16:49	savxml in
+17/12/2010 23:16:49	call savxml
+17/12/2010 23:16:49	call savxml ok
+17/12/2010 23:16:49	savxml ok
+17/12/2010 23:16:49	closefile ok
+17/12/2010 23:17:12	dll1
+17/12/2010 23:17:12	dll2
+17/12/2010 23:17:12	init td panels
+17/12/2010 23:17:12	1
+17/12/2010 23:17:12	1a
+17/12/2010 23:17:12	dll1
+17/12/2010 23:17:12	dll2
+17/12/2010 23:17:12	1b
+17/12/2010 23:17:12	tdpanel add
+17/12/2010 23:17:12	1a
+17/12/2010 23:17:12	dll1
+17/12/2010 23:17:12	dll2
+17/12/2010 23:17:12	1b
+17/12/2010 23:17:12	tdpanel add
+17/12/2010 23:17:12	1a
+17/12/2010 23:17:12	dll1
+17/12/2010 23:17:12	dll2
+17/12/2010 23:17:12	1b
+17/12/2010 23:17:12	tdpanel add
+17/12/2010 23:17:16	dll1
+17/12/2010 23:17:16	dll2
+17/12/2010 23:17:20	avt question
+17/12/2010 23:17:21	mainfrm clos
+17/12/2010 23:17:21	mainfrm close
+17/12/2010 23:17:21	savxml in
+17/12/2010 23:17:21	call savxml
+17/12/2010 23:17:21	call savxml ok
+17/12/2010 23:17:21	savxml ok
+17/12/2010 23:17:21	closefile ok
+17/12/2010 23:25:09	dll1
+17/12/2010 23:25:09	dll2
+17/12/2010 23:25:10	init td panels
+17/12/2010 23:25:10	1
+17/12/2010 23:25:10	1a
+17/12/2010 23:25:10	dll1
+17/12/2010 23:25:10	dll2
+17/12/2010 23:25:10	1b
+17/12/2010 23:25:10	tdpanel add
+17/12/2010 23:25:10	1a
+17/12/2010 23:25:10	dll1
+17/12/2010 23:25:10	dll2
+17/12/2010 23:25:10	1b
+17/12/2010 23:25:10	tdpanel add
+17/12/2010 23:25:10	1a
+17/12/2010 23:25:10	dll1
+17/12/2010 23:25:10	dll2
+17/12/2010 23:25:10	1b
+17/12/2010 23:25:10	tdpanel add
+17/12/2010 23:25:14	dll1
+17/12/2010 23:25:14	dll2
+17/12/2010 23:25:21	dll1
+17/12/2010 23:25:21	dll2
+17/12/2010 23:25:21	dll1
+17/12/2010 23:25:21	dll2
+17/12/2010 23:25:21	ouverture de [Webcam Classic]
+17/12/2010 23:25:21	device = Conexant 2388x Video Capture
+17/12/2010 23:25:21	device = Webcam Classic
+17/12/2010 23:25:21	bind to [System.__ComObject]
+17/12/2010 23:25:21	... pin ID = 0[Capturer]
+17/12/2010 23:25:21	... pin ID = 0[Capturer]
+17/12/2010 23:25:21	... pin ID = 0[Capturer]
+17/12/2010 23:25:21	... pin ID = 0[Capturer]
+17/12/2010 23:25:21	... pin ID = 0[Capturer]
+17/12/2010 23:25:21	... pin ID = 0[Capturer]
+17/12/2010 23:25:21	... pin ID = 0[Capturer]
+17/12/2010 23:25:21	... pin ID = 0[Capturer]
+17/12/2010 23:25:21	... pin ID = 0[Capturer]
+17/12/2010 23:25:21	... pin ID = 0[Capturer]
+17/12/2010 23:25:21	... pin ID = 0[Capturer]
+17/12/2010 23:25:21	grab pin in [System.__ComObject]
+17/12/2010 23:25:21	setmediatype
+17/12/2010 23:25:21	add source filter
+17/12/2010 23:25:21	add grabber
+17/12/2010 23:25:21	cap pin out 0
+17/12/2010 23:25:21	grab source pin out [System.__ComObject]
+17/12/2010 23:25:24	connect pins
+17/12/2010 23:25:24	connection ok
+17/12/2010 23:25:24	install callback
+17/12/2010 23:25:24	install callback ok
+17/12/2010 23:27:50	dll1
+17/12/2010 23:27:50	dll2
+17/12/2010 23:27:50	init td panels
+17/12/2010 23:27:50	1
+17/12/2010 23:27:50	1a
+17/12/2010 23:27:50	dll1
+17/12/2010 23:27:50	dll2
+17/12/2010 23:27:50	1b
+17/12/2010 23:27:50	tdpanel add
+17/12/2010 23:27:50	1a
+17/12/2010 23:27:50	dll1
+17/12/2010 23:27:50	dll2
+17/12/2010 23:27:50	1b
+17/12/2010 23:27:50	tdpanel add
+17/12/2010 23:27:50	1a
+17/12/2010 23:27:50	dll1
+17/12/2010 23:27:50	dll2
+17/12/2010 23:27:50	1b
+17/12/2010 23:27:50	tdpanel add
+17/12/2010 23:27:54	dll1
+17/12/2010 23:27:54	dll2
+17/12/2010 23:28:03	dll1
+17/12/2010 23:28:03	dll2
+17/12/2010 23:28:03	dll1
+17/12/2010 23:28:03	dll2
+17/12/2010 23:28:03	ouverture de [Webcam Classic]
+17/12/2010 23:28:03	device = Conexant 2388x Video Capture
+17/12/2010 23:28:03	device = Webcam Classic
+17/12/2010 23:28:03	bind to [System.__ComObject]
+17/12/2010 23:28:03	... pin ID = 0[Capturer]
+17/12/2010 23:28:03	... pin ID = 0[Capturer]
+17/12/2010 23:28:03	... pin ID = 0[Capturer]
+17/12/2010 23:28:03	... pin ID = 0[Capturer]
+17/12/2010 23:28:03	... pin ID = 0[Capturer]
+17/12/2010 23:28:03	... pin ID = 0[Capturer]
+17/12/2010 23:28:03	... pin ID = 0[Capturer]
+17/12/2010 23:28:03	... pin ID = 0[Capturer]
+17/12/2010 23:28:03	... pin ID = 0[Capturer]
+17/12/2010 23:28:03	... pin ID = 0[Capturer]
+17/12/2010 23:28:03	... pin ID = 0[Capturer]
+17/12/2010 23:28:03	grab pin in [System.__ComObject]
+17/12/2010 23:28:03	setmediatype
+17/12/2010 23:28:03	add source filter
+17/12/2010 23:28:03	add grabber
+17/12/2010 23:28:03	cap pin out 0
+17/12/2010 23:28:03	grab source pin out [System.__ComObject]
+17/12/2010 23:28:07	connect pins
+17/12/2010 23:28:07	connection ok
+17/12/2010 23:28:07	install callback
+17/12/2010 23:28:07	install callback ok
+17/12/2010 23:28:33	avt question
+17/12/2010 23:28:34	mainfrm clos
+17/12/2010 23:28:34	mainfrm close
+17/12/2010 23:28:34	savxml in
+17/12/2010 23:28:34	call savxml
+17/12/2010 23:28:34	call savxml ok
+17/12/2010 23:28:34	savxml ok
+17/12/2010 23:28:34	close file camera
+17/12/2010 23:28:34	signaltostop
+17/12/2010 23:28:34	camera stop
+17/12/2010 23:28:34	camera stop ok
+17/12/2010 23:28:34	camera null
+17/12/2010 23:28:34	camera null
+17/12/2010 23:28:34	closefile ok
+17/12/2010 23:29:25	dll1
+17/12/2010 23:29:25	dll2
+17/12/2010 23:29:25	init td panels
+17/12/2010 23:29:25	1
+17/12/2010 23:29:25	1a
+17/12/2010 23:29:25	dll1
+17/12/2010 23:29:25	dll2
+17/12/2010 23:29:25	1b
+17/12/2010 23:29:25	tdpanel add
+17/12/2010 23:29:25	1a
+17/12/2010 23:29:25	dll1
+17/12/2010 23:29:25	dll2
+17/12/2010 23:29:25	1b
+17/12/2010 23:29:25	tdpanel add
+17/12/2010 23:29:25	1a
+17/12/2010 23:29:25	dll1
+17/12/2010 23:29:25	dll2
+17/12/2010 23:29:25	1b
+17/12/2010 23:29:25	tdpanel add
+17/12/2010 23:29:29	dll1
+17/12/2010 23:29:29	dll2
+17/12/2010 23:29:29	dll1
+17/12/2010 23:29:29	dll2
+17/12/2010 23:29:29	ouverture de [Webcam Classic]
+17/12/2010 23:29:29	device = Conexant 2388x Video Capture
+17/12/2010 23:29:29	device = Webcam Classic
+17/12/2010 23:29:29	bind to [System.__ComObject]
+17/12/2010 23:29:29	... pin ID = 0[Capturer]
+17/12/2010 23:29:29	... pin ID = 0[Capturer]
+17/12/2010 23:29:29	... pin ID = 0[Capturer]
+17/12/2010 23:29:29	... pin ID = 0[Capturer]
+17/12/2010 23:29:29	... pin ID = 0[Capturer]
+17/12/2010 23:29:29	... pin ID = 0[Capturer]
+17/12/2010 23:29:29	... pin ID = 0[Capturer]
+17/12/2010 23:29:29	... pin ID = 0[Capturer]
+17/12/2010 23:29:29	... pin ID = 0[Capturer]
+17/12/2010 23:29:29	... pin ID = 0[Capturer]
+17/12/2010 23:29:29	... pin ID = 0[Capturer]
+17/12/2010 23:29:29	grab pin in [System.__ComObject]
+17/12/2010 23:29:29	setmediatype
+17/12/2010 23:29:29	add source filter
+17/12/2010 23:29:30	add grabber
+17/12/2010 23:29:30	cap pin out 0
+17/12/2010 23:29:30	grab source pin out [System.__ComObject]
+17/12/2010 23:29:30	connect pins
+17/12/2010 23:29:30	connection ok
+17/12/2010 23:29:30	install callback
+17/12/2010 23:29:30	install callback ok
+17/12/2010 23:30:22	avt question
+17/12/2010 23:30:24	mainfrm clos
+17/12/2010 23:30:24	mainfrm close
+17/12/2010 23:30:24	savxml in
+17/12/2010 23:30:24	call savxml
+17/12/2010 23:30:24	call savxml ok
+17/12/2010 23:30:24	savxml ok
+17/12/2010 23:30:24	close file camera
+17/12/2010 23:30:24	signaltostop
+17/12/2010 23:30:24	camera stop
+17/12/2010 23:30:24	camera stop ok
+17/12/2010 23:30:24	camera null
+17/12/2010 23:30:24	camera null
+17/12/2010 23:30:24	closefile ok
+17/12/2010 23:30:45	dll1
+17/12/2010 23:30:45	dll2
+17/12/2010 23:30:46	init td panels
+17/12/2010 23:30:46	1
+17/12/2010 23:30:46	1a
+17/12/2010 23:30:46	dll1
+17/12/2010 23:30:46	dll2
+17/12/2010 23:30:46	1b
+17/12/2010 23:30:46	tdpanel add
+17/12/2010 23:30:46	1a
+17/12/2010 23:30:46	dll1
+17/12/2010 23:30:46	dll2
+17/12/2010 23:30:46	1b
+17/12/2010 23:30:46	tdpanel add
+17/12/2010 23:30:46	1a
+17/12/2010 23:30:46	dll1
+17/12/2010 23:30:46	dll2
+17/12/2010 23:30:46	1b
+17/12/2010 23:30:46	tdpanel add
+17/12/2010 23:30:50	dll1
+17/12/2010 23:30:50	dll2
+17/12/2010 23:30:50	dll1
+17/12/2010 23:30:50	dll2
+17/12/2010 23:30:50	ouverture de [Webcam Classic]
+17/12/2010 23:30:50	device = Conexant 2388x Video Capture
+17/12/2010 23:30:50	device = Webcam Classic
+17/12/2010 23:30:50	bind to [System.__ComObject]
+17/12/2010 23:30:50	... pin ID = 0[Capturer]
+17/12/2010 23:30:50	... pin ID = 0[Capturer]
+17/12/2010 23:30:50	... pin ID = 0[Capturer]
+17/12/2010 23:30:50	... pin ID = 0[Capturer]
+17/12/2010 23:30:50	... pin ID = 0[Capturer]
+17/12/2010 23:30:50	... pin ID = 0[Capturer]
+17/12/2010 23:30:50	... pin ID = 0[Capturer]
+17/12/2010 23:30:50	... pin ID = 0[Capturer]
+17/12/2010 23:30:50	... pin ID = 0[Capturer]
+17/12/2010 23:30:50	... pin ID = 0[Capturer]
+17/12/2010 23:30:50	... pin ID = 0[Capturer]
+17/12/2010 23:30:50	grab pin in [System.__ComObject]
+17/12/2010 23:30:50	setmediatype
+17/12/2010 23:30:51	add source filter
+17/12/2010 23:30:51	add grabber
+17/12/2010 23:30:51	cap pin out 0
+17/12/2010 23:30:51	grab source pin out [System.__ComObject]
+17/12/2010 23:30:51	connect pins
+17/12/2010 23:30:51	connection ok
+17/12/2010 23:30:51	install callback
+17/12/2010 23:30:51	install callback ok
+17/12/2010 23:38:42	avt question
+17/12/2010 23:38:44	mainfrm clos
+17/12/2010 23:38:44	mainfrm close
+17/12/2010 23:38:44	savxml in
+17/12/2010 23:38:44	call savxml
+17/12/2010 23:38:44	call savxml ok
+17/12/2010 23:38:44	savxml ok
+17/12/2010 23:38:44	close file camera
+17/12/2010 23:38:44	signaltostop
+17/12/2010 23:38:44	camera stop
+17/12/2010 23:38:44	camera stop ok
+17/12/2010 23:38:44	camera null
+17/12/2010 23:38:44	camera null
+17/12/2010 23:38:44	closefile ok
+17/12/2010 23:47:08	dll1
+17/12/2010 23:47:08	dll2
+17/12/2010 23:47:09	init td panels
+17/12/2010 23:47:09	1
+17/12/2010 23:47:09	1a
+17/12/2010 23:47:09	dll1
+17/12/2010 23:47:09	dll2
+17/12/2010 23:47:09	1b
+17/12/2010 23:47:09	tdpanel add
+17/12/2010 23:47:09	1a
+17/12/2010 23:47:10	dll1
+17/12/2010 23:47:10	dll2
+17/12/2010 23:47:10	1b
+17/12/2010 23:47:10	tdpanel add
+17/12/2010 23:47:10	1a
+17/12/2010 23:47:10	dll1
+17/12/2010 23:47:10	dll2
+17/12/2010 23:47:10	1b
+17/12/2010 23:47:10	tdpanel add
+17/12/2010 23:47:14	dll1
+17/12/2010 23:47:14	dll2
+17/12/2010 23:47:14	dll1
+17/12/2010 23:47:14	dll2
+17/12/2010 23:47:14	ouverture de [Webcam Classic]
+17/12/2010 23:47:14	device = Conexant 2388x Video Capture
+17/12/2010 23:47:14	device = Webcam Classic
+17/12/2010 23:47:14	bind to [System.__ComObject]
+17/12/2010 23:47:14	... pin ID = 0[Capturer]
+17/12/2010 23:47:14	... pin ID = 0[Capturer]
+17/12/2010 23:47:14	... pin ID = 0[Capturer]
+17/12/2010 23:47:14	... pin ID = 0[Capturer]
+17/12/2010 23:47:14	... pin ID = 0[Capturer]
+17/12/2010 23:47:14	... pin ID = 0[Capturer]
+17/12/2010 23:47:14	... pin ID = 0[Capturer]
+17/12/2010 23:47:14	... pin ID = 0[Capturer]
+17/12/2010 23:47:14	... pin ID = 0[Capturer]
+17/12/2010 23:47:14	... pin ID = 0[Capturer]
+17/12/2010 23:47:14	... pin ID = 0[Capturer]
+17/12/2010 23:47:14	grab pin in [System.__ComObject]
+17/12/2010 23:47:14	setmediatype
+17/12/2010 23:47:14	add source filter
+17/12/2010 23:47:14	add grabber
+17/12/2010 23:47:14	cap pin out 0
+17/12/2010 23:47:14	grab source pin out [System.__ComObject]
+17/12/2010 23:47:14	connect pins
+17/12/2010 23:47:14	connection ok
+17/12/2010 23:47:14	install callback
+17/12/2010 23:47:14	install callback ok
+17/12/2010 23:48:02	avt question
+17/12/2010 23:48:04	mainfrm clos
+17/12/2010 23:48:04	mainfrm close
+17/12/2010 23:48:04	savxml in
+17/12/2010 23:48:04	call savxml
+17/12/2010 23:48:04	call savxml ok
+17/12/2010 23:48:04	savxml ok
+17/12/2010 23:48:04	close file camera
+17/12/2010 23:48:04	signaltostop
+17/12/2010 23:48:04	camera stop
+17/12/2010 23:48:04	camera stop ok
+17/12/2010 23:48:04	camera null
+17/12/2010 23:48:04	camera null
+17/12/2010 23:48:04	closefile ok
+17/12/2010 23:49:23	dll1
+17/12/2010 23:49:23	dll2
+17/12/2010 23:49:23	init td panels
+17/12/2010 23:49:23	1
+17/12/2010 23:49:23	1a
+17/12/2010 23:49:23	dll1
+17/12/2010 23:49:23	dll2
+17/12/2010 23:49:23	1b
+17/12/2010 23:49:23	tdpanel add
+17/12/2010 23:49:23	1a
+17/12/2010 23:49:23	dll1
+17/12/2010 23:49:23	dll2
+17/12/2010 23:49:23	1b
+17/12/2010 23:49:23	tdpanel add
+17/12/2010 23:49:23	1a
+17/12/2010 23:49:23	dll1
+17/12/2010 23:49:23	dll2
+17/12/2010 23:49:23	1b
+17/12/2010 23:49:23	tdpanel add
+17/12/2010 23:49:28	dll1
+17/12/2010 23:49:28	dll2
+17/12/2010 23:49:28	dll1
+17/12/2010 23:49:28	dll2
+17/12/2010 23:49:28	ouverture de [Webcam Classic]
+17/12/2010 23:49:28	device = Conexant 2388x Video Capture
+17/12/2010 23:49:28	device = Webcam Classic
+17/12/2010 23:49:28	bind to [System.__ComObject]
+17/12/2010 23:49:28	... pin ID = 0[Capturer]
+17/12/2010 23:49:28	... pin ID = 0[Capturer]
+17/12/2010 23:49:28	... pin ID = 0[Capturer]
+17/12/2010 23:49:28	... pin ID = 0[Capturer]
+17/12/2010 23:49:28	... pin ID = 0[Capturer]
+17/12/2010 23:49:28	... pin ID = 0[Capturer]
+17/12/2010 23:49:28	... pin ID = 0[Capturer]
+17/12/2010 23:49:28	... pin ID = 0[Capturer]
+17/12/2010 23:49:28	... pin ID = 0[Capturer]
+17/12/2010 23:49:28	... pin ID = 0[Capturer]
+17/12/2010 23:49:28	... pin ID = 0[Capturer]
+17/12/2010 23:49:28	grab pin in [System.__ComObject]
+17/12/2010 23:49:28	setmediatype
+17/12/2010 23:49:28	add source filter
+17/12/2010 23:49:28	add grabber
+17/12/2010 23:49:28	cap pin out 0
+17/12/2010 23:49:28	grab source pin out [System.__ComObject]
+17/12/2010 23:49:28	connect pins
+17/12/2010 23:49:28	connection ok
+17/12/2010 23:49:28	install callback
+17/12/2010 23:49:28	install callback ok
+17/12/2010 23:52:38	dll1
+17/12/2010 23:52:38	dll2
+17/12/2010 23:52:39	init td panels
+17/12/2010 23:52:39	1
+17/12/2010 23:52:39	1a
+17/12/2010 23:52:39	dll1
+17/12/2010 23:52:39	dll2
+17/12/2010 23:52:39	1b
+17/12/2010 23:52:39	tdpanel add
+17/12/2010 23:52:39	1a
+17/12/2010 23:52:39	dll1
+17/12/2010 23:52:39	dll2
+17/12/2010 23:52:39	1b
+17/12/2010 23:52:39	tdpanel add
+17/12/2010 23:52:39	1a
+17/12/2010 23:52:39	dll1
+17/12/2010 23:52:39	dll2
+17/12/2010 23:52:39	1b
+17/12/2010 23:52:39	tdpanel add
+17/12/2010 23:52:43	dll1
+17/12/2010 23:52:43	dll2
+17/12/2010 23:52:43	dll1
+17/12/2010 23:52:43	dll2
+17/12/2010 23:52:44	ouverture de [Webcam Classic]
+17/12/2010 23:52:44	device = Conexant 2388x Video Capture
+17/12/2010 23:52:44	device = Webcam Classic
+17/12/2010 23:52:44	bind to [System.__ComObject]
+17/12/2010 23:52:44	... pin ID = 0[Capturer]
+17/12/2010 23:52:44	... pin ID = 0[Capturer]
+17/12/2010 23:52:44	... pin ID = 0[Capturer]
+17/12/2010 23:52:44	... pin ID = 0[Capturer]
+17/12/2010 23:52:44	... pin ID = 0[Capturer]
+17/12/2010 23:52:44	... pin ID = 0[Capturer]
+17/12/2010 23:52:44	... pin ID = 0[Capturer]
+17/12/2010 23:52:44	... pin ID = 0[Capturer]
+17/12/2010 23:52:44	... pin ID = 0[Capturer]
+17/12/2010 23:52:44	... pin ID = 0[Capturer]
+17/12/2010 23:52:44	... pin ID = 0[Capturer]
+17/12/2010 23:52:44	grab pin in [System.__ComObject]
+17/12/2010 23:52:44	setmediatype
+17/12/2010 23:52:44	add source filter
+17/12/2010 23:52:44	add grabber
+17/12/2010 23:52:44	cap pin out 0
+17/12/2010 23:52:44	grab source pin out [System.__ComObject]
+17/12/2010 23:52:44	connect pins
+17/12/2010 23:52:44	connection ok
+17/12/2010 23:52:44	install callback
+17/12/2010 23:52:44	install callback ok
+17/12/2010 23:55:46	dll1
+17/12/2010 23:55:46	dll2
+17/12/2010 23:55:47	init td panels
+17/12/2010 23:55:47	1
+17/12/2010 23:55:47	1a
+17/12/2010 23:55:47	dll1
+17/12/2010 23:55:47	dll2
+17/12/2010 23:55:47	1b
+17/12/2010 23:55:47	tdpanel add
+17/12/2010 23:55:47	1a
+17/12/2010 23:55:47	dll1
+17/12/2010 23:55:47	dll2
+17/12/2010 23:55:47	1b
+17/12/2010 23:55:47	tdpanel add
+17/12/2010 23:55:47	1a
+17/12/2010 23:55:47	dll1
+17/12/2010 23:55:47	dll2
+17/12/2010 23:55:47	1b
+17/12/2010 23:55:47	tdpanel add
+17/12/2010 23:55:51	dll1
+17/12/2010 23:55:51	dll2
+17/12/2010 23:55:51	dll1
+17/12/2010 23:55:51	dll2
+17/12/2010 23:55:52	ouverture de [Webcam Classic]
+17/12/2010 23:55:52	device = Conexant 2388x Video Capture
+17/12/2010 23:55:52	device = Webcam Classic
+17/12/2010 23:55:52	bind to [System.__ComObject]
+17/12/2010 23:55:52	... pin ID = 0[Capturer]
+17/12/2010 23:55:52	... pin ID = 0[Capturer]
+17/12/2010 23:55:52	... pin ID = 0[Capturer]
+17/12/2010 23:55:52	... pin ID = 0[Capturer]
+17/12/2010 23:55:52	... pin ID = 0[Capturer]
+17/12/2010 23:55:52	... pin ID = 0[Capturer]
+17/12/2010 23:55:52	... pin ID = 0[Capturer]
+17/12/2010 23:55:52	... pin ID = 0[Capturer]
+17/12/2010 23:55:52	... pin ID = 0[Capturer]
+17/12/2010 23:55:52	... pin ID = 0[Capturer]
+17/12/2010 23:55:52	... pin ID = 0[Capturer]
+17/12/2010 23:55:52	grab pin in [System.__ComObject]
+17/12/2010 23:55:52	setmediatype
+17/12/2010 23:55:52	add source filter
+17/12/2010 23:55:52	add grabber
+17/12/2010 23:55:52	cap pin out 0
+17/12/2010 23:55:52	grab source pin out [System.__ComObject]
+17/12/2010 23:55:52	connect pins
+17/12/2010 23:55:52	connection ok
+17/12/2010 23:55:52	install callback
+17/12/2010 23:55:52	install callback ok
+18/12/2010 00:00:30	avt question
+18/12/2010 00:00:32	mainfrm clos
+18/12/2010 00:00:32	mainfrm close
+18/12/2010 00:00:32	savxml in
+18/12/2010 00:00:32	call savxml
+18/12/2010 00:00:32	call savxml ok
+18/12/2010 00:00:32	savxml ok
+18/12/2010 00:00:32	close file camera
+18/12/2010 00:00:32	signaltostop
+18/12/2010 00:00:32	camera stop
+18/12/2010 00:00:32	camera stop ok
+18/12/2010 00:00:32	camera null
+18/12/2010 00:00:32	camera null
+18/12/2010 00:00:32	closefile ok
+18/12/2010 00:04:44	dll1
+18/12/2010 00:04:44	dll2
+18/12/2010 00:04:45	init td panels
+18/12/2010 00:04:45	1
+18/12/2010 00:04:45	1a
+18/12/2010 00:04:45	dll1
+18/12/2010 00:04:45	dll2
+18/12/2010 00:04:45	1b
+18/12/2010 00:04:45	tdpanel add
+18/12/2010 00:04:45	1a
+18/12/2010 00:04:45	dll1
+18/12/2010 00:04:45	dll2
+18/12/2010 00:04:45	1b
+18/12/2010 00:04:45	tdpanel add
+18/12/2010 00:04:45	1a
+18/12/2010 00:04:45	dll1
+18/12/2010 00:04:45	dll2
+18/12/2010 00:04:45	1b
+18/12/2010 00:04:45	tdpanel add
+18/12/2010 00:04:49	dll1
+18/12/2010 00:04:49	dll2
+18/12/2010 00:04:49	dll1
+18/12/2010 00:04:49	dll2
+18/12/2010 00:04:49	ouverture de [Webcam Classic]
+18/12/2010 00:04:49	device = Conexant 2388x Video Capture
+18/12/2010 00:04:49	device = Webcam Classic
+18/12/2010 00:04:49	bind to [System.__ComObject]
+18/12/2010 00:04:49	... pin ID = 0[Capturer]
+18/12/2010 00:04:49	... pin ID = 0[Capturer]
+18/12/2010 00:04:49	... pin ID = 0[Capturer]
+18/12/2010 00:04:49	... pin ID = 0[Capturer]
+18/12/2010 00:04:49	... pin ID = 0[Capturer]
+18/12/2010 00:04:49	... pin ID = 0[Capturer]
+18/12/2010 00:04:49	... pin ID = 0[Capturer]
+18/12/2010 00:04:49	... pin ID = 0[Capturer]
+18/12/2010 00:04:49	... pin ID = 0[Capturer]
+18/12/2010 00:04:49	... pin ID = 0[Capturer]
+18/12/2010 00:04:49	... pin ID = 0[Capturer]
+18/12/2010 00:04:49	grab pin in [System.__ComObject]
+18/12/2010 00:04:49	setmediatype
+18/12/2010 00:04:49	add source filter
+18/12/2010 00:04:49	add grabber
+18/12/2010 00:04:49	cap pin out 0
+18/12/2010 00:04:49	grab source pin out [System.__ComObject]
+18/12/2010 00:04:49	connect pins
+18/12/2010 00:04:49	connection ok
+18/12/2010 00:04:49	install callback
+18/12/2010 00:04:49	install callback ok
+18/12/2010 00:10:20	dll1
+18/12/2010 00:10:20	dll2
+18/12/2010 00:10:21	init td panels
+18/12/2010 00:10:21	1
+18/12/2010 00:10:21	1a
+18/12/2010 00:10:21	dll1
+18/12/2010 00:10:21	dll2
+18/12/2010 00:10:21	1b
+18/12/2010 00:10:21	tdpanel add
+18/12/2010 00:10:21	1a
+18/12/2010 00:10:21	dll1
+18/12/2010 00:10:21	dll2
+18/12/2010 00:10:21	1b
+18/12/2010 00:10:21	tdpanel add
+18/12/2010 00:10:21	1a
+18/12/2010 00:10:21	dll1
+18/12/2010 00:10:21	dll2
+18/12/2010 00:10:21	1b
+18/12/2010 00:10:21	tdpanel add
+18/12/2010 00:10:26	dll1
+18/12/2010 00:10:26	dll2
+18/12/2010 00:10:26	dll1
+18/12/2010 00:10:26	dll2
+18/12/2010 00:10:26	ouverture de [Webcam Classic]
+18/12/2010 00:10:26	device = Conexant 2388x Video Capture
+18/12/2010 00:10:26	device = Webcam Classic
+18/12/2010 00:10:26	bind to [System.__ComObject]
+18/12/2010 00:10:26	... pin ID = 0[Capturer]
+18/12/2010 00:10:26	... pin ID = 0[Capturer]
+18/12/2010 00:10:26	... pin ID = 0[Capturer]
+18/12/2010 00:10:26	... pin ID = 0[Capturer]
+18/12/2010 00:10:26	... pin ID = 0[Capturer]
+18/12/2010 00:10:26	... pin ID = 0[Capturer]
+18/12/2010 00:10:26	... pin ID = 0[Capturer]
+18/12/2010 00:10:26	... pin ID = 0[Capturer]
+18/12/2010 00:10:26	... pin ID = 0[Capturer]
+18/12/2010 00:10:26	... pin ID = 0[Capturer]
+18/12/2010 00:10:26	... pin ID = 0[Capturer]
+18/12/2010 00:10:26	grab pin in [System.__ComObject]
+18/12/2010 00:10:26	setmediatype
+18/12/2010 00:10:26	add source filter
+18/12/2010 00:10:26	add grabber
+18/12/2010 00:10:26	cap pin out 0
+18/12/2010 00:10:26	grab source pin out [System.__ComObject]
+18/12/2010 00:10:26	connect pins
+18/12/2010 00:10:26	connection ok
+18/12/2010 00:10:26	install callback
+18/12/2010 00:10:26	install callback ok
+18/12/2010 00:12:02	avt question
+18/12/2010 00:12:04	mainfrm clos
+18/12/2010 00:12:04	mainfrm close
+18/12/2010 00:12:04	savxml in
+18/12/2010 00:12:04	call savxml
+18/12/2010 00:12:04	call savxml ok
+18/12/2010 00:12:04	savxml ok
+18/12/2010 00:12:04	close file camera
+18/12/2010 00:12:04	signaltostop
+18/12/2010 00:12:04	camera stop
+18/12/2010 00:12:04	camera stop ok
+18/12/2010 00:12:04	camera null
+18/12/2010 00:12:04	camera null
+18/12/2010 00:12:04	closefile ok
+18/12/2010 00:28:04	dll1
+18/12/2010 00:28:04	dll2
+18/12/2010 00:28:05	init td panels
+18/12/2010 00:28:05	1
+18/12/2010 00:28:05	1a
+18/12/2010 00:28:05	dll1
+18/12/2010 00:28:05	dll2
+18/12/2010 00:28:05	1b
+18/12/2010 00:28:05	tdpanel add
+18/12/2010 00:28:05	1a
+18/12/2010 00:28:05	dll1
+18/12/2010 00:28:05	dll2
+18/12/2010 00:28:05	1b
+18/12/2010 00:28:05	tdpanel add
+18/12/2010 00:28:05	1a
+18/12/2010 00:28:05	dll1
+18/12/2010 00:28:05	dll2
+18/12/2010 00:28:05	1b
+18/12/2010 00:28:05	tdpanel add
+18/12/2010 00:28:09	dll1
+18/12/2010 00:28:09	dll2
+18/12/2010 00:28:09	dll1
+18/12/2010 00:28:09	dll2
+18/12/2010 00:28:09	ouverture de [Webcam Classic]
+18/12/2010 00:28:09	device = Conexant 2388x Video Capture
+18/12/2010 00:28:09	device = Webcam Classic
+18/12/2010 00:28:09	bind to [System.__ComObject]
+18/12/2010 00:28:09	... pin ID = 0[Capturer]
+18/12/2010 00:28:09	... pin ID = 0[Capturer]
+18/12/2010 00:28:09	... pin ID = 0[Capturer]
+18/12/2010 00:28:09	... pin ID = 0[Capturer]
+18/12/2010 00:28:09	... pin ID = 0[Capturer]
+18/12/2010 00:28:09	... pin ID = 0[Capturer]
+18/12/2010 00:28:09	... pin ID = 0[Capturer]
+18/12/2010 00:28:09	... pin ID = 0[Capturer]
+18/12/2010 00:28:09	... pin ID = 0[Capturer]
+18/12/2010 00:28:09	... pin ID = 0[Capturer]
+18/12/2010 00:28:09	... pin ID = 0[Capturer]
+18/12/2010 00:28:09	grab pin in [System.__ComObject]
+18/12/2010 00:28:09	setmediatype
+18/12/2010 00:28:09	add source filter
+18/12/2010 00:28:09	add grabber
+18/12/2010 00:28:09	cap pin out 0
+18/12/2010 00:28:09	grab source pin out [System.__ComObject]
+18/12/2010 00:28:09	connect pins
+18/12/2010 00:28:09	connection ok
+18/12/2010 00:28:09	install callback
+18/12/2010 00:28:09	install callback ok
+18/12/2010 00:28:27	dll1
+18/12/2010 00:28:27	dll2
+18/12/2010 00:28:27	init td panels
+18/12/2010 00:28:27	1
+18/12/2010 00:28:27	1a
+18/12/2010 00:28:27	dll1
+18/12/2010 00:28:27	dll2
+18/12/2010 00:28:27	1b
+18/12/2010 00:28:27	tdpanel add
+18/12/2010 00:28:27	1a
+18/12/2010 00:28:28	dll1
+18/12/2010 00:28:28	dll2
+18/12/2010 00:28:28	1b
+18/12/2010 00:28:28	tdpanel add
+18/12/2010 00:28:28	1a
+18/12/2010 00:28:28	dll1
+18/12/2010 00:28:28	dll2
+18/12/2010 00:28:28	1b
+18/12/2010 00:28:28	tdpanel add
+18/12/2010 00:28:32	dll1
+18/12/2010 00:28:32	dll2
+18/12/2010 00:28:32	dll1
+18/12/2010 00:28:32	dll2
+18/12/2010 00:28:32	ouverture de [Webcam Classic]
+18/12/2010 00:28:32	device = Conexant 2388x Video Capture
+18/12/2010 00:28:32	device = Webcam Classic
+18/12/2010 00:28:32	bind to [System.__ComObject]
+18/12/2010 00:28:32	... pin ID = 0[Capturer]
+18/12/2010 00:28:32	... pin ID = 0[Capturer]
+18/12/2010 00:28:32	... pin ID = 0[Capturer]
+18/12/2010 00:28:32	... pin ID = 0[Capturer]
+18/12/2010 00:28:32	... pin ID = 0[Capturer]
+18/12/2010 00:28:32	... pin ID = 0[Capturer]
+18/12/2010 00:28:32	... pin ID = 0[Capturer]
+18/12/2010 00:28:32	... pin ID = 0[Capturer]
+18/12/2010 00:28:32	... pin ID = 0[Capturer]
+18/12/2010 00:28:32	... pin ID = 0[Capturer]
+18/12/2010 00:28:32	... pin ID = 0[Capturer]
+18/12/2010 00:28:32	grab pin in [System.__ComObject]
+18/12/2010 00:28:32	setmediatype
+18/12/2010 00:28:32	add source filter
+18/12/2010 00:28:32	add grabber
+18/12/2010 00:28:32	cap pin out 0
+18/12/2010 00:28:32	grab source pin out [System.__ComObject]
+18/12/2010 00:28:32	connect pins
+18/12/2010 00:28:32	connection ok
+18/12/2010 00:28:32	install callback
+18/12/2010 00:28:32	install callback ok
+18/12/2010 00:28:51	close file camera
+18/12/2010 00:28:51	signaltostop
+18/12/2010 00:28:51	camera stop
+18/12/2010 00:28:51	camera stop ok
+18/12/2010 00:28:51	camera null
+18/12/2010 00:28:51	camera null
+18/12/2010 00:28:51	dll1
+18/12/2010 00:28:51	dll2
+18/12/2010 00:28:51	dll1
+18/12/2010 00:28:51	dll2
+18/12/2010 00:28:51	ouverture de [Webcam Classic]
+18/12/2010 00:28:51	device = Conexant 2388x Video Capture
+18/12/2010 00:28:51	device = Webcam Classic
+18/12/2010 00:28:51	bind to [System.__ComObject]
+18/12/2010 00:28:51	... pin ID = 0[Capturer]
+18/12/2010 00:28:51	... pin ID = 0[Capturer]
+18/12/2010 00:28:51	... pin ID = 0[Capturer]
+18/12/2010 00:28:51	... pin ID = 0[Capturer]
+18/12/2010 00:28:51	... pin ID = 0[Capturer]
+18/12/2010 00:28:51	... pin ID = 0[Capturer]
+18/12/2010 00:28:51	... pin ID = 0[Capturer]
+18/12/2010 00:28:51	... pin ID = 0[Capturer]
+18/12/2010 00:28:51	... pin ID = 0[Capturer]
+18/12/2010 00:28:51	... pin ID = 0[Capturer]
+18/12/2010 00:28:51	... pin ID = 0[Capturer]
+18/12/2010 00:28:51	grab pin in [System.__ComObject]
+18/12/2010 00:28:51	setmediatype
+18/12/2010 00:28:51	add source filter
+18/12/2010 00:28:51	add grabber
+18/12/2010 00:28:51	cap pin out 0
+18/12/2010 00:28:51	grab source pin out [System.__ComObject]
+18/12/2010 00:28:55	connect pins
+18/12/2010 00:28:56	create device exception : connect pins
+18/12/2010 00:29:09	close file camera
+18/12/2010 00:29:09	signaltostop
+18/12/2010 00:29:09	camera stop
+18/12/2010 00:29:09	camera stop ok
+18/12/2010 00:29:09	camera null
+18/12/2010 00:29:09	camera null
+18/12/2010 00:29:09	dll1
+18/12/2010 00:29:09	dll2
+18/12/2010 00:29:09	dll1
+18/12/2010 00:29:09	dll2
+18/12/2010 00:29:10	ouverture de [Webcam Classic]
+18/12/2010 00:29:10	device = Conexant 2388x Video Capture
+18/12/2010 00:29:10	device = Webcam Classic
+18/12/2010 00:29:10	bind to [System.__ComObject]
+18/12/2010 00:29:10	... pin ID = 0[Capturer]
+18/12/2010 00:29:10	... pin ID = 0[Capturer]
+18/12/2010 00:29:10	... pin ID = 0[Capturer]
+18/12/2010 00:29:10	... pin ID = 0[Capturer]
+18/12/2010 00:29:10	... pin ID = 0[Capturer]
+18/12/2010 00:29:10	... pin ID = 0[Capturer]
+18/12/2010 00:29:10	... pin ID = 0[Capturer]
+18/12/2010 00:29:10	... pin ID = 0[Capturer]
+18/12/2010 00:29:10	... pin ID = 0[Capturer]
+18/12/2010 00:29:10	... pin ID = 0[Capturer]
+18/12/2010 00:29:10	... pin ID = 0[Capturer]
+18/12/2010 00:29:10	grab pin in [System.__ComObject]
+18/12/2010 00:29:10	setmediatype
+18/12/2010 00:29:10	add source filter
+18/12/2010 00:29:10	add grabber
+18/12/2010 00:29:10	cap pin out 0
+18/12/2010 00:29:10	grab source pin out [System.__ComObject]
+18/12/2010 00:29:13	connect pins
+18/12/2010 00:29:13	create device exception : connect pins
+18/12/2010 00:29:29	close file camera
+18/12/2010 00:29:29	signaltostop
+18/12/2010 00:29:29	camera stop
+18/12/2010 00:29:29	camera stop ok
+18/12/2010 00:29:29	camera null
+18/12/2010 00:29:29	camera null
+18/12/2010 00:29:29	dll1
+18/12/2010 00:29:29	dll2
+18/12/2010 00:29:38	close file camera
+18/12/2010 00:29:38	signaltostop
+18/12/2010 00:29:38	camera stop
+18/12/2010 00:29:38	camera stop ok
+18/12/2010 00:29:38	camera null
+18/12/2010 00:29:38	camera null
+18/12/2010 00:29:38	dll1
+18/12/2010 00:29:38	dll2
+18/12/2010 00:29:38	dll1
+18/12/2010 00:29:38	dll2
+18/12/2010 00:29:38	ouverture de [Webcam Classic]
+18/12/2010 00:29:38	device = Conexant 2388x Video Capture
+18/12/2010 00:29:38	device = Webcam Classic
+18/12/2010 00:29:38	bind to [System.__ComObject]
+18/12/2010 00:29:38	... pin ID = 0[Capturer]
+18/12/2010 00:29:38	... pin ID = 0[Capturer]
+18/12/2010 00:29:38	... pin ID = 0[Capturer]
+18/12/2010 00:29:38	... pin ID = 0[Capturer]
+18/12/2010 00:29:38	... pin ID = 0[Capturer]
+18/12/2010 00:29:38	... pin ID = 0[Capturer]
+18/12/2010 00:29:38	... pin ID = 0[Capturer]
+18/12/2010 00:29:38	... pin ID = 0[Capturer]
+18/12/2010 00:29:38	... pin ID = 0[Capturer]
+18/12/2010 00:29:38	... pin ID = 0[Capturer]
+18/12/2010 00:29:38	... pin ID = 0[Capturer]
+18/12/2010 00:29:38	grab pin in [System.__ComObject]
+18/12/2010 00:29:38	setmediatype
+18/12/2010 00:29:38	add source filter
+18/12/2010 00:29:38	add grabber
+18/12/2010 00:29:38	cap pin out 0
+18/12/2010 00:29:38	grab source pin out [System.__ComObject]
+18/12/2010 00:29:43	connect pins
+18/12/2010 00:29:43	create device exception : connect pins
+18/12/2010 00:29:57	close file camera
+18/12/2010 00:29:57	signaltostop
+18/12/2010 00:29:57	camera stop
+18/12/2010 00:29:57	camera stop ok
+18/12/2010 00:29:57	camera null
+18/12/2010 00:29:57	camera null
+18/12/2010 00:29:57	dll1
+18/12/2010 00:29:57	dll2
+18/12/2010 00:29:57	dll1
+18/12/2010 00:29:57	dll2
+18/12/2010 00:29:57	ouverture de [Webcam Classic]
+18/12/2010 00:29:57	device = Conexant 2388x Video Capture
+18/12/2010 00:29:57	device = Webcam Classic
+18/12/2010 00:29:57	bind to [System.__ComObject]
+18/12/2010 00:29:57	... pin ID = 0[Capturer]
+18/12/2010 00:29:57	... pin ID = 0[Capturer]
+18/12/2010 00:29:57	... pin ID = 0[Capturer]
+18/12/2010 00:29:57	... pin ID = 0[Capturer]
+18/12/2010 00:29:57	... pin ID = 0[Capturer]
+18/12/2010 00:29:57	... pin ID = 0[Capturer]
+18/12/2010 00:29:57	... pin ID = 0[Capturer]
+18/12/2010 00:29:57	... pin ID = 0[Capturer]
+18/12/2010 00:29:57	... pin ID = 0[Capturer]
+18/12/2010 00:29:57	... pin ID = 0[Capturer]
+18/12/2010 00:29:57	... pin ID = 0[Capturer]
+18/12/2010 00:29:57	grab pin in [System.__ComObject]
+18/12/2010 00:29:57	setmediatype
+18/12/2010 00:29:57	add source filter
+18/12/2010 00:29:57	add grabber
+18/12/2010 00:29:57	cap pin out 0
+18/12/2010 00:29:57	grab source pin out [System.__ComObject]
+18/12/2010 00:30:10	connect pins
+18/12/2010 00:30:10	create device exception : connect pins
+18/12/2010 00:30:12	avt question
+18/12/2010 00:30:14	mainfrm clos
+18/12/2010 00:30:14	mainfrm close
+18/12/2010 00:30:14	savxml in
+18/12/2010 00:30:14	call savxml
+18/12/2010 00:30:14	call savxml ok
+18/12/2010 00:30:14	savxml ok
+18/12/2010 00:30:14	close file camera
+18/12/2010 00:30:14	signaltostop
+18/12/2010 00:30:14	camera stop
+18/12/2010 00:30:14	camera stop ok
+18/12/2010 00:30:14	camera null
+18/12/2010 00:30:14	camera null
+18/12/2010 00:30:14	closefile ok
+18/12/2010 00:30:17	dll1
+18/12/2010 00:30:17	dll2
+18/12/2010 00:30:17	init td panels
+18/12/2010 00:30:17	1
+18/12/2010 00:30:17	1a
+18/12/2010 00:30:17	dll1
+18/12/2010 00:30:17	dll2
+18/12/2010 00:30:17	1b
+18/12/2010 00:30:17	tdpanel add
+18/12/2010 00:30:17	1a
+18/12/2010 00:30:17	dll1
+18/12/2010 00:30:17	dll2
+18/12/2010 00:30:17	1b
+18/12/2010 00:30:17	tdpanel add
+18/12/2010 00:30:17	1a
+18/12/2010 00:30:17	dll1
+18/12/2010 00:30:17	dll2
+18/12/2010 00:30:17	1b
+18/12/2010 00:30:17	tdpanel add
+18/12/2010 00:30:21	dll1
+18/12/2010 00:30:21	dll2
+18/12/2010 00:30:21	dll1
+18/12/2010 00:30:21	dll2
+18/12/2010 00:30:22	ouverture de [Webcam Classic]
+18/12/2010 00:30:22	device = Conexant 2388x Video Capture
+18/12/2010 00:30:22	device = Webcam Classic
+18/12/2010 00:30:22	bind to [System.__ComObject]
+18/12/2010 00:30:22	... pin ID = 0[Capturer]
+18/12/2010 00:30:22	... pin ID = 0[Capturer]
+18/12/2010 00:30:22	... pin ID = 0[Capturer]
+18/12/2010 00:30:22	... pin ID = 0[Capturer]
+18/12/2010 00:30:22	... pin ID = 0[Capturer]
+18/12/2010 00:30:22	... pin ID = 0[Capturer]
+18/12/2010 00:30:22	... pin ID = 0[Capturer]
+18/12/2010 00:30:22	... pin ID = 0[Capturer]
+18/12/2010 00:30:22	... pin ID = 0[Capturer]
+18/12/2010 00:30:22	... pin ID = 0[Capturer]
+18/12/2010 00:30:22	... pin ID = 0[Capturer]
+18/12/2010 00:30:22	grab pin in [System.__ComObject]
+18/12/2010 00:30:22	setmediatype
+18/12/2010 00:30:22	add source filter
+18/12/2010 00:30:22	add grabber
+18/12/2010 00:30:22	cap pin out 0
+18/12/2010 00:30:22	grab source pin out [System.__ComObject]
+18/12/2010 00:30:22	connect pins
+18/12/2010 00:30:22	connection ok
+18/12/2010 00:30:22	install callback
+18/12/2010 00:30:22	install callback ok
+18/12/2010 00:35:01	avt question
+18/12/2010 00:35:03	mainfrm clos
+18/12/2010 00:35:03	mainfrm close
+18/12/2010 00:35:03	savxml in
+18/12/2010 00:35:03	call savxml
+18/12/2010 00:35:03	call savxml ok
+18/12/2010 00:35:03	savxml ok
+18/12/2010 00:35:03	close file camera
+18/12/2010 00:35:03	signaltostop
+18/12/2010 00:35:03	camera stop
+18/12/2010 00:35:03	camera stop ok
+18/12/2010 00:35:03	camera null
+18/12/2010 00:35:03	camera null
+18/12/2010 00:35:03	closefile ok
+14/01/2011 23:16:46	dll1
+14/01/2011 23:16:46	dll2
+14/01/2011 23:16:47	init td panels
+14/01/2011 23:16:47	1
+14/01/2011 23:16:47	1a
+14/01/2011 23:16:47	dll1
+14/01/2011 23:16:47	dll2
+14/01/2011 23:16:47	1b
+14/01/2011 23:16:47	tdpanel add
+14/01/2011 23:16:47	1a
+14/01/2011 23:16:47	dll1
+14/01/2011 23:16:47	dll2
+14/01/2011 23:16:47	1b
+14/01/2011 23:16:47	tdpanel add
+14/01/2011 23:16:47	1a
+14/01/2011 23:16:47	dll1
+14/01/2011 23:16:47	dll2
+14/01/2011 23:16:47	1b
+14/01/2011 23:16:47	tdpanel add
+14/01/2011 23:16:51	dll1
+14/01/2011 23:16:51	dll2
+14/01/2011 23:16:51	dll1
+14/01/2011 23:16:51	dll2
+14/01/2011 23:16:51	ouverture de [Webcam Classic]
+14/01/2011 23:16:51	device = Conexant 2388x Video Capture
+14/01/2011 23:16:51	device = RZ300C
+14/01/2011 23:16:51	device = TCC-1.4C LICE Camera
+14/01/2011 23:16:51	device = Google Camera Adapter 0
+14/01/2011 23:16:51	device = Google Camera Adapter 1
+14/01/2011 23:16:51	device = Virtual Cam
+14/01/2011 23:16:51	create device exception : device not found
+14/01/2011 23:17:13	close file camera
+14/01/2011 23:17:13	signaltostop
+14/01/2011 23:17:13	camera stop
+14/01/2011 23:17:13	camera stop ok
+14/01/2011 23:17:13	camera null
+14/01/2011 23:17:13	camera null
+14/01/2011 23:17:13	dll1
+14/01/2011 23:17:13	dll2
+14/01/2011 23:17:13	dll1
+14/01/2011 23:17:13	dll2
+14/01/2011 23:17:13	ouverture de [TCC-1.4C LICE Camera]
+14/01/2011 23:17:13	device = Conexant 2388x Video Capture
+14/01/2011 23:17:13	device = RZ300C
+14/01/2011 23:17:13	device = TCC-1.4C LICE Camera
+14/01/2011 23:17:13	bind to [System.__ComObject]
+14/01/2011 23:17:13	... pin ID = 1[~Capture]
+14/01/2011 23:17:13	... pin ID = 2[Preview]
+14/01/2011 23:17:13	grab pin in [System.__ComObject]
+14/01/2011 23:17:13	setmediatype
+14/01/2011 23:17:13	add source filter
+14/01/2011 23:17:13	add grabber
+14/01/2011 23:17:13	cap pin out 0
+14/01/2011 23:17:13	grab source pin out [System.__ComObject]
+14/01/2011 23:17:15	connect pins
+14/01/2011 23:17:15	connection ok
+14/01/2011 23:17:15	install callback
+14/01/2011 23:17:15	install callback ok
+14/01/2011 23:17:20	avt question
+14/01/2011 23:17:22	mainfrm clos
+14/01/2011 23:17:22	mainfrm close
+14/01/2011 23:17:22	savxml in
+14/01/2011 23:17:22	call savxml
+14/01/2011 23:17:22	call savxml ok
+14/01/2011 23:17:22	savxml ok
+14/01/2011 23:17:22	close file camera
+14/01/2011 23:17:22	signaltostop
+14/01/2011 23:17:22	camera stop
+14/01/2011 23:17:22	camera stop ok
+14/01/2011 23:17:22	camera null
+14/01/2011 23:17:22	camera null
+14/01/2011 23:17:22	closefile ok
+14/01/2011 23:17:24	dll1
+14/01/2011 23:17:24	dll2
+14/01/2011 23:17:24	init td panels
+14/01/2011 23:17:24	1
+14/01/2011 23:17:24	1a
+14/01/2011 23:17:24	dll1
+14/01/2011 23:17:24	dll2
+14/01/2011 23:17:24	1b
+14/01/2011 23:17:24	tdpanel add
+14/01/2011 23:17:24	1a
+14/01/2011 23:17:24	dll1
+14/01/2011 23:17:25	dll2
+14/01/2011 23:17:25	1b
+14/01/2011 23:17:25	tdpanel add
+14/01/2011 23:17:25	1a
+14/01/2011 23:17:25	dll1
+14/01/2011 23:17:25	dll2
+14/01/2011 23:17:25	1b
+14/01/2011 23:17:25	tdpanel add
+14/01/2011 23:17:29	dll1
+14/01/2011 23:17:29	dll2
+14/01/2011 23:17:29	dll1
+14/01/2011 23:17:29	dll2
+14/01/2011 23:17:29	ouverture de [TCC-1.4C LICE Camera]
+14/01/2011 23:17:29	device = Conexant 2388x Video Capture
+14/01/2011 23:17:29	device = RZ300C
+14/01/2011 23:17:29	device = TCC-1.4C LICE Camera
+14/01/2011 23:17:29	bind to [System.__ComObject]
+14/01/2011 23:17:29	... pin ID = 1[~Capture]
+14/01/2011 23:17:29	... pin ID = 2[Preview]
+14/01/2011 23:17:29	grab pin in [System.__ComObject]
+14/01/2011 23:17:29	setmediatype
+14/01/2011 23:17:29	add source filter
+14/01/2011 23:17:29	add grabber
+14/01/2011 23:17:29	cap pin out 0
+14/01/2011 23:17:29	grab source pin out [System.__ComObject]
+14/01/2011 23:17:29	connect pins
+14/01/2011 23:17:29	connection ok
+14/01/2011 23:17:29	install callback
+14/01/2011 23:17:29	install callback ok
+14/01/2011 23:18:27	avt question
+14/01/2011 23:18:28	mainfrm clos
+14/01/2011 23:18:28	mainfrm close
+14/01/2011 23:18:28	savxml in
+14/01/2011 23:18:28	call savxml
+14/01/2011 23:18:28	call savxml ok
+14/01/2011 23:18:28	savxml ok
+14/01/2011 23:18:28	close file camera
+14/01/2011 23:18:28	signaltostop
+14/01/2011 23:18:28	camera stop
+14/01/2011 23:18:28	camera stop ok
+14/01/2011 23:18:28	camera null
+14/01/2011 23:18:28	camera null
+14/01/2011 23:18:28	closefile ok
+14/01/2011 23:18:31	avt question
+14/01/2011 23:18:33	mainfrm clos
+14/01/2011 23:18:33	mainfrm close
+14/01/2011 23:18:33	savxml in
+14/01/2011 23:18:33	call savxml
+14/01/2011 23:18:33	call savxml ok
+14/01/2011 23:18:33	savxml ok
+14/01/2011 23:18:33	closefile ok

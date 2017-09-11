@@ -1,0 +1,7 @@
+#ignore tous les .svn
+**/.svn
+
+*.obj
+*.resx
+*.bak
+*.tmp

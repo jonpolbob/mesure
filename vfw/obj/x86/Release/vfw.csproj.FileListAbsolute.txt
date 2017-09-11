@@ -1,0 +1,16 @@
+C:\essais\mesure2C\vfw\bin\x86\Release\vfw.dll
+C:\essais\mesure2C\vfw\bin\x86\Release\vfw.pdb
+C:\essais\mesure2C\vfw\obj\x86\Release\ResolveAssemblyReference.cache
+C:\essais\mesure2C\vfw\obj\x86\Release\vfw.Properties.Resources.resources
+C:\essais\mesure2C\vfw\obj\x86\Release\vfw.csproj.GenerateResource.Cache
+C:\essais\mesure2C\vfw\obj\x86\Release\vfw.dll
+C:\essais\mesure2C\vfw\obj\x86\Release\vfw.pdb
+C:\essais\mesure2C\vfw\bin\x86\Release\vfw.dll.config
+C:\essais\mesure2d\vfw\bin\x86\Release\vfw.dll.config
+C:\essais\mesure2d\vfw\bin\x86\Release\vfw.dll
+C:\essais\mesure2d\vfw\bin\x86\Release\vfw.pdb
+C:\essais\mesure2d\vfw\obj\x86\Release\ResolveAssemblyReference.cache
+C:\essais\mesure2d\vfw\obj\x86\Release\vfw.Properties.Resources.resources
+C:\essais\mesure2d\vfw\obj\x86\Release\vfw.csproj.GenerateResource.Cache
+C:\essais\mesure2d\vfw\obj\x86\Release\vfw.dll
+C:\essais\mesure2d\vfw\obj\x86\Release\vfw.pdb

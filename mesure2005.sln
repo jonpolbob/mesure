@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mesure", "mesure\mesure.csproj", "{9CE00D49-20A6-4946-891D-E893FA790742}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vfw", "vfw\vfw.csproj", "{110E4504-2443-4116-9255-53D1F723BED7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "twainlib", "twainlib\twainlib.csproj", "{95B180F9-4776-426F-BC05-472968CE6F0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ruler", "ruler\ruler.csproj", "{658BE15C-93AB-44DF-9693-E086A49FAF4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AviFile", "AviFile\AviFile.csproj", "{ABB32A29-AF50-47FA-B243-5FD75A5ABA54}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "install", "install\install\install.vdproj", "{D451B382-F5F1-47A7-8FFE-86FEA5847FD9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9CE00D49-20A6-4946-891D-E893FA790742}.Debug|x86.ActiveCfg = Release|x86
+		{9CE00D49-20A6-4946-891D-E893FA790742}.Debug|x86.Build.0 = Release|x86
+		{9CE00D49-20A6-4946-891D-E893FA790742}.Release|x86.ActiveCfg = Release|x86
+		{9CE00D49-20A6-4946-891D-E893FA790742}.Release|x86.Build.0 = Release|x86
+		{110E4504-2443-4116-9255-53D1F723BED7}.Debug|x86.ActiveCfg = Release|x86
+		{110E4504-2443-4116-9255-53D1F723BED7}.Debug|x86.Build.0 = Release|x86
+		{110E4504-2443-4116-9255-53D1F723BED7}.Release|x86.ActiveCfg = Release|x86
+		{110E4504-2443-4116-9255-53D1F723BED7}.Release|x86.Build.0 = Release|x86
+		{95B180F9-4776-426F-BC05-472968CE6F0B}.Debug|x86.ActiveCfg = Release|x86
+		{95B180F9-4776-426F-BC05-472968CE6F0B}.Debug|x86.Build.0 = Release|x86
+		{95B180F9-4776-426F-BC05-472968CE6F0B}.Release|x86.ActiveCfg = Release|x86
+		{95B180F9-4776-426F-BC05-472968CE6F0B}.Release|x86.Build.0 = Release|x86
+		{658BE15C-93AB-44DF-9693-E086A49FAF4D}.Debug|x86.ActiveCfg = Release|x86
+		{658BE15C-93AB-44DF-9693-E086A49FAF4D}.Debug|x86.Build.0 = Release|x86
+		{658BE15C-93AB-44DF-9693-E086A49FAF4D}.Release|x86.ActiveCfg = Release|x86
+		{658BE15C-93AB-44DF-9693-E086A49FAF4D}.Release|x86.Build.0 = Release|x86
+		{ABB32A29-AF50-47FA-B243-5FD75A5ABA54}.Debug|x86.ActiveCfg = Release|x86
+		{ABB32A29-AF50-47FA-B243-5FD75A5ABA54}.Debug|x86.Build.0 = Release|x86
+		{ABB32A29-AF50-47FA-B243-5FD75A5ABA54}.Release|x86.ActiveCfg = Release|x86
+		{ABB32A29-AF50-47FA-B243-5FD75A5ABA54}.Release|x86.Build.0 = Release|x86
+		{D451B382-F5F1-47A7-8FFE-86FEA5847FD9}.Debug|x86.ActiveCfg = Release
+		{D451B382-F5F1-47A7-8FFE-86FEA5847FD9}.Debug|x86.Build.0 = Release
+		{D451B382-F5F1-47A7-8FFE-86FEA5847FD9}.Release|x86.ActiveCfg = Release
+		{D451B382-F5F1-47A7-8FFE-86FEA5847FD9}.Release|x86.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

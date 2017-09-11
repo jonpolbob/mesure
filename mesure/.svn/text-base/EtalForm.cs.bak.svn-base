@@ -1,0 +1,230 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+using System.Collections;
+
+namespace mesure
+{ // delegate est une sorte de typedef pour l'event
+    // ici on envoie au form un ok quand on quitte le dial modal
+    // vrai : l'etal est corrcet
+    // false : cancel
+    public delegate void EtalOkhandler(object source, ClickOkEvent e);
+   
+    public partial class EtalForm : Form
+    {
+        private double m_dDistPix;
+        private double m_dSaisie;
+        private string m_sUnit;
+        private string m_sObjName;
+        Etalonnage m_curetal;
+        PointF m_deb;
+        PointF m_fin;
+        bool m_bDrawDistOk = false; // trace etlonnage ok
+        bool m_bSaisDistOk= false; // trace etlonnage ok
+        bool m_bSaisNamOk = false; // trace etlonnage ok
+
+        //@brief gestion ok
+        // declaration du event appele a la fermeture de la boite avant son autodestruction
+
+        [Browsable(true)] // visible dans l'editeur graphique
+        public event EtalOkhandler CliqueFin ;
+
+        // fonction appelee par la mainform lors du mouvement de la souris etalonnage
+        // doit copier les xy cliques dans les xy mesures, pour que ca ressorte dans les variables 
+        // du mesureru etalonnage
+        public void MainFrmConvHandler(object sender, ref MesureEventArgs e)
+        {
+            return; // rien a faire : la conversion source-unite est faite dans le constructeur de mesureeventsargs
+            // donc on recupere en sortie les cooedonnees non etalonnees des points cliquees
+        }
+        
+
+        // fonction appelee par l'evenement a chaque nouveau resultat du calcuteur
+        // on recoit une liste de vriables conteenant les 4 points de la ligne : 
+        // ce sont les coords des 2 points cliques
+        // euh il faudrait decider si c'est ici que ca se fait ou dasn setpoints ....
+        public void GetResu(object sender, ref ResuEventArg e)
+        {
+         ArrayList list = e.IDResus;
+            ICalculator calcul = (ICalculator)sender;
+            double debX=0;
+                double debY=0;
+                double finX = 0;
+                double finY = 0;
+
+                bool savDrawDistOk = m_bDrawDistOk;
+            
+            foreach (int ID in list)
+            {
+                double valeur = calcul.GetValeur(ID,0);
+
+                switch (ID)
+                {
+                    case 101: debX = valeur; break;
+                    case 102: debY = valeur; break;
+                    case 103: debY = valeur; break;
+                    case 104: finY = valeur; break;
+                }
+
+            }
+             
+            
+            m_deb.X = (float)debX;
+            m_deb.Y = (float)debY;
+            m_fin.X = (float)finX;
+            m_fin.Y = (float)finY;
+            m_dDistPix = Math.Sqrt((debX - finX) * (debX - finX) + (debY - finY) * (debY - finY));
+            m_bDrawDistOk = true;
+            // ici on pourrait donner cette distance dans la fenete
+            if (m_bDrawDistOk != savDrawDistOk) // aachose a change dans la validite
+                chksaisok(); // saisie ok on peut quitter
+        
+        }
+
+        //-----------------------------
+        // get set de l'etalonnage en cours d'edition
+        //-----------------------------
+        public Etalonnage etalonnage
+        { set {m_curetal= value;}
+          get { return m_curetal; }
+        }
+
+        //-------------------------------------------
+        // defintion des deux points d'etalonnage
+        // appele par l'event du trace de ligne
+        //-------------------------------------------
+        public void SetPoints(PointF deb, PointF fin)
+        {m_deb = deb; // on conserve les deux points dans l'etalonnage
+         m_fin = fin;
+
+         double dx = (double)(deb.X-fin.X);
+         double dy = (double)(deb.Y-fin.Y);
+         m_dDistPix = Math.Sqrt(dx*dx+dy*dy); // calcul de la distance d'etalonnage
+         m_bDrawDistOk = true;// ici il faudrait mettre un bool distok qui valide l'etalonnage
+        }
+
+        //-----------------------------
+        //
+        //-----------------------------
+        public double DistSaisie
+        { get 
+            { return m_dSaisie;
+            } 
+        }
+
+
+        //-----------------------------
+        // creation
+        //-----------------------------
+        public EtalForm()
+        {
+            InitializeComponent();
+        }
+
+        //-----------------------------
+        // ca setr a quoi ca ???
+        //-----------------------------
+        private void EtalForm_Load(object sender, EventArgs e)
+        {
+        }
+
+        //-----------------------------
+        //@brief sur un cliqu okon previent la form mere qu'on a clique sur ok
+        //-----------------------------
+        private void butquit_Click(object sender, EventArgs e)
+        {ClickOkEvent eventout = new ClickOkEvent();
+         // lecture de la distance
+        m_curetal.Name = m_sObjName;
+        m_curetal.InitEtal(m_deb.X, m_deb.Y, m_fin.X, m_fin.Y, this.m_dSaisie, "cm");
+        
+        eventout.ok = true;
+        if (CliqueFin != null) //cet evenement a ete attache par qqun
+             CliqueFin(this,eventout);    
+        }
+
+
+        //-----------------------------
+        // teste la'etat de l'etalonnage et valide le ok ou l'invalide
+        //-----------------------------
+        void chksaisok()
+        {if (!m_bSaisDistOk)
+            {butQuit.Enabled=false;
+            return;
+            }
+        
+         if (!m_bDrawDistOk)
+         {butQuit.Enabled = false;
+          return;
+         }
+        
+         if (!m_bSaisNamOk)
+         {
+             butQuit.Enabled = false;
+            return;
+            }
+
+         butQuit.Enabled = true;
+        }
+
+        //-----------------------------
+        // action sur text changed
+        // on verifie que la valeur est correcte 
+        //-----------------------------
+        private void edLongueur_TextChanged(object sender, EventArgs e)
+        {double valmesuree=0;
+         bool savsaiok = m_bSaisDistOk;
+
+         try{
+             double.TryParse(edLongueur.Text,out valmesuree); // decodage du double saisi
+             if (valmesuree != 0.0)
+                m_bSaisDistOk = true;
+         }catch{
+             m_bSaisDistOk = false;
+             }
+
+         if (m_bSaisDistOk)
+             m_dSaisie = valmesuree; // distance saisie
+
+         if (m_bSaisDistOk != savsaiok) // aachose a change dans la validite
+             chksaisok(); // saisie ok on peut quitter
+        }
+
+        //----------------------------------
+        // changement du nom de l'objectif
+        //----------------------------------
+        private void edNamObj_TextChanged(object sender, EventArgs e)
+        {
+            bool savsaisnam = m_bSaisNamOk;
+
+        if (edNamObj.Text.Length <= 3) // 3 lettres mini
+            this.m_bSaisNamOk = false;
+        else
+            this.m_bSaisNamOk = true;
+        
+        this.m_sObjName = edNamObj.Text;
+
+        if (savsaisnam != m_bSaisNamOk) // changelement de validation
+            chksaisok(); // saisie ok on peut quitter
+        }
+    }
+
+    //---------------------------------------------------
+    // definition de l'argument de l'event clickokevent
+    //---------------------------------------------------
+    public class ClickOkEvent : System.EventArgs
+    {
+        public ClickOkEvent() { }
+
+        bool bOk;
+        public bool ok
+        {
+            get { return bOk; }
+            set { bOk = value; }
+        }
+    }
+
+}

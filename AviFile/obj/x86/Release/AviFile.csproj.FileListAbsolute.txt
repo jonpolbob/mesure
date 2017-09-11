@@ -1,0 +1,8 @@
+C:\essais\mesure2C\AviFile\bin\x86\Release\AviFile.dll
+C:\essais\mesure2C\AviFile\obj\x86\Release\ResolveAssemblyReference.cache
+C:\essais\mesure2C\AviFile\obj\x86\Release\AviFile.dll
+C:\essais\mesure2C\AviFile\bin\x86\Release\AviFile.dll.config
+C:\essais\mesure2d\AviFile\bin\x86\Release\AviFile.dll.config
+C:\essais\mesure2d\AviFile\bin\x86\Release\AviFile.dll
+C:\essais\mesure2d\AviFile\obj\x86\Release\ResolveAssemblyReference.cache
+C:\essais\mesure2d\AviFile\obj\x86\Release\AviFile.dll

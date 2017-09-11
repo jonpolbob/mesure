@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="mesure2005">
+</Property><Property Name="Solution File" Value="C:\essais\mesure2C\mesure2005.sln">
+</Property><Property Name="Date" Value="mercredi 15 décembre 2010">
+</Property><Property Name="Time" Value="21:20">
+</Property></Properties><Event ErrorLevel="0" Project="mesure" Source="mesure\mesure.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="mesure" Source="mesure\mesure.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="vfw" Source="vfw\vfw.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="vfw" Source="vfw\vfw.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="twainlib" Source="twainlib\twainlib.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="twainlib" Source="twainlib\twainlib.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="ruler" Source="ruler\ruler.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="ruler" Source="ruler\ruler.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="AviFile" Source="AviFile\AviFile.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="AviFile" Source="AviFile\AviFile.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="" Source="mesure2005.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="mesure2005.sln" Description="Converted">
+</Event></UpgradeLog>

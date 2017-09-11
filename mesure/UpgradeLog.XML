@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="mesure">
+</Property><Property Name="Solution File" Value="C:\essais\mesure2C\mesure\mesure.sln">
+</Property><Property Name="User Options File" Value="C:\essais\mesure2C\mesure\mesure.suo">
+</Property><Property Name="Date" Value="mercredi 15 décembre 2010">
+</Property><Property Name="Time" Value="21:19">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="mesure.sln" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\mesure.sln">
+</Event><Event ErrorLevel="0" Project="" Source="mesure.suo" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\mesure.suo">
+</Event><Event ErrorLevel="0" Project="mesure" Source="mesure.csproj" Description="Project file successfully backed up as C:\essais\mesure2C\mesure\Backup\mesure.csproj">
+</Event><Event ErrorLevel="0" Project="mesure" Source="mesure.csproj.user" Description="Project user file successfully backed up as C:\essais\mesure2C\mesure\Backup\mesure.csproj.user">
+</Event><Event ErrorLevel="0" Project="mesure" Source="AboutForm.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\AboutForm.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="ByteArrayUtils.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\ByteArrayUtils.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="Camera.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\Camera.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="mesureur\GenericCalculator.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\mesureur\GenericCalculator.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="mesureur\horMesure.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\mesureur\horMesure.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="mesureur\ICalculator.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\mesureur\ICalculator.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="mesureur\LineCalculator.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\mesureur\LineCalculator.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="mesureur\logger.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\mesureur\logger.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="mesureur\MesureEvent.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\mesureur\MesureEvent.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="mesureur\VertMesure.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\mesureur\VertMesure.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="mesureur\XMLSerialisable.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\mesureur\XMLSerialisable.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="Config.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\Config.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="CoreSystem.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\CoreSystem.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="GesEtal.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\GesEtal.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="CameraEvents.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\CameraEvents.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="CameraWindow.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\CameraWindow.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="CaptureDeviceForm.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\CaptureDeviceForm.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="Center.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\Center.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="ClippingEngine.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\ClippingEngine.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="EnregFichierParam.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\EnregFichierParam.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="EnregFichierParam.Designer.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\EnregFichierParam.Designer.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="EtalForm.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\EtalForm.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="EtalForm.designer.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\EtalForm.designer.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="etalonnage.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\etalonnage.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="FormResu.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\FormResu.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="FormResu.Designer.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\FormResu.Designer.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="Gesres.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\Gesres.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="IBagSavXml.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\IBagSavXml.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="MainForm.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\MainForm.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="mainformbags.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\mainformbags.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="mainformclicksource.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\mainformclicksource.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="MainFormDx.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\MainFormDx.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="MesureForm.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\MesureForm.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="MesureForm.Designer.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\MesureForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="Properties\Resources.Designer.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="Properties\Settings.Designer.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="ReglageAutoSauv.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\ReglageAutoSauv.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="ReglageAutoSauv.designer.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\ReglageAutoSauv.designer.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="ReglagesMesure.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\ReglagesMesure.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="ReglagesMesure.Designer.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\ReglagesMesure.Designer.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="Resource1.Designer.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\Resource1.Designer.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="rulerscale.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\rulerscale.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="serialcode\GesCodForm.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\serialcode\GesCodForm.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="serialcode\GesCodForm.Designer.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\serialcode\GesCodForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="serialcode\Sample_ManagementObjectSearcher.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\serialcode\Sample_ManagementObjectSearcher.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="splashscreen\SplashScreen.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\splashscreen\SplashScreen.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="splashscreen\SplashScreenForm.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\splashscreen\SplashScreenForm.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="splashscreen\SplashScreenForm.designer.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\splashscreen\SplashScreenForm.designer.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="TDPanel.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\TDPanel.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="URLForm.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\URLForm.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="videosource\CaptureDevice.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\videosource\CaptureDevice.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="videosource\IMGStream.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\videosource\IMGStream.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="videosource\ipcamdial.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\videosource\ipcamdial.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="videosource\ipcamdial.Designer.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\videosource\ipcamdial.Designer.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="videosource\IVideoSource.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\videosource\IVideoSource.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="videosource\JPEGStream.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\videosource\JPEGStream.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="videosource\MJPEGStream.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\videosource\MJPEGStream.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="videosource\TwainDevice.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\videosource\TwainDevice.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="videosource\VideoFileSource.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\videosource\VideoFileSource.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="XMLEngine.cs" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\XMLEngine.cs">
+</Event><Event ErrorLevel="0" Project="mesure" Source="mesure_TemporaryKey.pfx" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\mesure_TemporaryKey.pfx">
+</Event><Event ErrorLevel="0" Project="mesure" Source="Properties\Settings.settings" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="mesure" Source="Properties\addobj.Image.bmp" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\Properties\addobj.Image.bmp">
+</Event><Event ErrorLevel="0" Project="mesure" Source="Resources\camera-photo-5.ico" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\Resources\camera-photo-5.ico">
+</Event><Event ErrorLevel="0" Project="mesure" Source="Resources\camera-web.ico" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\Resources\camera-web.ico">
+</Event><Event ErrorLevel="0" Project="mesure" Source="Resources\clipscr.bmp" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\Resources\clipscr.bmp">
+</Event><Event ErrorLevel="0" Project="mesure" Source="Resources\configure-3.ico" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\Resources\configure-3.ico">
+</Event><Event ErrorLevel="0" Project="mesure" Source="Resources\delobjmic.bmp" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\Resources\delobjmic.bmp">
+</Event><Event ErrorLevel="0" Project="mesure" Source="Resources\fulscr.bmp" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\Resources\fulscr.bmp">
+</Event><Event ErrorLevel="0" Project="mesure" Source="Resources\icomoinmic.bmp" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\Resources\icomoinmic.bmp">
+</Event><Event ErrorLevel="0" Project="mesure" Source="Resources\icoplumic.bmp" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\Resources\icoplumic.bmp">
+</Event><Event ErrorLevel="0" Project="mesure" Source="Resources\img-objchk.bmp" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\Resources\img-objchk.bmp">
+</Event><Event ErrorLevel="0" Project="mesure" Source="Resources\img-objnotset.bmp" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\Resources\img-objnotset.bmp">
+</Event><Event ErrorLevel="0" Project="mesure" Source="Resources\img-objunchk.bmp" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\Resources\img-objunchk.bmp">
+</Event><Event ErrorLevel="0" Project="mesure" Source="Resources\imgbuttsetetal.bmp" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\Resources\imgbuttsetetal.bmp">
+</Event><Event ErrorLevel="0" Project="mesure" Source="upmove.ico" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\upmove.ico">
+</Event><Event ErrorLevel="0" Project="mesure" Source="aaversion.txt" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\aaversion.txt">
+</Event><Event ErrorLevel="0" Project="mesure" Source="videomotion2.ico" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\videomotion2.ico">
+</Event><Event ErrorLevel="0" Project="mesure" Source="AboutForm.resx" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\AboutForm.resx">
+</Event><Event ErrorLevel="0" Project="mesure" Source="CameraWindow.resx" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\CameraWindow.resx">
+</Event><Event ErrorLevel="0" Project="mesure" Source="CaptureDeviceForm.resx" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\CaptureDeviceForm.resx">
+</Event><Event ErrorLevel="0" Project="mesure" Source="EtalForm.resx" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\EtalForm.resx">
+</Event><Event ErrorLevel="0" Project="mesure" Source="MainForm.resx" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\MainForm.resx">
+</Event><Event ErrorLevel="0" Project="mesure" Source="Properties\Resources.resx" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="mesure" Source="Resource1.resx" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\Resource1.resx">
+</Event><Event ErrorLevel="0" Project="mesure" Source="EnregFichierParam.resx" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\EnregFichierParam.resx">
+</Event><Event ErrorLevel="0" Project="mesure" Source="FormResu.resx" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\FormResu.resx">
+</Event><Event ErrorLevel="0" Project="mesure" Source="MesureForm.resx" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\MesureForm.resx">
+</Event><Event ErrorLevel="0" Project="mesure" Source="ReglageAutoSauv.resx" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\ReglageAutoSauv.resx">
+</Event><Event ErrorLevel="0" Project="mesure" Source="ReglagesMesure.resx" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\ReglagesMesure.resx">
+</Event><Event ErrorLevel="0" Project="mesure" Source="Resources\dnmove.cur" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\Resources\dnmove.cur">
+</Event><Event ErrorLevel="0" Project="mesure" Source="Resources\addobj.bmp" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\Resources\addobj.bmp">
+</Event><Event ErrorLevel="0" Project="mesure" Source="Resources\upmove.cur" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\Resources\upmove.cur">
+</Event><Event ErrorLevel="0" Project="mesure" Source="Resources\periscop.cur" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\Resources\periscop.cur">
+</Event><Event ErrorLevel="0" Project="mesure" Source="Resources\regle.cur" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\Resources\regle.cur">
+</Event><Event ErrorLevel="0" Project="mesure" Source="Resources\lignehor.ico" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\Resources\lignehor.ico">
+</Event><Event ErrorLevel="0" Project="mesure" Source="Resources\lignepente.ico" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\Resources\lignepente.ico">
+</Event><Event ErrorLevel="0" Project="mesure" Source="Resources\lignevert.ico" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\Resources\lignevert.ico">
+</Event><Event ErrorLevel="0" Project="mesure" Source="Resources\supobj-ina.bmp" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\Resources\supobj-ina.bmp">
+</Event><Event ErrorLevel="0" Project="mesure" Source="Resources\supobj.bmp" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\Resources\supobj.bmp">
+</Event><Event ErrorLevel="0" Project="mesure" Source="Resources\ok-green.ico" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\Resources\ok-green.ico">
+</Event><Event ErrorLevel="0" Project="mesure" Source="Resources\RepeatBlue.ico" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\Resources\RepeatBlue.ico">
+</Event><Event ErrorLevel="0" Project="mesure" Source="Resources\leftmov.cur" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\Resources\leftmov.cur">
+</Event><Event ErrorLevel="0" Project="mesure" Source="Resources\rightmov.cur" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\Resources\rightmov.cur">
+</Event><Event ErrorLevel="0" Project="mesure" Source="serialcode\GesCodForm.resx" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\serialcode\GesCodForm.resx">
+</Event><Event ErrorLevel="0" Project="mesure" Source="splashscreen\Properties\Resources.resx" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\splashscreen\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="mesure" Source="splashscreen\SplashScreenForm.resx" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\splashscreen\SplashScreenForm.resx">
+</Event><Event ErrorLevel="0" Project="mesure" Source="videosource\ipcamdial.resx" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\videosource\ipcamdial.resx">
+</Event><Event ErrorLevel="0" Project="mesure" Source="splashscreen\logodecoup.jpg" Description="File successfully backed up as C:\essais\mesure2C\mesure\Backup\splashscreen\logodecoup.jpg">
+</Event><Event ErrorLevel="0" Project="mesure" Source="mesure.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="mesure" Source="mesure.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="" Source="mesure.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="mesure.sln" Description="Converted">
+</Event></UpgradeLog>

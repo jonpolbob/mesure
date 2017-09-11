@@ -1,0 +1,629 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Diagnostics;
+using System.Drawing;
+using System.Text;
+using System.Threading;
+using System.Windows.Forms;
+using ruler;
+
+namespace mesure
+{
+    /// --------------  delegates ----------------------------------
+    // delegate est une sorte de typedef pour l'event
+    public delegate void ChangeVariablehandler(object source, ChangeVariable e);
+
+    /// <summary>
+    /// camerawindow : control comprenant un panel, la fenetre ou s'affiche la video et les rulers. 
+    /// le panel remplit sa fenetre mere, quand il se redimensionne on recaclule la position de la video en fonction des parametres actuels
+    /// </summary>
+    public partial class CameraWindow : UserControl
+    {Object picrectobj = new Object();
+
+     private Camera m_camera = null;
+     private bool autosize = true;
+     private bool needSizeUpdate = false;
+     private bool firstFrame = true;
+
+     private System.Timers.Timer timer;
+     private int flash = 0;
+     private Color rectColor = Color.Black;
+
+     // points de debut et fin 
+     private Point startPoint = new Point(0, 0);
+     private Point endPoint = new Point(0, 0);
+
+     // bitmap de dessin
+     private Bitmap backBuffer = null;
+     private bool mouseDown = false;
+     Object thislock = new Object();
+     private int prvwidth = 0;
+     private int prvheight = 0;
+     private Panel panelsize;
+     private UserControl1 pictRuleLeft;
+     private UserControl1 pictRuleTop;
+     private Panel picvideo;
+     public event EventHandler ChgClipp;
+     // pour utiliser le .cur il faut le mettre en embedded dasn ses proprietes (action)
+        Cursor m_regle=null;
+
+
+     Rectangle pictrect = new Rectangle(0, 0, 0, 0);
+
+         
+        /// <summary>
+     /// ne pinte plus sur une ppict mais directemetn sur le clientrect
+        /// </summary>
+            public Control PicVideo
+            {
+                get {
+                    return (Control)picvideo; 
+                    }
+            }
+
+            //[Browsable(false)] // pas visible en mode editeur
+            // event du control
+            [Category("Property Changed")]
+            [Description("Actif quand une variable a changé")]
+
+            // declaration du event memebre de  la classe du controle
+            [Browsable(true)] // visible dans l'editeur graphique
+            public event ChangeVariablehandler ChangingVariable;
+
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+            [Browsable(false)] // pas visible dans l'editeur graphique
+            public Bitmap DrawBitMap
+            {
+                get
+                {
+                    System.Diagnostics.Debug.WriteLine("get drawb\r\n");
+                    lock (thislock)
+                    {
+                        if (backBuffer != null)
+                            return (Bitmap)backBuffer.Clone();
+                        else
+                            return null;
+                    }
+                }
+                set
+                {
+                    System.Diagnostics.Debug.WriteLine("Set drawb\r\n");
+
+                    lock (thislock)
+                    {
+                        if (backBuffer != null)
+                            backBuffer.Dispose();
+                        if (value != null)
+                            backBuffer = (Bitmap)value.Clone();
+                        else
+                            backBuffer = null;
+                    }
+                }
+            }
+
+
+            // AutoSize property
+            [DefaultValue(false)]
+            override public bool AutoSize
+            {
+                get { return autosize; }
+                set
+                {
+                    autosize = value;
+                    UpdatePosition();
+                }
+            }
+
+
+            /// <summary>
+            /// Camera property
+            /// </summary>  
+            [Browsable(false)]
+            public Camera Camera
+            {
+                get { return m_camera; }
+                set
+                {
+                    Debug.Write("setcamIN");
+                    // lock
+                    Monitor.Enter(this);
+
+                    // detach event
+                    if (m_camera != null)
+                    {
+                        m_camera.CamNewFrame -= new EventHandler(camera_NewFrame);
+                        m_camera.Alarm -= new EventHandler(camera_Alarm);
+                        timer.Stop();
+                    }
+
+                    m_camera = value;
+                    needSizeUpdate = true; // le timer devra redimensionner des choses
+                    firstFrame = true;
+                    flash = 0;
+
+
+                    // atach event
+                    if (m_camera != null)
+                    {// recalcul de la pictrect
+                        //clipper.SourceRect = m_camera.SourceRect;
+
+                        m_camera.CamNewFrame += new EventHandler(camera_NewFrame);
+                        m_camera.Alarm += new EventHandler(camera_Alarm);
+                        timer.Start();
+                        
+                        // backbuffer = taille de la fenete video
+                        // egale a la zone clippee
+                        backBuffer = new Bitmap(m_camera.Clipper.ClipRect.Width, m_camera.Clipper.ClipRect.Height, System.Drawing.Imaging.PixelFormat.Format32bppRgb);
+                        Graphics gr = Graphics.FromImage(backBuffer);
+                        gr.FillRectangle(new SolidBrush(Color.FromArgb(254, Color.Magenta)), 0, 0, backBuffer.Width, backBuffer.Height);
+                        gr.Dispose();
+
+                    }
+                    Monitor.Exit(this);
+                    Debug.Write("setcamOUT");
+                }
+            }
+
+
+
+            
+         /// <summary>
+         /// 
+         /// </summary>
+            public CameraWindow()
+            {
+                InitializeComponent();
+                m_regle = new Cursor(GetType(), "Resources.regle.cur");
+                SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.DoubleBuffer |
+                    ControlStyles.ResizeRedraw | ControlStyles.UserPaint, true);
+                panelsize.Cursor = m_regle;
+                
+            }
+
+            /// <summary>
+            /// 
+            /// </summary>
+            #region Windows Form Designer generated code
+            private void InitializeComponent()
+            {
+                this.timer = new System.Timers.Timer();
+                this.panelsize = new System.Windows.Forms.Panel();
+                this.pictRuleTop = new ruler.UserControl1();
+                this.pictRuleLeft = new ruler.UserControl1();
+                this.picvideo = new System.Windows.Forms.Panel();
+                ((System.ComponentModel.ISupportInitialize)(this.timer)).BeginInit();
+                this.panelsize.SuspendLayout();
+                this.SuspendLayout();
+                // 
+                // timer
+                // 
+                this.timer.Interval = 40;
+                this.timer.SynchronizingObject = this;
+                this.timer.Elapsed += new System.Timers.ElapsedEventHandler(this.timer_Elapsed);
+                // 
+                // panelsize
+                // 
+                this.panelsize.Controls.Add(this.pictRuleTop);
+                this.panelsize.Controls.Add(this.pictRuleLeft);
+                this.panelsize.Controls.Add(this.picvideo);
+                this.panelsize.Cursor = System.Windows.Forms.Cursors.Cross;
+                this.panelsize.Location = new System.Drawing.Point(19, 29);
+                this.panelsize.Name = "panelsize";
+                this.panelsize.Size = new System.Drawing.Size(440, 320);
+                this.panelsize.TabIndex = 0;
+                // 
+                // picruletop
+                // 
+                this.pictRuleTop.BackColor = System.Drawing.SystemColors.Info;
+                this.pictRuleTop.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+                this.pictRuleTop.Location = new System.Drawing.Point(0, 283);
+                this.pictRuleTop.MaxVal = 100;
+                this.pictRuleTop.MinVal = 10;
+                this.pictRuleTop.Name = "picruletop";
+                this.pictRuleTop.Size = new System.Drawing.Size(412, 37);
+                this.pictRuleTop.TabIndex = 4;
+                this.pictRuleTop.TabStop = false;
+                // 
+                // picruleleft
+                // 
+                this.pictRuleLeft.BackColor = System.Drawing.SystemColors.Info;
+                this.pictRuleLeft.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+                this.pictRuleLeft.Direction = ruler.direction.vertical;
+                this.pictRuleLeft.Location = new System.Drawing.Point(400, 0);
+                this.pictRuleLeft.MaxVal = 100;
+                this.pictRuleLeft.MinVal = 10;
+                this.pictRuleLeft.Name = "picruleleft";
+                this.pictRuleLeft.Size = new System.Drawing.Size(37, 283);
+                this.pictRuleLeft.TabIndex = 5;
+                this.pictRuleLeft.TabStop = false;
+                // 
+                // picvideo
+                // 
+                this.picvideo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+                this.picvideo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+                //this.picvideo.Cursor = System.Windows.Forms.Cursors.Default;
+                this.picvideo.Location = new System.Drawing.Point(-3, 0);
+                this.picvideo.Name = "picvideo";
+                this.picvideo.Size = new System.Drawing.Size(377, 277);
+                this.picvideo.TabIndex = 6;
+                this.picvideo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picvideo_MouseMove);
+                this.picvideo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picvideo_MouseDown);
+                this.picvideo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picvideo_MouseUp);
+                // 
+                // CameraWindow
+                // 
+                this.Controls.Add(this.panelsize);
+                this.Name = "CameraWindow";
+                this.Size = new System.Drawing.Size(574, 387);
+                this.Load += new System.EventHandler(this.CameraWindow_Load);
+                this.Resize += new System.EventHandler(this.CameraWindow_Resize);
+                this.SizeChanged += new System.EventHandler(this.CameraWindow_SizeChanged);
+                ((System.ComponentModel.ISupportInitialize)(this.timer)).EndInit();
+                this.panelsize.ResumeLayout(false);
+                this.ResumeLayout(false);
+
+            }
+            #endregion
+
+            
+        /// <summary>
+        /// Paint control
+        /// </summary>
+        /// <param name="pe"></param>
+    
+        protected override void OnPaint(PaintEventArgs pe)
+            {
+                return;               
+            }
+
+         
+        /// <summary>
+         /// fonction a appeler quand on modifie la position deu control
+         /// elle se charge de recacluler les positrion de ses constituants
+         /// </summary>
+        public void UpdatePosition()
+            {
+                if (prvwidth == Width && prvheight == Height)
+                    return;
+
+                Debug.Write("[camerawindow.updatepos]");
+
+                // lock
+                Monitor.Enter(this);
+                prvheight = Height;
+                prvwidth = Width;
+
+
+
+                if ((autosize) && (this.Parent != null))
+                {// tant que m_camera est nul on n'a pas de backbuffer fabraique....
+                    if (backBuffer != null)
+                        backBuffer.Dispose();
+                    backBuffer = null;
+                    if (m_camera != null)
+                    {// demande la taille de la zone d'image
+                        // clipper renvoie toujours quelquechose de raisonnable
+                        backBuffer = new Bitmap(m_camera.Clipper.ClipRect.Width, m_camera.Clipper.ClipRect.Height, System.Drawing.Imaging.PixelFormat.Format32bppRgb);
+                        Graphics gr = Graphics.FromImage(backBuffer);
+                        gr.FillRectangle(new SolidBrush(Color.FromArgb(255, Color.Magenta)), 0, 0, backBuffer.Width, backBuffer.Height);
+                        gr.Dispose();
+                    }
+
+                    //
+                    this.SuspendLayout();
+
+                    // positionne la visurect
+                    if (m_camera != null)
+                    {
+                        Size visusize = m_camera.Clipper.processChangeVisuRect(Parent.ClientRectangle);  // taille de la fenetre client du container de cette fenetre
+                        this.Location = m_camera.Clipper.VisuLocation;
+                        this.Size = m_camera.Clipper.VisuSize;
+                        //m_camera.ChgVisuRect(); // on signale a la cam que le visurect a change
+                    }
+                    this.ResumeLayout();
+
+                }
+                // unlock
+                Monitor.Exit(this);
+                
+                if (ChgClipp != null)
+                    ChgClipp(this,new EventArgs()); // evenement envoye ailleurs disant qu'on a modifie la ^position de qqch dans le clipper
+            }
+         
+         
+         /// <summary>
+         /// eappele sur evenement sizechanged de la camerawindow
+         /// recalcule la taille de picvideo a partir de la taille de camerwindow et des curseurs
+         /// </summary>
+         /// <param name="sender"></param>
+         /// <param name="e"></param>
+           private void CameraWindow_SizeChanged(object sender, EventArgs e)
+            {// on redimensionne la video de l'image
+             // cad on positionne bien la video entre les rules
+             //picvideo.Width = Width - this.pictRuleLeft.Width ;
+             //picvideo.Height = Height - this.pictRuleTop.Height;
+            }
+
+
+            //---------------------------------------------
+            // On new frame ready
+            //---------------------------------------------
+            private void camera_NewFrame(object sender, System.EventArgs e)
+            {
+                //Debug.Write("camnewframe");
+                //Invalidate();
+            }
+
+            //---------------------------------------------
+            // On alarm
+            //---------------------------------------------
+            private void camera_Alarm(object sender, System.EventArgs e)
+            {
+                // flash for 2 seconds
+                flash = (int)(2 * (1000 / timer.Interval));
+            }
+
+            //---------------------------------------------
+            // On timer
+            //---------------------------------------------
+            private void timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
+            {
+                //return;
+
+                
+                // draw rectangle
+                if (!needSizeUpdate)
+                    {
+                        //Graphics g = this.CreateGraphics();
+                        //Rectangle rc = Parent.ClientRectangle;
+                        //Pen pen = new Pen(rectColor, 1);
+
+                        // draw rectangle
+                        //g.DrawRectangle(pen, rc.X+40, rc.Y, rc.Width - 1, rc.Height - 1);
+
+                        //g.Dispose();
+                        //pen.Dispose();
+
+                    }                
+            }
+
+           /// <summary>
+           /// traitement de l'event resize de la camerawindow
+           /// </summary>
+           /// <param name="sender"></param>
+           /// <param name="e"></param>
+            private void CameraWindow_Resize(object sender, EventArgs e)
+            {
+                Control quid = (Control)sender;
+
+                Debug.Write("[camerawindowresize]");
+                if (m_camera != null)
+                {//NOTE : Rectangle est une structure donc le = fait une copie
+                    Rectangle rectPar = new Rectangle();
+                    //Control CSender = (Control)sender;
+                    rectPar = this.Parent.ClientRectangle; // csender est en fait this
+                    Rectangle savrect = rectPar;
+                    /*{ // pour verification: le clientrectangles est ok !!!
+                        Graphics gr = this.CreateGraphics();
+                        Rectangle todraw = rectPar;
+                        todraw.Inflate(new Size(-1, -1));
+                        Pen VertPen = new Pen(Color.FromArgb(128, Color.Green),1);
+                        gr.DrawRectangle(VertPen, todraw);
+                        gr.Dispose();
+                    }*/
+                    rectPar.Width -= pictRuleLeft.Width; // on diminue le rect de la taille des regles pour recalculer la taille de la video
+                    rectPar.Height -= pictRuleTop.Height;
+
+                    //rectPar est La taille Dispose pour afficher la VideoSource avec les regles endPoint plus
+                    Size visusize = m_camera.Clipper.processChangeVisuRect(rectPar); // on recoit la taille de la fenetre de visu de la video
+                    Rectangle videorect = new Rectangle(0, 0, visusize.Width, visusize.Height);
+
+                    picvideo.SetBounds(0, 0, videorect.Width, videorect.Height);
+                    pictRuleTop.SetBounds(videorect.Left, videorect.Bottom + 2, videorect.Width, 0, BoundsSpecified.X | BoundsSpecified.Y | BoundsSpecified.Width);
+                    pictRuleLeft.SetBounds(videorect.Right + 2, videorect.Top, 0, videorect.Height, BoundsSpecified.X | BoundsSpecified.Y | BoundsSpecified.Height);
+
+                    // on redimensionne le panel video
+                    int newwidth = pictRuleLeft.Right + 2; // width de l'ensemble video + ruler
+                    int newheight = pictRuleTop.Bottom+ 2; // height de l'ensemble video + ruler
+
+                    panelsize.SetBounds((this.Width-newwidth)/2,(this.Height-newheight)/2,newwidth,newheight);
+                   
+                    pictRuleTop.Invalidate(); // pour faire repeindre
+                    pictRuleLeft.Invalidate();
+
+                }
+            }
+           
+         
+         
+/// <summary>
+/// 
+/// </summary>
+/// <param name="sender"></param>
+/// <param name="e"></param>
+           
+    private void picvideo_MouseDown(object sender, MouseEventArgs e)
+     {
+        // on convertit la coord souris depuis camerawindow vers picvideo
+        Point ptvisu = picvideo.PointToClient(Cursor.Position);
+        
+
+                mouseDown = true;
+                 int xbitmap = ptvisu.X;
+                int ybitmap = ptvisu.Y;
+                startPoint.X = xbitmap; // start et end sont confondus
+                startPoint.Y = ybitmap; // start et end sont confondus
+                endPoint.X = xbitmap; // start et end sont confondus
+                endPoint.Y = ybitmap; // start et end sont confondus
+
+                // un evenement 
+                if (ChangingVariable != null)
+                    ChangingVariable(this, new ChangeVariable(1, xbitmap, ybitmap)); // declanchement de l'event 1
+
+            }
+/// <summary>
+/// 
+/// </summary>
+/// <param name="sender"></param>
+/// <param name="e"></param>
+            private void picvideo_MouseMove(object sender, MouseEventArgs e)
+            {Debug.Write("[x="+e.X+"Y="+e.Y+"]");
+             Point ptvisu = picvideo.PointToClient(Cursor.Position);
+        
+                if (mouseDown)
+                {   int xbitmap = ptvisu.X; // (int)(e.X / (double)pictrect.Width * (double)locbuffer.Width);
+                    int ybitmap = ptvisu.Y; // (int)(e.Y / (double)pictrect.Height * (double)locbuffer.Height);
+
+                    endPoint.X = xbitmap; // start et end sont confondus
+                    endPoint.Y = ybitmap; // start et end sont confondus
+
+                    if (ChangingVariable != null)
+                        ChangingVariable(this, new ChangeVariable(2, endPoint.X, endPoint.Y)); // declanchement de l'event 2 : move
+                }
+                else
+                {//idem car on transmet a souris a la fenetre aussi
+                    int xbitmap = ptvisu.X; // (int)(e.X / (double)pictrect.Width * (double)locbuffer.Width);
+                    int ybitmap = ptvisu.Y; // (int)(e.Y / (double)pictrect.Height * (double)locbuffer.Height);
+
+                    if (ChangingVariable != null)
+                        ChangingVariable(this, new ChangeVariable(0, endPoint.X, endPoint.Y)); // declanchement de l'event 2 : move
+                    }
+
+            }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+            private void picvideo_MouseUp(object sender, MouseEventArgs e)
+            {Point ptvisu = picvideo.PointToClient(Cursor.Position);
+        
+                if (ChangingVariable != null)
+                    //ChangingVariable(this, new ChangeVariable(3, ClientRectangle.Width - e.X, endPoint.Y)); // declanchement de l'event 3 : fin de trace
+                    ChangingVariable(this, new ChangeVariable(3, ptvisu.X, endPoint.Y)); // declanchement de l'event 3 : fin de trace
+
+                mouseDown = false;
+            
+
+            }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+            private void picvideo_Click(object sender, EventArgs e)
+            {
+
+            }
+
+            /// <summary>
+            /// 
+            /// </summary>
+            /// <param name="sender"></param>
+            /// <param name="e"></param>
+            private void picvideo_Paint(object sender, PaintEventArgs e)
+            {
+
+            }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+            private void picvideo_MouseDoubleClick(object sender, MouseEventArgs e)
+            {
+
+            }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+         private void CameraWindow_Load(object sender, EventArgs e)
+         {
+
+         }
+
+
+        }// ------- fin de def classe ser control
+
+        
+    /// <summary>
+    /// eventarg utilise par l'event changevariable 
+    /// cet event est utilise quand qqchose d'interactif a ete modifie (mouvement de souris par exemple)
+    /// </summary>
+    public class ChangeVariable : System.EventArgs
+        {
+        /// <summary>
+        /// attributs 
+        /// </summary>
+            private int numVariable = 0; // valeur 0 : impossible
+            private double valValeurX = 0;
+            private double valValeurY = 0;
+
+            /// <summary>
+            /// 
+            /// </summary>
+            public ChangeVariable()
+            {
+            }
+
+            /// <summary>
+            /// 
+            /// </summary>
+            /// <param name="num">numero de vraiable</param>
+            /// <param name="valeurx">premiere valeur (x en general)</param>
+            /// <param name="valeury"duexieme valeur (y en general)></param>
+            public ChangeVariable(int num, double valeurx, double valeury)
+            {
+                setvalue(num, valeurx, valeury);
+            }
+
+            /// <summary>
+            /// 
+            /// </summary>
+            /// <param name="numvariable"></param>
+            /// <param name="valeurx"></param>
+            /// <param name="valeury"></param>
+            public void setvalue(int numvariable, double valeurx, double valeury)
+            {
+                numVariable = numvariable;
+                valValeurX = valeurx;
+                valValeurY = valeury;
+            }
+
+
+            /// <summary>
+            /// variable get renvoyant le num
+            /// </summary>
+            public int num
+            {
+                get { return numVariable; }
+            }
+
+        /// <summary>
+        /// @brief variable get renvoyant la valeur
+        /// </summary>
+        public double valeurx
+            {
+                get { return valValeurX; }
+            }
+/// <summary>
+/// 
+/// </summary>
+            public double valeury
+            {
+                get { return valValeurY; }
+            }
+        
+    }
+}

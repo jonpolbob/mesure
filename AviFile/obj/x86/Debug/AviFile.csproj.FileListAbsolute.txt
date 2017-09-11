@@ -1,0 +1,12 @@
+C:\essais\mesure2C\AviFile\bin\x86\Debug\AviFile.dll.config
+C:\essais\mesure2C\AviFile\bin\x86\Debug\AviFile.dll
+C:\essais\mesure2C\AviFile\bin\x86\Debug\AviFile.pdb
+C:\essais\mesure2C\AviFile\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\essais\mesure2C\AviFile\obj\x86\Debug\AviFile.dll
+C:\essais\mesure2C\AviFile\obj\x86\Debug\AviFile.pdb
+C:\essais\mesure2d\AviFile\bin\x86\Debug\AviFile.dll.config
+C:\essais\mesure2d\AviFile\bin\x86\Debug\AviFile.dll
+C:\essais\mesure2d\AviFile\bin\x86\Debug\AviFile.pdb
+C:\essais\mesure2d\AviFile\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\essais\mesure2d\AviFile\obj\x86\Debug\AviFile.dll
+C:\essais\mesure2d\AviFile\obj\x86\Debug\AviFile.pdb

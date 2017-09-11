@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mesure", "mesure.csproj", "{9CE00D49-20A6-4946-891D-E893FA790742}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ruler", "..\ruler\ruler.csproj", "{658BE15C-93AB-44DF-9693-E086A49FAF4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vfw", "..\vfw\vfw.csproj", "{110E4504-2443-4116-9255-53D1F723BED7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "twainlib", "..\twainlib\twainlib.csproj", "{95B180F9-4776-426F-BC05-472968CE6F0B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9CE00D49-20A6-4946-891D-E893FA790742}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CE00D49-20A6-4946-891D-E893FA790742}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CE00D49-20A6-4946-891D-E893FA790742}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CE00D49-20A6-4946-891D-E893FA790742}.Release|Any CPU.Build.0 = Release|Any CPU
+		{658BE15C-93AB-44DF-9693-E086A49FAF4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{658BE15C-93AB-44DF-9693-E086A49FAF4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{658BE15C-93AB-44DF-9693-E086A49FAF4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{658BE15C-93AB-44DF-9693-E086A49FAF4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{110E4504-2443-4116-9255-53D1F723BED7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{110E4504-2443-4116-9255-53D1F723BED7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{110E4504-2443-4116-9255-53D1F723BED7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{110E4504-2443-4116-9255-53D1F723BED7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95B180F9-4776-426F-BC05-472968CE6F0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95B180F9-4776-426F-BC05-472968CE6F0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95B180F9-4776-426F-BC05-472968CE6F0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95B180F9-4776-426F-BC05-472968CE6F0B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

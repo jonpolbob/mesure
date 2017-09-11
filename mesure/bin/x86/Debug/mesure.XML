@@ -1,0 +1,3752 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>mesure</name>
+    </assembly>
+    <members>
+        <member name="T:SplashScreenThreaded.TypeOfMessage">
+            <summary>
+            Defined types of messages: Success/Warning/Error.
+            </summary>
+        </member>
+        <member name="T:SplashScreenThreaded.SplashScreen">
+            <summary>
+            Initiate instance of SplashScreen
+            </summary>
+        </member>
+        <member name="M:SplashScreenThreaded.SplashScreen.ShowSplashScreen">
+            <summary>
+            Displays the splashscreen
+            </summary>
+        </member>
+        <member name="M:SplashScreenThreaded.SplashScreen.CloseSplashScreen">
+            <summary>
+            Closes the SplashScreen
+            </summary>
+        </member>
+        <member name="M:SplashScreenThreaded.SplashScreen.UdpateStatusText(System.String)">
+            <summary>
+            Update text in default green color of success message
+            </summary>
+            <param name="Text">Message</param>
+        </member>
+        <member name="M:SplashScreenThreaded.SplashScreen.UdpateStatusTextWithStatus(System.String,SplashScreenThreaded.TypeOfMessage)">
+            <summary>
+            Update text with message color defined as green/yellow/red/ for success/warning/failure
+            </summary>
+            <param name="Text">Message</param>
+            <param name="tom">Type of Message</param>
+        </member>
+        <member name="T:mesure.coltype">
+            <summary>
+            types de colonne
+            variable : sans type particulier
+            legendedeb : la colonne est en debut de ligne
+            legendefin : la colonne doit ariver apres lesresultats
+            result : la colonne fait partie du group de resultats
+            si on fait un add avec -1 comme numero de colonne :
+            une colonne legendedeb sera rajoutee apres la derniere legendedeb
+            une colonne legendefin sera rajoutee apres la derniere legende
+            une colonne result sera apres laderniere colonne resultat
+            </summary>
+        </member>
+        <member name="T:mesure.Gesres">
+            <summary>
+            gestionnaire de résultats
+             gere les resultats en foramt variable : chaque resultat est stocké avec le nom de sa colonne et sn numero de ligne
+            si une nouvelle colonne apparait, c'est capable de regenerer tout le dispositif
+            chaque colonne est designee dans la clase ar son id, comme ca si on decale une colonne tous les resultats restent correctemet attaches a elle
+            </summary>
+        </member>
+        <member name="M:mesure.Gesres.getnewcolID">
+            <summary>
+            renvoie un I dde colonne disponible
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.Gesres.AddNewLigne">
+            <summary>
+            prepare une nouvelle ligne de resultats
+            et la rajoute au tableau des resultats
+            </summary>
+            <param name="numligne"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.Gesres.getLigneEcr">
+            <summary>
+            renvoie la ligne en cours d'ecriture      
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.Gesres.RemoveLigne">
+            <summary>
+            vire la derniere ligne de resultats
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.Gesres.AddCell(System.String,System.String)">
+            <summary>
+            ajoute une celleule a la ligne d'ecriture courante
+            avec cette colonne et cette valeur
+            </summary>
+            <param name="nomcol">nom de la colonne</param>
+            <param name="valeur">valeur a enregistrer (correctemetn formattée)</param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.Gesres.getLstColType(mesure.coltype)">
+            <summary>
+            renvoie l'index de la derniere colonne de ce type
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.Gesres.DelColonne(System.String)">
+            <summary>
+            efface du tableau de resultats la colonne de nom nomcolonne
+            et vire tous les resultatas
+            en fait ce serai mieux de pas les virer, juste enlever la colonne        
+            </summary>
+            <param name="nomcolonne">nom de la colonne a enlever</param>
+            <returns>1 si col pas trouvee, 0 si OK</returns>
+        </member>
+        <member name="M:mesure.Gesres.AddColonne(System.Int32,mesure.coltype,System.String)">
+            <summary>
+            rajoute une colonne position(1ere position = 1)
+            decale les colonnes suivantes
+            cette gestion des colonnes ne concerne que les resultats
+            les colonnes parametres et objectifs sont gerees séparament
+            </summary>
+            <param name="position">si -1 : positionnement automatique selon le type</param>
+            <param name="type">type de colonne</param>
+            <param name="nomcolonne">nom de la nouvelle colonne</param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.Gesres.getidcolonne(System.String)">
+            <summary>
+            renvoi l'id de la colonne de nom nomcolonne
+            </summary>
+            <param name="nomcolonne"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.Gesres.ClearResul">
+            <summary>
+            claer de tous les resultats du tableau
+            </summary>
+            <returns></returns>         
+        </member>
+        <member name="M:mesure.Gesres.NxtColRead">
+            <summary>
+            renvoie le titre de la prochaine colonne
+            </summary>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:mesure.Gesres.ResetLinesRead" -->
+        <member name="M:mesure.Gesres.NxtLineRead(System.String@)">
+            <summary>
+            renvoie un chaine correcte de la ligne de resultat, corectemetn rangée selon les colonnes
+            avec des vides pour les champs vides
+            </summary>
+            <param name="lineout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.Gesres.readformattedline(mesure.Gesres.resLigne)">
+            <summary>
+            sort la ligne de resutlats correctemetn formattee en fonction des cononnes
+            a afficher
+            </summary>
+            <param name="line"></param>
+            <returns></returns>
+        </member>
+        <member name="T:mesure.Gesres.resCase">
+            <summary>
+            SOUSCLASS DE gstion d'une case du tableaude resultats
+            </summary>
+        </member>
+        <member name="T:mesure.Gesres.resLigne">
+            <summary>
+            une ligne de resultats 
+            </summary>
+        </member>
+        <member name="M:mesure.Etalonnage.LoadDisk(mesure.XMLAvElement)">
+            <summary>
+            charge l'etalonnage avec les donnees incluses dans element
+            </summary>
+            <param name="element"></param>
+            
+        </member>
+        <member name="M:mesure.Etalonnage.InitEtal(System.Double,System.Double,System.Double,System.Double,System.Double,System.String)">
+            <summary>
+            init de l'etalonnage, pour l'instant on fait tout en rapport d'ecran dde 1
+            </summary>
+            <param name="debx"></param>
+            <param name="deby"></param>
+            <param name="finx"></param>
+            <param name="finy"></param>
+            <param name="mesure"></param>
+            <param name="unit"></param>
+        </member>
+        <member name="M:mesure.Etalonnage.Conversion(System.Drawing.PointF)">
+             <summary>
+            renvoie un point en coordonees etalonnees a partir d'un point en coords source 
+             </summary>
+             <param name="ptin"></param>
+             <returns></returns>
+        </member>
+        <member name="M:mesure.Etalonnage.ConversionInv(System.Drawing.PointF,System.Drawing.PointF@)">
+            <summary>
+            fait la conversion d'un point coordonnees source è-> coordonnees client
+             si le point est en dehors du client : ca renboie 2 et ca positionne les valurs max dans le point
+            renvoie un point en coordonees etalonnees en coordonnees clipper
+            renvoie 0 si un probleme. la valeur sortie est toujours mise a jour mais peut etre 
+            fausee si ca depasse le cadre du clipper
+            </summary>
+            <param name="ptin"></param>
+            <param name="ptclient"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.Etalonnage.ConversionInv(System.Double,System.Double,System.Single@,System.Single@)">
+            <summary>
+             la meme fonction avec les coordonnees x,y du point        
+            </summary>
+            <param name="x">x du point en coords source</param>
+            <param name="y">y du point en coords source</param>
+            <param name="xunit">x du ploint en coords clipper</param>
+            <param name="yunit">ydu point en coords clipper</param>
+            <returns>0 si pas d'erreur, sinon des erreurs</returns>
+        </member>
+        <member name="M:mesure.Etalonnage.Conversion(System.Double,System.Double,System.Single@,System.Single@)">
+            <summary>
+            converti un pt x,y en un point d'unites x,y
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="xunit"></param>
+            <param name="yunit"></param>
+            <returns></returns>
+        </member>
+        <member name="P:mesure.Etalonnage.Unite">
+            <summary>
+            brief renvoie la legende des unites
+            </summary>
+        </member>
+        <member name="T:mesure.CoreSystem">
+            
+             singleton contenant les elements fonctionnels
+            
+        </member>
+        <member name="M:mesure.CoreSystem.#cctor">
+             <summary>
+            ca c'est assez mysterieux mais necessaire, ce constructeur static 
+             
+             
+             </summary>
+        </member>
+        <member name="M:mesure.CoreSystem.RebuildParamSauvImg(mesure.paramsavimg)">
+            <summary>
+            recreation de paramsavimg a partir d'une nouvelle structure
+            par exemle cette structure est le clone de la structure courante, modifié par la boite d'edit des parametres
+            </summary>
+            <param name="newparamsav">nouvelle classe paramsavimg destinee a remplacer l'existante</param>
+        </member>
+        <member name="P:mesure.CoreSystem.Instance">
+             <summary>
+            on accede a coresystem par instance Coresystem.Instance 
+             </summary>
+        </member>
+        <member name="P:mesure.CoreSystem.Camera">
+            <summary>
+            property Camera get set
+            </summary>        
+        </member>
+        <member name="P:mesure.CoreSystem.ResCumul">
+            <summary>
+            membre renvoyant le gestionnaire de resultats
+            </summary>
+        </member>
+        <member name="P:mesure.CoreSystem.Config">
+            <summary>
+            memebre renvoyant le gestionnaire de config
+            </summary>
+        </member>
+        <member name="P:mesure.CoreSystem.Etals">
+            <summary>
+            property Etals get uniquement
+            </summary>
+        </member>
+        <member name="P:mesure.CoreSystem.Calculator">
+            <summary>
+            property calculator get set
+            </summary>
+        </member>
+        <member name="P:mesure.CoreSystem.ParamSauvImg">
+            <summary>
+            permet d'acceder a paramsavimg en lecture
+            </summary>
+        </member>
+        <member name="P:mesure.CoreSystem.ParamSauvRes">
+            <summary>
+            permet d'acceder a paramsavimg
+            </summary>
+        </member>
+        <member name="P:mesure.CoreSystem.CurEchName">
+            <summary>
+            nom actuel de l'ecchantillon
+            </summary>
+        </member>
+        <member name="T:mesure.HorMesure">
+            <summary>
+            classe derivee de icalculator faisant une mesure de longueur verticale
+            </summary>
+        </member>
+        <member name="T:mesure.GenericCalculator">
+            <summary>
+            contient les elements comuns a tous les calculator
+            il reste plus qu'a implementer l'interface
+            </summary>
+        </member>
+        <member name="T:mesure.IGenericCalculator">
+            <summary>
+            interface permettant de faire deriver 
+            </summary>
+        </member>
+        <member name="P:mesure.IGenericCalculator.Panel">
+            <summary>
+            
+            </summary>
+            <value> tdpanel devant etre utilise par ce calculateur pour ses dessins</value>
+        </member>
+        <member name="M:mesure.GenericCalculator.OnVisuToSrcConv(System.Object,mesure.MesureEventArgs@)">
+            <summary>
+            fonctions appelenat les events car on le peut pas appeler des events d'une classe mere 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:mesure.GenericCalculator.m_Color">
+            <summary>
+            <value> couleur de trace</value>
+            </summary>
+        </member>
+        <member name="M:mesure.GenericCalculator.SetColor(System.Drawing.Color)">
+            <summary>
+            positionne la couleur de trace
+            </summary>
+            <param name="newcolor"></param>
+        </member>
+        <member name="P:mesure.GenericCalculator.Panel">
+            <summary>
+            definit lepanel a utiliser 
+            </summary>
+        </member>
+        <member name="T:mesure.ICalculator">
+            <summary>
+            interface ICalculator servant a definir les fonctions indispensables a un calculator, en plus des fonctions de base de genereic
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:mesure.ICalculator.SetActive(System.Windows.Forms.Control)" -->
+        <!-- Badly formed XML comment ignored for member "M:mesure.ICalculator.SaveDisk(mesure.XMLAvElement)" -->
+        <!-- Badly formed XML comment ignored for member "M:mesure.ICalculator.GetValeur(System.Int32,System.Int32)" -->
+        <!-- Badly formed XML comment ignored for member "M:mesure.ICalculator.GetLegende(System.Int32)" -->
+        <!-- Badly formed XML comment ignored for member "M:mesure.ICalculator.GetUnit(System.Int32,mesure.etalflagstyp@)" -->
+        <!-- Badly formed XML comment ignored for member "M:mesure.ICalculator.GetListResu" -->
+        <!-- Badly formed XML comment ignored for member "E:mesure.ICalculator.VisuToSrcConv" -->
+        <!-- Badly formed XML comment ignored for member "E:mesure.ICalculator.SrcToVisuConv" -->
+        <!-- Badly formed XML comment ignored for member "E:mesure.ICalculator.SrcToEtalConv" -->
+        <!-- Badly formed XML comment ignored for member "E:mesure.ICalculator.ToResu" -->
+        <member name="M:mesure.HorMesure.#ctor">
+            <summary>
+            constructeur
+            </summary>
+        </member>
+        <member name="F:mesure.HorMesure.xCalGauche">
+            y source de l ligne basse
+        </member>
+        <member name="F:mesure.HorMesure.xCalDroite">
+            y calibre de la ligne haute
+        </member>
+        <member name="F:mesure.HorMesure.leclient">
+            y calibre de la ligne basse
+        </member>
+        <member name="M:mesure.HorMesure.SaveDisk(mesure.XMLAvElement)">
+            <summary>
+            necessaire a Icalculator
+            </summary>
+            <param name="element"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.HorMesure.LoadDisk(mesure.XMLAvElement)">
+            <summary>
+            necessaire a Icalculator
+            lit les reglages dans las ection de la config
+            </summary>
+            <param name="elemnt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.HorMesure.sendresuline(System.Boolean)">
+            <summary>
+            fonction construisant la liste des resultats
+            </summary>
+            <param name="final">true si c'est le resultat destine a etre enregistre</param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.HorMesure.GetValeur(System.Int32,System.Int32)">
+            <summary>
+            renvoie la valeur du calul de numero ID
+            </summary>
+            <param name="ID"></param>
+            <param name="unit"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.HorMesure.GetLegende(System.Int32)">
+            <summary>
+            necessaire a Icalculator
+            </summary>
+            <param name="ID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.HorMesure.GetUnit(System.Int32,mesure.etalflagstyp@)">
+            <summary>
+            necessaire a Icalculator
+            </summary>
+            <param name="ID"></param>
+            <param name="etalflags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.HorMesure.GetListResu">
+            <summary>
+            genere la listr des id de resultats disponibles pour ce calcul
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.HorMesure.reloadlignes(System.Object)">
+            <summary>
+            reinitialise les coordonnees lignes a l'ecran en les recalculant a partir des coords source et du clipper
+            </summary>
+            <param name="sender">objet envoyant le message</param>
+        </member>
+        <member name="M:mesure.HorMesure.OnChgVisuSize(System.Object,System.EventArgs)">
+            <summary>
+            fonction traitant les changement de taille de la visu
+            le but est de reconvertir les coords source de ce calculateur en nouvelles coords clipp
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.HorMesure.repaint">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:mesure.HorMesure.SetActive(System.Windows.Forms.Control)">
+            <summary>
+            rend cette mesure active (et lza dessine a l'ecran)
+            </summary>
+            <param name="client"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.HorMesure.inity">
+            <summary>
+            initialise la position des traits si c'est pas deja fait
+            ne'init pas les valeurs de ycalibre
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.HorMesure.OnChangeVariable(System.Object,mesure.ChangeVariable)">
+            <summary>
+            traite un changement de variable
+            renvoie 0 si resultat ok
+            renvoie 1 si attend encore qqchose                
+            </summary>
+            <param name="e"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.HorMesure.onmousedown(System.Double,System.Double)">
+            <summary>
+            traite les coordonnees de la souris quand on l'appuie
+            </summary>
+            <param name="x">coord souris dans la fenetre visu video</param>
+            <param name="y"></param>
+            <returns>0 si u probleme</returns>
+        </member>
+        <member name="M:mesure.HorMesure.onmousemove(System.Double,System.Double)">
+            <summary>
+            action realisee au mouvement de souris
+            on lit les y et on les convertit en source mais pas en calibre
+            on sauvegardera les coordonnees source une fois la souris relachee
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.HorMesure.onmouseup(System.Double,System.Double)">
+            <summary>
+            action realisee au lacher de souris:
+            on calcule le resu etalonne
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.HorMesure.tstcursor(System.Double,System.Double)">
+            <summary>
+             teste xy pour savoir si on est pres des lignes et donc si on doit
+             changer le curseur
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <returns></returns>
+        </member>
+        <member name="F:mesure.GesCodForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:mesure.GesCodForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:mesure.GesCodForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:mesure.GesCodForm.but_genkey_Click(System.Object,System.EventArgs)">
+            <summary>
+             generer une cle
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:mesure.RulerAxis">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:mesure.RulerAxis.max">
+            valeur min de l'axe 
+        </member>
+        <member name="T:mesure.CaptureDeviceForm">
+            <summary>
+            Summary description for CaptureDeviceForm.
+            </summary>
+        </member>
+        <member name="F:mesure.CaptureDeviceForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:mesure.CaptureDeviceForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:mesure.CaptureDeviceForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:mesure.VertMesure">
+            <summary>
+            classe derivee de icalculator faisant une mesure de longueur verticale
+            </summary>
+        </member>
+        <member name="M:mesure.VertMesure.#ctor">
+            <summary>
+            constructeur
+            </summary>
+        </member>
+        <member name="F:mesure.VertMesure.yCalHaut">
+            y source de l ligne basse
+        </member>
+        <member name="F:mesure.VertMesure.yCalBas">
+            y calibre de la ligne haute
+        </member>
+        <member name="F:mesure.VertMesure.leclient">
+            y calibre de la ligne basse
+        </member>
+        <member name="M:mesure.VertMesure.SaveDisk(mesure.XMLAvElement)">
+            <summary>
+            necessaire a Icalculator
+            </summary>
+            <param name="element"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.VertMesure.LoadDisk(mesure.XMLAvElement)">
+            <summary>
+            necessaire a Icalculator
+            lit les reglages dans las ection de la config
+            </summary>
+            <param name="elemnt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.VertMesure.sendresuline(System.Boolean)">
+            <summary>
+            fonction construisant la liste des resultats
+            </summary>
+            <param name="final">true si c'est le resultat destine a etre enregistre</param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.VertMesure.GetValeur(System.Int32,System.Int32)">
+            <summary>
+            renvoie la valeur du calul de numero ID
+            </summary>
+            <param name="ID"></param>
+            <param name="unit"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.VertMesure.GetLegende(System.Int32)">
+            <summary>
+            necessaire a Icalculator
+            </summary>
+            <param name="ID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.VertMesure.GetUnit(System.Int32,mesure.etalflagstyp@)">
+            <summary>
+            necessaire a Icalculator
+            </summary>
+            <param name="ID"></param>
+            <param name="etalflags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.VertMesure.GetListResu">
+            <summary>
+            genere la listr des id de resultats disponibles pour ce calcul
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.VertMesure.reloadlignes(System.Object)">
+            <summary>
+            reinitialise les coordonnees lignes a l'ecran en les recalculant a partir des coords source et du clipper
+            </summary>
+            <param name="sender">objet envoyant le message</param>
+        </member>
+        <member name="M:mesure.VertMesure.OnChgVisuSize(System.Object,System.EventArgs)">
+            <summary>
+            fonction traitant les changement de taille de la visu
+            le but est de reconvertir les coords source de ce calculateur en nouvelles coords clipp
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.VertMesure.repaint">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:mesure.VertMesure.SetActive(System.Windows.Forms.Control)">
+            <summary>
+            rend cette mesure active (et lza dessine a l'ecran)
+            </summary>
+            <param name="client"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.VertMesure.inity">
+            <summary>
+            initialise la position des traits si c'est pas deja fait
+            ne'init pas les valeurs de ycalibre
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.VertMesure.OnChangeVariable(System.Object,mesure.ChangeVariable)">
+            <summary>
+            traite un changement de variable
+            renvoie 0 si resultat ok
+            renvoie 1 si attend encore qqchose                
+            </summary>
+            <param name="e"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.VertMesure.onmousedown(System.Double,System.Double)">
+            <summary>
+            traite les coordonnees de la souris quand on l'appuie
+            </summary>
+            <param name="x">coord souris dans la fenetre visu video</param>
+            <param name="y"></param>
+            <returns>0 si u probleme</returns>
+        </member>
+        <member name="M:mesure.VertMesure.onmousemove(System.Double,System.Double)">
+            <summary>
+            action realisee au mouvement de souris
+            on lit les y et on les convertit en source mais pas en calibre
+            on sauvegardera les coordonnees source une fois la souris relachee
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.VertMesure.onmouseup(System.Double,System.Double)">
+            <summary>
+            action realisee au lacher de souris:
+            on calcule le resu etalonne
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.VertMesure.tstcursor(System.Double,System.Double)">
+            <summary>
+             teste xy pour savoir si on est pres des lignes et donc si on doit
+             changer le curseur
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <returns></returns>
+        </member>
+        <member name="T:mesure.MesureEventHandler">
+            <summary>
+            delegate pour la conversion de client a source
+            </summary>
+            <param name="sender">controle emettant l'event</param>
+            <param name="e">argument contenant les coords en vis(x/y) et qui recevra les resultats caclules en cal(x/y)</param>
+        </member>
+        <member name="T:mesure.MesureEventArgs">
+            <summary>
+            arguments pour la conversion de client a resultats calibres et vice versa
+            </summary>
+        </member>
+        <member name="F:mesure.MesureEventArgs.inputY">
+            x a covertir
+        </member>
+        <member name="F:mesure.MesureEventArgs.outputX">
+            y a convertir
+        </member>
+        <member name="F:mesure.MesureEventArgs.outputY">
+            resultat X converti
+        </member>
+        <member name="F:mesure.MesureEventArgs.convAvail">
+            resultata Y converti
+        </member>
+        <member name="F:mesure.MesureEventArgs.scaleok">
+            la conversion etait possible (un etalonnage existait)
+        </member>
+        <member name="F:mesure.MesureEventArgs.codeerreur">
+            la conversion est dans la gamme de conversion possible
+        </member>
+        <member name="M:mesure.MesureEventArgs.#ctor(System.Double,System.Double)">
+            <summary>
+            constructuer remplissant les points client de la structure
+            initialise la structure avec les points client a convertir.
+            les points calibres sont init egaux aux points clients
+            </summary>
+            <param name="X">x a convertir</param>
+            <param name="cliy">y a convertir</param>
+        </member>
+        <member name="P:mesure.MesureEventArgs.CodeErreur">
+            il y a une erreur qui fait que le resutat sorti n'est pas explitable
+        </member>
+        <member name="P:mesure.MesureEventArgs.inputPt">
+            <summary>
+            get le point a convertir
+            </summary>
+        </member>
+        <member name="P:mesure.MesureEventArgs.outPt">
+            <summary>
+            get/set le point converti 
+            le set est fait pas copie des x,y
+            </summary>
+        </member>
+        <member name="P:mesure.MesureEventArgs.CalOk">
+            <summary>
+            renvoie si la calibration est ok
+            </summary>
+        </member>
+        <member name="P:mesure.MesureEventArgs.ScaleOk">
+            <summary>
+            renvoie si l'echelle est ok
+            </summary>
+        </member>
+        <member name="T:mesure.ResuEventHandler">
+            <summary>
+            elements pour le retour des resultats du mesureur vers l'affichage ou les tableaux de resultats
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:mesure.ResuEventArg">
+            <summary>
+            class permettant la communication des resultats entre le mesureur et l'appli
+            </summary>
+        </member>
+        <member name="M:mesure.ResuEventArg.#ctor(mesure.ICalculator,System.Boolean)">
+             <summary>
+            constructeur, dit si c'est un envoi de resultat final ou en cours de trace 
+             </summary>
+             <param name="final"></param>
+        </member>
+        <member name="M:mesure.ResuEventArg.#ctor(mesure.ICalculator)">
+            <summary>
+            constructeur de base, pour des resultats non finaux
+            </summary>
+        </member>
+        <member name="M:mesure.ResuEventArg.AddResu(System.Int32)">
+            <summary>
+            ajoute un ID a la liste des resultats proposes
+            </summary>
+            <param name="ID"></param>
+            <returns></returns>
+        </member>
+        <member name="P:mesure.ResuEventArg.IDResus">
+            <summary>
+            arraylist des id de resultats proposes par la mesureur
+            </summary>
+        </member>
+        <member name="P:mesure.ResuEventArg.isFinal">
+            <summary>
+            get sile resultat de ce resuarg est final ou non
+            </summary>
+        </member>
+        <member name="T:mesure.LineCalculator">
+            <summary>
+            implemente Icalculator dans une classe mesure verticale
+            </summary>
+        </member>
+        <member name="F:mesure.LineCalculator.prvx">
+            dit si on est en mode souris appuyee ou non
+        </member>
+        <member name="M:mesure.LineCalculator.#ctor">
+            <summary>
+            constructeur par defaut
+            </summary>
+        </member>
+        <member name="M:mesure.LineCalculator.OnChgVisuSize(System.Object,System.EventArgs)">
+            <summary>
+            fonction traitant les changement de taille de la visu
+            appelle par l'evenemetn de la visu changement de taille
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+            EventHandler
+        </member>
+        <member name="M:mesure.LineCalculator.SaveDisk(mesure.XMLAvElement)">
+            <summary>
+            sauve les parametres dans l'arobrescence XML de sauvegarde
+            </summary>
+            <param name="elemnt">element a remplir </param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.LineCalculator.LoadDisk(mesure.XMLAvElement)">
+            <summary>
+            charge les parametres dans l'element xml de sauvegarde
+            </summary>
+            <param name="elemnt">element a lire</param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.LineCalculator.SetActive(System.Windows.Forms.Control)">
+            <summary>
+            rend ce calcuateur actif pour les mesures actuelles
+            </summary>
+            <param name="control"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.LineCalculator.GetLegende(System.Int32)">
+            <summary>
+            renvoie la legende a utiliser pour cette mesure 
+            </summary>
+            <param name="ID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.LineCalculator.OnChangeVariable(System.Object,mesure.ChangeVariable)">
+            <summary>
+            traite un changement de variable de la camerawindow (mouvement souris etc etc
+            </summary>
+            <param name="user"></param>
+            <param name="e"></param>
+            <returns>1 si la mesure continue, 0 si la mesure est finie</returns>
+        </member>
+        <member name="M:mesure.LineCalculator.onmousedown(mesure.ChangeVariable,System.Drawing.Graphics)">
+            <summary>
+            action sur clic souris dans la fenetre video
+            </summary>
+            <param name="e"></param>
+            <param name="graph"></param>
+        </member>
+        <member name="M:mesure.LineCalculator.onmousemove(mesure.ChangeVariable,System.Drawing.Graphics)">
+            <summary>
+            action sur mouvement souris dans fenetre video
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.LineCalculator.onmousup(mesure.ChangeVariable,System.Drawing.Graphics)">
+            <summary>
+            envoi de reultats a la fin de la mesure
+            </summary>
+            <param name="e"></param>
+            <param name="graph"></param>
+        </member>
+        <member name="M:mesure.LineCalculator.GetUnit(System.Int32,mesure.etalflagstyp@)">
+            <summary>
+            renvoie des information sur la gestion de l'unite d'une messure
+            </summary>
+            <param name="ID">ID de la mesure</param>
+            <param name="flag">flags de traitement de la mesure</param>
+            <returns>nom de la mesure</returns>
+        </member>
+        <member name="M:mesure.LineCalculator.newresuline(System.Boolean)">
+            <summary>
+            genere un eventarg correct pour tous les resultats d'une mesure
+            renvoie uniquement un resultat : la longueuru
+            </summary>
+            <param name="final">a true si c'est une mesure finale</param>
+            <returns>resueventarg pret a etre passe a l'event</returns>
+        </member>
+        <member name="M:mesure.LineCalculator.sendresuline(System.Boolean)">
+            <summary>
+            fonction construisant la liste des resultats disponibles ou actuellement selectionnes
+            pour le resultat final
+            </summary>
+            <param name="final"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.LineCalculator.GetListResu">
+            <summary>
+            genere la liste des resultats pouvant etre generes pour preparer le tableau des resultats de rsultat final
+            on ne renvoie que la longueur qui est 105 ici
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:mesure.EtalCalculator">
+            <summary>
+            calculator utilise pour le dessin de al ligne d'etalonnage
+            comme la ligne mais renvoie les x y des extremites 
+            </summary>
+        </member>
+        <member name="M:mesure.EtalCalculator.newresuline(System.Boolean)">
+            <summary>
+            construction des resultats : surcharge de linecalcultaor pour sortir les xy des deux extremites en coords source
+            le calculateur d'etalonnage renvoie 4 resultats
+            </summary>
+            <param name="final"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.EtalCalculator.GetValeur(System.Int32,System.Int32)">
+            <summary>
+            renvoie la valeur de la variable de ID id
+            en ligne etalonnage, on renvoie les 4 valeurs x et y de debut et fin de la ligne
+            l'etalonnage ne renvoie que les coords pixel source
+            </summary>
+            <param name="ID"></param>
+            <param name="unit"></param>
+            <returns></returns>
+        </member>
+        <member name="T:mesure.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:mesure.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:mesure.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:mesure.MainForm">
+            <summary>
+            Summary description for MainForm
+            </summary>
+            on implement imessagefilter a cause des messages du twain
+            <summary>
+            Summary description for MainForm
+            </summary>
+            on implement imessagefilter a cause des messages du twain
+        </member>
+        <member name="F:mesure.MainForm.microtab">
+            tabcontrol contenant les 2 pages
+        </member>
+        <member name="M:mesure.MainForm.Main(System.String[])">
+            <summary>
+            The main entry point for the application.
+            </summary>
+            _Runin
+        </member>
+        <member name="M:mesure.MainForm.OnPaintBackground(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Paint the form background only if the splash screen is gone
+            </summary>
+            <param name="e">Paint event arguments</param>
+        </member>
+        <member name="M:mesure.MainForm.#ctor">
+            <summary>
+            constructuer de la form
+            </summary>
+        </member>
+        <member name="M:mesure.MainForm.MainForm_Closing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+            <summary>
+            fermeture de mainform
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.MainForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:mesure.MainForm.menusaveauto_Click(System.Object,System.EventArgs)">
+            <summary>
+            reponse menu auoclic
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.MainForm.menuNewConfig_Click(System.Object,System.EventArgs)">
+            <summary>
+            menu config new : fait un reboot sasn lecture du default.xml
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.MainForm.menuSaveFile(System.Object,System.EventArgs)">
+            <summary>
+            menu file save
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.MainForm.saveToolStripButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            icone enregistrer sous : idema a menu
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.MainForm.menuEnregistrerImgSous_Click(System.Object,System.EventArgs)">
+            <summary>
+            menu enregistrer sous
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.MainForm.menuParamEnregImgAuto_Click(System.Object,System.EventArgs)">
+             <summary>
+            reponse menu reglage autoclic : ouverture de la boite de dialogue reglage autosave
+             </summary>
+             <param name="sender"></param>
+             <param name="e"></param>
+        </member>
+        <member name="M:mesure.MainForm.menuParamEnregResuAuto_Click(System.Object,System.EventArgs)">
+            <summary>
+            menu parametres reglage enregistremetn automatique fichier
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.MainForm.menuPrtRapport_Click(System.Object,System.EventArgs)">
+            <summary>
+            meun impression
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.MainForm.exitFileItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            reponse au menu file exit
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.MainForm.menuItem5_Click(System.Object,System.EventArgs)">
+            <summary>
+            menu reboot (a supprimer)
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.MainForm.reboot">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:mesure.MainForm.aboutHelpItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            reponse au menu about
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.MainForm.menuSelColorGenerale_Click(System.Object,System.EventArgs)">
+            <summary>
+            menu selection couleur ligne
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.MainForm.printToolStripButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            bouton toobox print rapport
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.MainForm.menuVisuExport_Click(System.Object,System.EventArgs)">
+            <summary>
+            sauvegarde les resultats mesure en xls
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.MainForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:mesure.MainForm.camera_NewFrame(System.Object,System.EventArgs)">
+            <summary>
+            eventhandler avfecte a camnewframe de la camera
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.MainForm.MakeCartouche(System.Drawing.Bitmap)">
+            <summary>
+            cree un cartouche a l'image
+            // la taille du cartouche est ajuste pour que la reduction de l'image a l'ecran donne des caracteres lisibles
+            </summary>
+        </member>
+        <member name="M:mesure.MainForm.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            if a paint message is called, Render the scene
+            </summary>
+        </member>
+        <member name="M:mesure.MainForm.timer1_Tick(System.Object,System.EventArgs)">
+            <summary>
+            timer utilise pour la gestion de l'mpression
+            et pour le render 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.MainForm.mainfrmSrc2EtalConvHandler(System.Object,mesure.MesureEventArgs@)">
+            <summary>
+            handler d'evenement de conversion source to etalonnage
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.MainForm.mainfrmSrc2VisConvHandler(System.Object,mesure.MesureEventArgs@)">
+            <summary>
+            handler d'events demodif du clipping
+            appele a chaque modification du clipper : il faut recalculer la position des points des mesureurs a l'ecran
+            cette fonction fait la conversion source -> client, 
+            eklle peut echouer si le point sort de la surface de clipping 
+            mais POUR L'INSTATNT ;  tant qu'on n'a pas de zoom ca peut pas arriver. 
+            et enfin calcule les ccords source de la souris
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.MainForm.mainfrmVisu2SrcHandler(System.Object,mesure.MesureEventArgs@)">
+            <summary>
+            handler d'events mesure
+            convertit lea section visu de e , (en coords visu)
+            en coords source dans la section src
+            pour permettre d'afficher en direct les coords souris
+            et eventuellement de reagir sur la position de la souris
+            et enfin calcule les ccords source de la souris
+            </summary>
+            <param name="sender">argument contenant les coords souris dans sa section visu</param>
+            <param name="e"></param> 
+        </member>
+        <member name="M:mesure.MainForm.MainResuEventHandler(System.Object,mesure.ResuEventArg@)">
+            <summary>
+             cet evenement est appeleé par l'algo des qu'il a une mesure disponible
+             y compris quand la souris se deplace, et est utilise pour afficher en temps reel l'evolution de la mesure 
+             suivant l'action de la souris
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.MainForm.FinalResuEventHandler(System.Object,mesure.ResuEventArg@)">
+             <summary>
+             traite l'envoi final de resultats 
+             dans le tableau de mesre live
+            
+             pour tous les resultats dont le id est passe dans la liste resueventarg
+             envoie un resultat et son nom dans resulstring 
+             qui servira a remplir le tableau record
+             resustring contient peut etre deja la param et recavrea eventuelelment l'objectif a la fin
+             </summary>
+             <param name="sender"></param>
+             <param name="e"></param>
+        </member>
+        <member name="M:mesure.MainForm.DelDerResuRecord">
+            <summary>
+            efface la derniere ligne de resultats du tableau live
+            en fait on efface la derniere ligne du gesres et on reaffiche
+            </summary>
+        </member>
+        <member name="M:mesure.MainForm.updateresdatagrid">
+            <summary>
+            redessine le resdata grid a partir du removeligne
+            </summary>
+        </member>
+        <member name="M:mesure.MainForm.InitLineResuRecord">
+            <summary>
+            init la ligne de resultats dans le tableau record
+            c'est a dire la chaine resustring
+            </summary>
+        </member>
+        <member name="M:mesure.MainForm.FinLineResuRecord">
+            <summary>
+            finit la ligne de resultats dasn le tableau des exports
+            ici il y aura toutes les options de sortie de resultat
+            </summary>
+        </member>
+        <member name="M:mesure.MainForm.ligneToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            clic sur icone mode toolstrip mesure ligne
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.MainForm.menuCalcLigne_Click(System.Object,System.EventArgs)">
+            <summary>
+            menu demarrage mesure ligne 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.MainForm.menuCalcVert_Click(System.Object,System.EventArgs)">
+            <summary>
+            menu demarrage de lamesure en ligne
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.MainForm.updatecalculGUI(System.Windows.Forms.MenuItem,System.Windows.Forms.ToolStripMenuItem)">
+            <summary>
+            mise a jour GUI des menus et tool bar mesures 
+            </summary>
+            <param name="menuitem">menu a cocher</param>
+            <param name="toolstripitem">item combo toolbar a cocher</param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.MainForm.setCalcLigne">
+            <summary>
+            passe le calculateur en mode ligne
+            </summary>
+        </member>
+        <member name="M:mesure.MainForm.setCalcVert">
+            <summary>
+            passe le caclul courant en vertical
+            </summary>
+        </member>
+        <member name="M:mesure.MainForm.setCalcHorz">
+            <summary>
+            choisir l'outil de mesure horizontal
+            et met a jour le gui
+            </summary>
+        </member>
+        <member name="M:mesure.MainForm.setcalcul(mesure.ICalculator)">
+            <summary>
+            installe un calcul
+            installe les events
+            ouvrel le dialogue calcul
+            init le tableau de resultats immediats
+            </summary>
+            <param name="mesureur"></param>
+        </member>
+        <member name="M:mesure.MainForm.InitGridResuRecord(mesure.ICalculator)">
+            <summary>
+            prepare le datagridresu de resultat live pour ce calculateur
+            </summary>
+            <param name="calculateur">calculateur envoyant ss resultats dans ce datagridresu</param>
+            <returns>tojours 0 </returns>
+        </member>
+        <member name="M:mesure.MainForm.savemesureur(mesure.XMLAvElement)">
+            <summary>
+            seialisation du mesureur et de ses parametres
+            </summary>
+            <param name="element">element contenant le mesureur</param>
+        </member>
+        <member name="M:mesure.MainForm.loadmesureur(mesure.XMLAvElement)">
+            <summary>
+            deserialisation du mesureur et de ses parametres (chargement depuis le disque)
+            </summary>
+            <param name="element">element contenzant le mesureur a charger</param>
+        </member>
+        <member name="M:mesure.MainForm.camwin_ChangingVariable(System.Object,mesure.ChangeVariable)">
+            <summary>
+            fonction appelee par l'evenement changingvariable de la fenetre camwin
+            appelle le calculateur qui va utiliser ces actions sur la souris et autre GUI pour faire cses calculs
+            </summary>
+            <param name="source">source des mouvements de souris (en general c'est camwin)</param>
+            <param name="e">parametre decrivant la nature des changements de variable</param>
+        </member>
+        <member name="M:mesure.MainForm.printpage">
+            <summary>
+            impression d'une page
+            </summary>
+        </member>
+        <member name="M:mesure.MainForm.Doc_PrintPage(System.Object,System.Drawing.Printing.PrintPageEventArgs)">
+            <summary>
+            event impression : 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.MainForm.dataGridEtal_CellContentClick(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
+            <summary>
+            clique sur une cellule de la grille etalonnage : on rend l'etalonnage actif
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.MainForm.toolStripDropDn_DropDownItemClicked(System.Object,System.Windows.Forms.ToolStripItemClickedEventArgs)">
+            <summary>
+            click sur drop down d'etalonnage
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.MainForm.butaddetal_Click(System.Object,System.EventArgs)">
+            <summary>
+            cique sur le bouton ajout d'etalonnage
+            ouvre la boite de dialogue ajout etalonnage
+            on ajoutera l'etalonnage a la fermeture
+            on ajoute toujours un etalonnage apres le courant
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.MainForm.OnCloseEtal(System.Object,mesure.ClickOkEvent)">
+            <summary>
+            fonction appelee par l'evenement quit de la form etalonnage
+            </summary>
+            <param name="source"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.MainForm.updateetals">
+            <summary>
+            fait la mise a jour du GUI des etalonnages : panel + menus et toostrip
+            </summary>
+        </member>
+        <member name="M:mesure.MainForm.supobj_Click(System.Object,System.EventArgs)">
+            <summary>
+             bouton effacement d'un objectif
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.MainForm.savexml(System.String)">
+            <summary>
+            fonction faisant la sauvegarde de la config dant le fichier de path nomfic
+            </summary>
+        </member>
+        <member name="M:mesure.MainForm.SaveDefaultXml">
+            <summary>
+            enregistre le xml par defaut
+            </summary>
+        </member>
+        <member name="M:mesure.MainForm.SetEchantillon(System.String)">
+            <summary>
+            definit l'echantillon de la mesure
+            </summary>
+            <param name="echantillon"></param>
+        </member>
+        <member name="M:mesure.MainForm.saveconfig">
+            <summary>
+            ouvre la boite de dialogue et enregistre la config
+            </summary>
+        </member>
+        <member name="M:mesure.MainForm.menuOpenFile(System.Object,System.EventArgs)">
+            <summary>
+            menu file open
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:mesure.MainForm.LoadDefaultXml">
+            <summary>
+            charge le xml de config par defaut
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.MainForm.InitSettingsXml">
+            <summary>
+            charge le xml de config par defaut
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.MainForm.LoadSettingsXml(System.String,System.Boolean)">
+            <summary>
+            charge es sttings du prgramme
+            </summary>
+            <param name="pathxml"></param>
+            <param name="checkConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.MainForm.LoadXml(System.String,System.Boolean)">
+            <summary>
+            ouvre un fichier xml de configuration
+            </summary>
+            <param name="pathxml"></param>
+            <param name="checkConfig">si true : ne pas charger la config si on a la variable nodefault a 1</param>
+            <returns>0 si pas d'erreur</returns>
+        </member>
+        <member name="M:mesure.MainForm.MainForm_Load(System.Object,System.EventArgs)">
+            <summary>
+            chargement de la form
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.MainForm.menuReglages_Click(System.Object,System.EventArgs)">
+            <summary>
+            menu reglage camera
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.MainForm.autoSaveImage">
+            <summary>
+            sauvegarde auto des images
+            </summary>
+        </member>
+        <member name="M:mesure.MainForm.menuResuInit_Click(System.Object,System.EventArgs)">
+            <summary>
+            clear les resultats mesure
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.MainForm.ClearTabResuRecord">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.MainForm.IsEmptyResurecord">
+            <summary>
+            dit si le tableau des resultats est vide ou non
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.MainForm.saveImage(System.String,System.String)">
+             <summary>
+            enregistremetn de l'image 
+             </summary>
+             <param name="nompath">chemin complet d'enregistrement</param>
+             <param name="extension">extension sur 3 cars</param>
+        </member>
+        <member name="M:mesure.MainForm.EndMesure">
+            <summary>
+            appele par clic sur le bouton fin de mesure
+            </summary>
+        </member>
+        <member name="M:mesure.MainForm.visuExport">
+            <summary>
+            visualistaion resultats avant exportation
+            </summary>
+        </member>
+        <member name="M:mesure.MainForm.autoSaveResu">
+            <summary>
+            sauvegarde automatique de resultats
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.MainForm.saveResu(System.Windows.Forms.DataGridView,System.String,System.String)">
+            <summary>
+            vide le tableau de resultats dans un fichier
+            </summary>
+            <param name="source"></param>
+            <param name="filename"></param>
+            <param name="extension"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.MainForm.menuEnregAuto_Click(System.Object,System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.MainForm.menuEnregresSous_Click(System.Object,System.EventArgs)">
+            <summary>
+            dialogue menu enregistrer sous : choix fichier et on sauve l contenu du datagridviewrecord
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.MainForm.hauteurToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            clic sur icone toolstrip mesure hauteur
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.MainForm.largeurToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            click sur icone mesure largeur
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.MainForm.toolStripDropEtal_DropDownItemClicked(System.Object,System.Windows.Forms.ToolStripItemClickedEventArgs)">
+            <summary>
+            clic sur un bouton d'etalonnage
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.MainForm.ToolStripButNew_Click(System.Object,System.EventArgs)">
+            <summary>
+            clique sur icone toolbar file new
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.MainForm.menuImageLive_Click(System.Object,System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.MainForm.ScreenCapture">
+            essai de copie d'ecran
+            
+        </member>
+        <member name="M:mesure.MainForm.menuOpenFilm_Click(System.Object,System.EventArgs)">
+            <summary>
+            click sur le menu file open : ouvrir une video
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.MainForm.menuSourcURLJPGFile_Action(System.Object,System.EventArgs)">
+            <summary>
+            action sur menu (il faut que le click soit dans mainform.cs !!!)
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.MainForm.menuSourceURLMJEPGItem_Action(System.Object,System.EventArgs)">
+            <summary>
+            menu source ouverture d'une URL mjpg 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.MainForm.menuSourcePeriph_Action(System.Object,System.EventArgs)">
+            <summary>
+            menu ouverture d'un peripherique local
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.MainForm.menuSourcTwain_Action(System.Object,System.EventArgs)">
+            <summary>
+            appele par menu open twain
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.MainForm.menuSourcImg_Action(System.Object,System.EventArgs)">
+            <summary>
+            menu ouverture source image
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.MainForm.OpenVideoSource(VideoSource.IVideoSource)">
+            <summary>
+            cree une camera l'attache a une source et fait demarrer l'ensemble
+            </summary>
+            <param name="source">source a connecter et a lancer</param>
+        </member>
+        <member name="M:mesure.MainForm.LoadVideoSource(mesure.XMLAvElement)">
+            <summary>
+            charge une config complete a prtir du fichier xml
+            cree la cam, et la charge (ce qui cree et charge la source)
+            cree les etalonnages, demarre la source
+            </summary>
+            <param name="EtalList">XMl element contenant les parametres de la cam</param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.MainForm.CloseFile">
+            <summary>
+            ferme la source et delete la camera
+            </summary>
+        </member>
+        <member name="M:mesure.MainForm.timer_Elapsed(System.Object,System.Timers.ElapsedEventArgs)">
+            <summary>
+            timer event - pas utilise
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.MainForm.Render">
+            <summary>
+            D3D rendering
+            </summary>
+        </member>
+        <member name="M:mesure.MainForm.AddTDPanel(System.Boolean,System.Int32,System.Single,System.Single,System.Single)">
+            <summary>
+            ajoute un tdpanel c a d un plan au stack de directX
+            </summary>
+            <param name="video"></param>
+            <param name="rotateDimension"></param>
+            <param name="xOffset"></param>
+            <param name="yOffset"></param>
+            <param name="zOffset"></param>
+        </member>
+        <member name="M:mesure.MainForm.InitializeTDPanels">
+            <summary>
+            Initialize the Direct3D device, and rendering timer
+            </summary>
+        </member>
+        <member name="M:mesure.MainForm.InitializeGraphics">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.MainForm.OnResetDevice(System.Object,System.EventArgs)">
+            <summary>
+            appelé quand le directx reset le device
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="P:mesure.MainForm.pDialMesure">
+            <summary>
+            renvoie la fenetre dialmesure pour la repositionner
+            </summary>
+        </member>
+        <member name="T:mesure.SecurityException">
+            <summary>
+            classe exception de securite
+            </summary>
+        </member>
+        <member name="M:mesure.SecurityException.#ctor(System.Int32)">
+            <summary>
+            surcharge de constructeur avec argument
+            </summary>
+            <param name="numexception"></param>
+        </member>
+        <member name="P:mesure.SecurityException.NumException">
+            <summary>
+            accesseur au type d'exception
+            </summary>
+        </member>
+        <member name="T:mesure.ClippingEngine">
+            <summary>
+            ClippinEngine class
+            
+            </summary>
+        </member>
+        <member name="M:mesure.ClippingEngine._SetSourceRect(System.Int32,System.Int32)">
+            <summary>
+            recalcule le parametre rourcerect a partir de width et height recu
+            ne modifie rien d'autre
+            </summary>
+            <param name="Width">nouvelle width de la source</param>
+            <param name="Height">nouvelle height de la source</param>
+            <returns>renvoie le sourcerect remis a jour</returns>
+        </member>
+        <member name="M:mesure.ClippingEngine.processChangeVisuRect(System.Drawing.Rectangle)">
+            <summary>
+            recalcule les memebres du clipper qd la taille de la fenete parent est modifiee
+            dstrect est recalcule et parentrect est mis a jour
+            suivant le mode de zoom, les reaction sont diffierentes
+            par contre, on ne renvoie que la size de la fenetre car e sera le parent qui la positionnera, selon les rulers.
+            </summary>
+            <param name="newvisu">dimension de la feneter parent devant recevoir la visu</param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.ClippingEngine.processChangeClipRect(System.Drawing.Rectangle)">
+            <summary>
+            recalcule les memebres dstrect et modifie cliprect 
+            quand le on demande un changement de cliprect (zoom, changement taille video etc...)
+            ca arrive quand on change de camera, ou ca arrivera quand on fera zoom
+            ca modifie aussi visurect qui est recalculé
+            </summary>
+            <param name="newclip">nouveau rectangle de cllip</param>
+            <returns>renvoie le visusize</returns>
+        </member>
+        <member name="M:mesure.ClippingEngine.convVisuToSrc(System.Drawing.PointF)">
+            <summary>
+            convertit un point client en point source
+            </summary>
+            <param name="visuCoordsPt">point en coordonnees visu</param>
+            <returns>point en coordonnees source</returns>
+        </member>
+        <member name="M:mesure.ClippingEngine.convSrcToVisu(System.Drawing.PointF)">
+            <summary>
+            conversion coordonnees source -> coordonnees visu
+            </summary>
+            <param name="srcCoordsPt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.ClippingEngine._RecalcVisuSize(System.Drawing.Rectangle,System.Drawing.Rectangle)">
+            <summary>
+            renvoie la position du rectangle de visualisation en fonction de la zone client et de la taille du cliprect
+            </summary>
+            <param name="cliprect">rectangle du clipping</param>
+            <param name="ParentRect">rectangle du parent</param>
+            <returns></returns>
+        </member>
+        <member name="P:mesure.ClippingEngine.SourceRect">
+            <summary>
+            get / set la taille totale image source
+            init le clipp et la visu a la meme taille
+            </summary>
+        </member>
+        <member name="P:mesure.ClippingEngine.ClipRect">
+            <summary>
+            get de la zone clippee dans la source
+            </summary>
+        </member>
+        <member name="P:mesure.ClippingEngine.VisuLocation">
+            <summary>
+            renvoie la position de la fenetre de visualisation de la video 
+            dans son panel de visualisation
+            </summary>
+        </member>
+        <member name="P:mesure.ClippingEngine.VisuSize">
+            <summary>
+            get de la size de la fenetre destination (visu)
+            </summary>
+        </member>
+        <member name="T:VideoSource.MJPEGStream">
+            <summary>
+            MJPEGSource - MJPEG stream support
+            </summary>
+        </member>
+        <member name="T:VideoSource.IVideoSource">
+            <summary>
+            IVideoSource interface
+            </summary>
+        </member>
+        <member name="M:mesure.IBagSavXml.SaveDisk(mesure.XMLAvElement)">
+            <summary>
+            savedisk recoit un node
+            ecrit dedans le type d'obket sauve et son numero de version
+            </summary>
+            <param name="element"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.IBagSavXml.LoadDisk(mesure.XMLAvElement)">
+            <summary>
+            loaddisk  recoit un node
+            lit dedans le type et verifie que c'est le bon -> exception badtype
+            lit dedans un numero de version s'il y en a un et charge l'objet selon cette version -> exception errversion
+            </summary>
+            <param name="element">node contenant tout la sauvegarde</param>
+            <returns></returns>
+        </member>
+        <member name="M:VideoSource.IVideoSource.capchglive">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VideoSource.IVideoSource.Start(System.Int32)">
+            <summary>
+            Start receiving video frames
+            </summary>
+        </member>
+        <member name="M:VideoSource.IVideoSource.SignalToStop">
+            <summary>
+            Stop receiving video frames
+            </summary>
+        </member>
+        <member name="M:VideoSource.IVideoSource.WaitForStop">
+            <summary>
+            Wait for stop
+            </summary>
+        </member>
+        <member name="M:VideoSource.IVideoSource.Stop">
+            <summary>
+            Stop work
+            </summary>
+        </member>
+        <member name="E:VideoSource.IVideoSource.NewFrame">
+            <summary>
+            New frame event - notify client about the new frame
+            </summary>
+        </member>
+        <member name="P:VideoSource.IVideoSource.VideoSource">
+            <summary>
+            Video source property
+            </summary>
+        </member>
+        <member name="P:VideoSource.IVideoSource.Login">
+            <summary>
+            Login property
+            </summary>
+        </member>
+        <member name="P:VideoSource.IVideoSource.Password">
+            <summary>
+            Password property
+            </summary>
+        </member>
+        <member name="P:VideoSource.IVideoSource.FramesReceived">
+            <summary>
+            FramesReceived property
+            get number of frames the video source received from the last
+            access to the property
+            </summary>
+        </member>
+        <member name="P:VideoSource.IVideoSource.BytesReceived">
+            <summary>
+            BytesReceived property
+            get number of bytes the video source received from the last
+            access to the property
+            </summary>
+        </member>
+        <member name="P:VideoSource.IVideoSource.UserData">
+            <summary>
+            UserData property
+            allows to associate user data with an object
+            </summary>
+        </member>
+        <member name="P:VideoSource.IVideoSource.Running">
+            <summary>
+            Get state of video source
+            </summary>
+        </member>
+        <member name="P:VideoSource.IVideoSource.ClipRect">
+            <summary>
+            cree ou renvoie le rectangle de clipping
+            </summary>
+        </member>
+        <member name="M:VideoSource.MJPEGStream.SaveDisk(mesure.XMLAvElement)">
+            <summary>
+            
+            </summary>
+            <param name="element"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VideoSource.MJPEGStream.LoadDisk(mesure.XMLAvElement)">
+            <summary>
+            
+            </summary>
+            <param name="element"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VideoSource.MJPEGStream.Dispose">
+            
+        </member>
+        <member name="P:VideoSource.MJPEGStream.SeparateConnectionGroup">
+            <summary>
+            SeparateConnectioGroup property
+            indicates to open WebRequest in separate connection group		
+            </summary>
+        </member>
+        <member name="P:VideoSource.MJPEGStream.VideoSource">
+             <summary>
+            VideoSource property 
+             </summary>
+        </member>
+        <member name="P:VideoSource.MJPEGStream.Login">
+             <summary>
+            Login property 
+             </summary>
+        </member>
+        <member name="P:VideoSource.MJPEGStream.Password">
+            <summary>
+            Password property 
+            </summary>
+        </member>
+        <member name="P:VideoSource.MJPEGStream.FramesReceived">
+            <summary>
+            FramesReceived property 
+            </summary>
+        </member>
+        <member name="P:VideoSource.MJPEGStream.BytesReceived">
+             <summary>
+            BytesReceived property 
+             </summary>
+        </member>
+        <member name="P:VideoSource.MJPEGStream.UserData">
+            <summary>
+            UserData property         
+            </summary>
+        </member>
+        <member name="P:VideoSource.MJPEGStream.Running">
+            <summary>
+            Get state of the video source thread
+            </summary>
+        </member>
+        <member name="T:mesure.EtalOkhandler">
+            <summary>
+            delegate est une sorte de typedef pour l'event
+            ici on envoie au form un ok quand on quitte le dial modal
+            e.ok = vrai : l'etal est correct  : validation
+            = false : on n'ajout pas l'etalonnage
+            </summary>
+            <param name="source"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:mesure.EtalForm">
+            <summary>
+            form d'etalonnage
+            </summary>
+        </member>
+        <member name="M:mesure.EtalForm.MainFrmConvHandler(System.Object,mesure.MesureEventArgs@)">
+            <summary>
+            fonction appelee par la mainform lors du mouvement de la souris etalonnage
+            doit copier les xy cliques dans les xy mesures, pour que ca ressorte dans les variables 
+            du mesureru etalonnage
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.EtalForm.trttimer(System.Object,System.EventArgs)">
+            <summary>
+            ticks de decompte du timer
+            </summary>
+            <param name="source"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.EtalForm.SmoothHide(System.Boolean)">
+            <summary>
+            ferme la fenetre avec un petit delai pour peviter le clignotement
+            </summary>
+            <param name="hide"></param>
+        </member>
+        <member name="M:mesure.EtalForm.GetResu(System.Object,mesure.ResuEventArg@)">
+            <summary>
+            fonction appelee par l'evenement a chaque nouveau resultat du calcuteur
+            on recoit une liste de vriables conteenant les 4 points de la ligne : 
+            ce sont les coords des 2 points cliques
+            euh il faudrait decider si c'est ici que ca se fait ou dasn setpoints ....
+            </summary>
+            <param name="sender">objet ayant envoye l'event</param>
+            <param name="e">eventarg contenant la liste des ID des resultats disponbles en resultat</param>
+        </member>
+        <member name="M:mesure.EtalForm.SetPoints(System.Drawing.PointF,System.Drawing.PointF)">
+            <summary>
+            defintion des deux points d'etalonnage
+            appele par l'event du trace de ligne
+            </summary>
+            <param name="deb">point de debut</param>
+            <param name="fin">point de fin</param>
+        </member>
+        <member name="M:mesure.EtalForm.#ctor">
+            <summary>
+            creation de la form
+            </summary>
+        </member>
+        <member name="M:mesure.EtalForm.EtalForm_Load(System.Object,System.EventArgs)">
+            <summary>
+            load de la forme
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.EtalForm.updateGUI">
+            <summary>
+            teste l'etat de l'etalonnage tel qu'il est saisi et valide le ok ou l'invalide 
+            </summary>
+        </member>
+        <member name="M:mesure.EtalForm.edLongueur_TextChanged(System.Object,System.EventArgs)">
+            <summary>
+            saisie longueur
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.EtalForm.edNamObj_TextChanged(System.Object,System.EventArgs)">
+            <summary>
+            saisie nom objectif
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.EtalForm.EtalForm_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+            <summary>
+            fermeture de la form
+            si on a clique ok et que c'est pas valide : on cancel le quit
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.EtalForm.comboBox1_TextChanged(System.Object,System.EventArgs)">
+            <summary>
+            controle l'etalonnage apres changement du texte du combo
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.EtalForm.butQuit_Click(System.Object,System.EventArgs)">
+            <summary>
+            action sur le bouton click : close de la fenetre
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.EtalForm.butcancel_Click(System.Object,System.EventArgs)">
+            <summary>
+             action sur le bouton cancel : close de la fenetre
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:mesure.EtalForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:mesure.EtalForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:mesure.EtalForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="E:mesure.EtalForm.CliqueFin">
+            <summary>
+            event declenche au clique sur la fin
+            </summary>
+        </member>
+        <member name="P:mesure.EtalForm.DistSaisie">
+            <summary>
+            get /set de la distance saisie par l'utilisateur
+            </summary>
+        </member>
+        <member name="P:mesure.EtalForm.etalonnage">
+            <summary>
+            get set de l'etalonnage en cours d'edition
+            </summary>
+        </member>
+        <member name="T:mesure.resuformat">
+            <summary>
+            enum des formats de fichier resultat
+            </summary>
+        </member>
+        <member name="M:mesure.EnregFichierParam.#ctor">
+            <summary>
+            constructeur
+            </summary>
+        </member>
+        <member name="M:mesure.EnregFichierParam.buttselectdir_Click(System.Object,System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.EnregFichierParam.combosuffixe_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.EnregFichierParam.EnregFichierParam_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+            <summary>
+            execute sur le close de la boite de dialogue
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:mesure.EnregFichierParam.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:mesure.EnregFichierParam.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:mesure.EnregFichierParam.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:VideoSource.CameraEventArgs">
+            <summary>
+            Camera event arguments
+            </summary>
+        </member>
+        <member name="T:mesure.GesEtals">
+            <summary>
+            classe gerant les etalonnages
+            les etalonnages etaient dans la camera maismaintenant ils sont sortis pour eviter l'effacement des etalonnages en cas de 
+            destruction/reconstruction de camera
+            </summary>
+        </member>
+        <member name="M:mesure.GesEtals.etalonne(System.Drawing.PointF)">
+            <summary>
+            renvoie le valeur etalonnee d'un point exprime en coords source
+            attention, il faudrait renvoyer des messages d'erreur ici
+            </summary>
+            <param name="pointsrc">point en ccord source</param>
+            <returns>point en coordonnees etalonnees</returns>
+        </member>
+        <member name="M:mesure.GesEtals.invEtalonne(System.Drawing.PointF,System.Drawing.PointF@)">
+            <summary>
+            renvoie le valeur clipping d'un point en coordonnees source 
+            </summary>
+            <param name="pointsrc">point en coordonnees etalonnees</param>
+            <param name="pointCli">point en coordonnees source</param>
+            <returns>0 si pas d'erreur</returns>
+        </member>
+        <member name="M:mesure.GesEtals.GetCurrentEchelle(System.Int32)">
+            <summary>
+            calcule une echelle possible l'argument est une lonngueur en pixels qui sera celle utilisse a 10% pres pour dessiner une echelle correcte
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.GesEtals.genTicks(System.Double,System.Double@)">
+            <summary>
+            calcule les ticks de l'etalonnage pour une longueur donnee
+            </summary>
+            <param name="tableau"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.GesEtals.iscurrentetal(System.String)">
+            <summary>
+            renvoie true si cet etalonnage est le courant
+            </summary>
+            <param name="nometal">nom de l'etalonnage</param>
+            <returns>bool true si c'est le courant</returns>
+        </member>
+        <member name="M:mesure.GesEtals.InsertEtal(mesure.Etalonnage)">
+            <summary>
+            Ajoute un etalonnage apres l'etalonnage courant
+            </summary>
+            <param name="newetal">nexetal : nouvel etalonnage a inserer</param>
+            <returns>false si erreur</returns>
+        </member>
+        <member name="M:mesure.GesEtals.DelCurEtal">
+            <summary>
+            elemine l'etalonnage courant de la liste des etlaonnages 
+            et revient en mode pixel
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.GesEtals.ClearEtals">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.GesEtals.DelEtal(System.String)">
+            <summary>
+            destruction de l'etalonnnage de nopm etalname 
+            </summary>
+            <param name="etalname"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.GesEtals.GetListEtal(System.Int32@)">
+             <summary>
+            renvoie la liste des etalonnages dispos 
+             </summary>
+             <param name="indexcur"></param>
+             <returns></returns>
+        </member>
+        <member name="M:mesure.GesEtals.getCurEtalName">
+            <summary>
+            renvoie le nom de l'etalonnage courant
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.GesEtals.getCurEtalUnit">
+            <summary>
+            renvoie le nom de l'etalonnage courant
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.GesEtals.SetCurEtal(System.String)">
+            <summary>
+            positionne l'etalonnage courant sur l'etalonnage dont on met le nom
+            si l'etalonnage n'est pas trouve : rien ne change
+            </summary>
+            <param name="etalname"></param>
+            <returns></returns>
+        </member>
+        <member name="P:mesure.GesEtals.Clipper">
+            <summary>
+            clipping engine utilise par la camera : mis a jour a chaque modif du clipping de la camera
+            </summary>
+        </member>
+        <member name="P:mesure.GesEtals.ListEtals">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:mesure.Echelledrawing">
+            <summary>
+            classe contenant les elements de dessin d'une echelle correcte
+            </summary>
+        </member>
+        <member name="M:mesure.Echelledrawing.#ctor(System.Int32,System.Int32,System.Double)">
+            <summary>
+            nbpix = nb de pixels du trait d'echelle
+            reallen = longueur reelle       
+            </summary>
+            <param name="nbpix"></param>
+            <param name="nbticks"></param>
+            <param name="reallen"></param>
+        </member>
+        <member name="P:mesure.Echelledrawing.unitname">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:mesure.Echelledrawing.nbpix">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:mesure.Echelledrawing.nbticks">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:mesure.Echelledrawing.reallen">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:videoSource.ipcamdial.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:videoSource.ipcamdial.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:videoSource.ipcamdial.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:mesure.ReglagesMesure.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:mesure.ReglagesMesure.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:mesure.ReglagesMesure.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:mesure.ReglagesMesure.OnClkSepar(System.Object,System.EventArgs)">
+            <summary>
+            gestionnaire de clic commaun a tous les radiobuttons
+            positionne la variable m_radioChecked chaqu fois qu'un bouton est chcked
+            pour checked un bouton il faut faire
+            RadioButton r = (RadioButton)panelsepar.Controls[n];
+            r.Checked = true; et encore c'est pas dit que ca uncheck les autres. a verifier
+            et positionner m_radio
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.ReglagesMesure.ReglagesMesure_Load(System.Object,System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.ReglagesMesure.EnregFichierParam">
+            <summary>
+            on superpose le textbox d'edit de nom suffixe avec le sroll des valeurs acceptees
+            </summary>
+        </member>
+        <member name="M:mesure.ReglagesMesure.butOK_Click(System.Object,System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:mesure.ReglageAutoSauvImg.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:mesure.ReglageAutoSauvImg.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:mesure.ReglageAutoSauvImg.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:mesure.MesureForm">
+            <summary>
+            form pilotant la mesure
+            </summary>
+        </member>
+        <member name="F:mesure.MesureForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:mesure.MesureForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:mesure.MesureForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:mesure.MesureForm.#ctor">
+            <summary>
+            constructeur
+            </summary>
+        </member>
+        <member name="M:mesure.MesureForm.butValid_Click(System.Object,System.EventArgs)">
+            <summary>
+            bouton valid : lance l'enregistremetn de la mesure courant a l'aide d'un changingvariable
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.MesureForm.delete_Click(System.Object,System.EventArgs)">
+            <summary>
+            clic sur bouton efface derniere mesure :
+            ca appelle changingvariable avec delresu
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.MesureForm.SauveRes_Click(System.Object,System.EventArgs)">
+            <summary>
+            bouton sauve
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.MesureForm.MesureForm_VisibleChanged(System.Object,System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.MesureForm.button1_Click(System.Object,System.EventArgs)">
+            <summary>
+            bouton abandonner la mesure 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="E:mesure.MesureForm.ChangingVariable">
+            <summary>
+            event declenché quand on clique sur valid : ca declenche un evenement comme un changement de GUI
+            </summary>
+        </member>
+        <member name="T:mesure.etalflagstyp">
+            
+             types pour l'etalonnage
+        </member>
+        <member name="M:VideoSource.IMGStream.GetListSources(System.Collections.ArrayList)">
+            <summary>
+            
+            </summary>
+            <param name="List"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VideoSource.IMGStream.SaveDisk(mesure.XMLAvElement)">
+            <summary>
+            
+            </summary>
+            <param name="element"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VideoSource.IMGStream.LoadDisk(mesure.XMLAvElement)">
+            <summary>
+            
+            </summary>
+            <param name="element"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VideoSource.IMGStream.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:VideoSource.IMGStream.Start(System.Int32)">
+            <summary>
+            Start work
+            </summary>
+        </member>
+        <member name="M:VideoSource.IMGStream.Free">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:VideoSource.IMGStream.WaitForStop">
+            <summary>
+            Wait for thread stop 
+            </summary>
+        </member>
+        <member name="M:VideoSource.IMGStream.Stop">
+            <summary>
+            Abort thread
+            </summary>
+        </member>
+        <member name="M:VideoSource.IMGStream.WorkerThread">
+            <summary>
+            Thread entry point 
+            </summary>
+        </member>
+        <member name="P:VideoSource.IMGStream.ClipRect">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:VideoSource.IMGStream.VideoSource">
+            <summary>
+            VideoSource property        
+            </summary>
+        </member>
+        <member name="P:VideoSource.IMGStream.Login">
+            <summary>
+            Login property
+            </summary>
+        </member>
+        <member name="P:VideoSource.IMGStream.Password">
+            <summary>
+            Password property
+            </summary>
+        </member>
+        <member name="P:VideoSource.IMGStream.FramesReceived">
+            <summary>
+            FramesReceived property
+            </summary>
+        </member>
+        <member name="P:VideoSource.IMGStream.BytesReceived">
+            <summary>
+            BytesReceived property
+            </summary>
+        </member>
+        <member name="P:VideoSource.IMGStream.UserData">
+            <summary>
+            UserData property
+            </summary>
+        </member>
+        <member name="P:VideoSource.IMGStream.Running">
+            <summary>
+            Get state of the video source thread
+            </summary>
+        </member>
+        <member name="M:mesure.paramGUI.LoadDisk(mesure.XMLAvElement)">
+            <summary>
+            charge un element 
+            </summary>
+            <param name="elem"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.paramGUI.SaveDisk(mesure.XMLAvElement)">
+            <summary>
+            sauve les valeurs du bag sur disque
+            </summary>
+            <param name="elem"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.paramsavres.SaveDisk(mesure.XMLAvElement)">
+            <summary>
+            
+            </summary>
+            <param name="element"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.paramsavres.LoadDisk(mesure.XMLAvElement)">
+            <summary>
+            
+            </summary>
+            <param name="element"></param>
+            <returns></returns>
+        </member>
+        <member name="P:mesure.paramsavres.SavParam">
+            <summary>
+            renvoie la propriete disant si il faut sauver les parametres avec els resultats
+            </summary>
+        </member>
+        <member name="P:mesure.paramsavres.SavObj">
+            <summary>
+            renvoie la propriete disant si il faut sauver l'objecti avec els resultats
+            </summary>
+        </member>
+        <member name="T:mesure.paramsavimg">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:mesure.paramsavimg.getTabVers">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.paramsavimg.SaveDisk(mesure.XMLAvElement)">
+            <summary>
+            
+            </summary>
+            <param name="element"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.paramsavimg.LoadDisk(mesure.XMLAvElement)">
+            <summary>
+            
+            </summary>
+            <param name="element"></param>
+            <returns></returns>
+        </member>
+        <member name="T:mesure.parammesure">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:mesure.parammesure.getTabVers">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.parammesure.SaveDisk(mesure.XMLAvElement)">
+            <summary>
+            
+            </summary>
+            <param name="element"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.parammesure.LoadDisk(mesure.XMLAvElement)">
+            <summary>
+            
+            </summary>
+            <param name="element"></param>
+            <returns></returns>
+        </member>
+        <member name="T:mesure.ChangeVariablehandler">
+            --------------  delegates ----------------------------------
+        </member>
+        <member name="T:mesure.CameraWindow">
+            <summary>
+            camerawindow : control comprenant un panel, la fenetre ou s'affiche la video et les rulers. 
+            le panel remplit sa fenetre mere, quand il se redimensionne on recaclule la position de la video en fonction des parametres actuels
+            </summary>
+        </member>
+        <member name="M:mesure.CameraWindow.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:mesure.CameraWindow.InitializeComponent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:mesure.CameraWindow.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Paint control
+            </summary>
+            <param name="pe"></param>
+        </member>
+        <member name="M:mesure.CameraWindow.UpdatePosition">
+            <summary>
+            fonction a appeler quand on modifie la position deu control
+            elle se charge de recacluler les positrion de ses constituants
+            /// en cas de modofication de la taille de la camwin
+            </summary>
+        </member>
+        <member name="M:mesure.CameraWindow.WinCamPaint">
+            <summary>
+            relais pour updateposition
+            recalule la taille de la wincam et son positionnement
+            a prtir de la taille de la femetre parrent
+            </summary>
+        </member>
+        <member name="M:mesure.CameraWindow.CameraWindow_SizeChanged(System.Object,System.EventArgs)">
+            <summary>
+            eappele sur evenement sizechanged de la camerawindow
+            recalcule la taille de picvideo a partir de la taille de camerwindow et des curseurs
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.CameraWindow.camera_NewFrame(System.Object,System.EventArgs)">
+            <summary>
+            On new frame ready
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.CameraWindow.camera_Alarm(System.Object,System.EventArgs)">
+            <summary>
+            On alarm
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.CameraWindow.CameraWindow_Resize(System.Object,System.EventArgs)">
+            <summary>
+            traitement de l'event resize de la camerawindow
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.CameraWindow.picvideo_MouseDown(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.CameraWindow.picvideo_MouseMove(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.CameraWindow.picvideo_MouseUp(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.CameraWindow.picvideo_Click(System.Object,System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.CameraWindow.CameraWindow_MouseEnter(System.Object,System.EventArgs)">
+            <summary>
+            la souris arrive au dessus de la fenetre
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.CameraWindow.CameraWindow_MouseLeave(System.Object,System.EventArgs)">
+            <summary>
+            la souris quitte la fenetre
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.CameraWindow.CameraWindow_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.CameraWindow.CameraWindow_Paint(System.Object,System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="P:mesure.CameraWindow.PicVideo">
+            <summary>
+            ne pinte plus sur une ppict mais directemetn sur le clientrect
+            </summary>
+        </member>
+        <member name="P:mesure.CameraWindow.AutoSize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:mesure.CameraWindow.Camera">
+            <summary>
+            Camera property
+            </summary>  
+        </member>
+        <member name="T:mesure.ChangeVariable">
+            <summary>
+            eventarg utilise par l'event changevariable 
+            cet event est utilise quand qqchose d'interactif a ete modifie (mouvement de souris par exemple)
+            </summary>
+        </member>
+        <member name="F:mesure.ChangeVariable.numVariable">
+            <summary>
+            attributs 
+            </summary>
+        </member>
+        <member name="M:mesure.ChangeVariable.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:mesure.ChangeVariable.#ctor(mesure.ChgVarNum,System.Double,System.Double)" -->
+        <member name="M:mesure.ChangeVariable.setvalue(mesure.ChgVarNum,System.Double,System.Double)">
+            <summary>
+            
+            </summary>
+            <param name="numvariable"></param>
+            <param name="valeurx"></param>
+            <param name="valeury"></param>
+        </member>
+        <member name="P:mesure.ChangeVariable.num">
+            <summary>
+            variable get renvoyant le num
+            </summary>
+        </member>
+        <member name="P:mesure.ChangeVariable.valeurx">
+            <summary>
+            @brief variable get renvoyant la valeur
+            </summary>
+        </member>
+        <member name="P:mesure.ChangeVariable.valeury">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:VideoSource.CaptureDevice">
+            <summary>
+            CaptureDevice - capture video from local device
+            </summary>
+        </member>
+        <member name="M:VideoSource.CaptureDevice.freeze">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VideoSource.CaptureDevice.live">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VideoSource.CaptureDevice.VideoSource#IVideoSource#capregl">
+            <summary>
+            une boite de dialogue regalge est disponible
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VideoSource.CaptureDevice.SaveDisk(mesure.XMLAvElement)">
+            <summary>
+            
+            </summary>
+            <param name="element"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VideoSource.CaptureDevice.LoadDisk(mesure.XMLAvElement)">
+            <summary>
+            
+            </summary>
+            <param name="element"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VideoSource.CaptureDevice.DoReglage(System.Windows.Forms.Control)">
+            <summary>
+            ouvre le dial de reglage
+            </summary>
+            <param name="parent"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VideoSource.CaptureDevice.DoInit(System.Windows.Forms.Control)">
+            <summary>
+            initialise le format de capture
+            </summary>
+            <param name="parent"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VideoSource.CaptureDevice.DisplayPropertyPage(DirectShowLib.IBaseFilter,System.Windows.Forms.Control,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="dev"></param>
+            <param name="Parent"></param>
+            typpage =1 : reglages
+            typpage = 2 : entree
+        </member>
+        <member name="M:VideoSource.CaptureDevice.InitGraph">
+            <summary>
+            pas d'argument : ouverture de la boite de dialogue pour les regler
+            </summary>
+        </member>
+        <member name="M:VideoSource.CaptureDevice.InitGraph(System.Int32)">
+            <summary>
+            interactive dit si on regle les argumentadans la boite ou par paramatres
+            </summary>
+        </member>
+        <member name="F:VideoSource.CaptureDevice.sourceBase">
+            -----------------------------------
+        </member>
+        <member name="M:VideoSource.CaptureDevice.SaveSizeInfo(DirectShowLib.ISampleGrabber)">
+            <summary>
+            lit les caracteristique de l'image grabbee et positionne les variables courantes
+            </summary>
+            <param name="legrabber"></param>
+        </member>
+        <member name="M:VideoSource.CaptureDevice.Grabber.BufferCB(System.Double,System.IntPtr,System.Int32)">
+            <summary>
+            Callback method that receives a pointer to the sample buffer			
+            </summary>
+            <param name="SampleTime"></param>
+            <param name="pBuffer"></param>
+            <param name="BufferLen"></param>
+            <returns></returns>
+        </member>
+        <member name="T:VideoSource.DeviceCreateException">
+            <summary>
+            exception application exception : deice not found
+            </summary>
+        </member>
+        <member name="M:VideoSource.DeviceCreateException.#ctor(System.Int32,System.String)">
+            <summary>
+            constructeur
+            </summary>
+            <param name="numexception"></param>
+            <param name="legend"></param>
+        </member>
+        <member name="P:VideoSource.DeviceCreateException.Legende">
+            <summary>
+            recupere la legende
+            </summary>
+        </member>
+        <member name="T:mesure.URLForm">
+            <summary>
+            Summary description for URLForm.
+            </summary>
+        </member>
+        <member name="F:mesure.URLForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:mesure.URLForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:mesure.URLForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:mesure.XmlAvException">
+            <summary>
+            exception lgestion des fichiers XML
+            </summary>
+        </member>
+        <member name="M:mesure.XmlAvException.#ctor(mesure.xmlavexceptiontype)">
+            <summary>
+            constructeur de l'exception
+            </summary>
+            <param name="i"></param>
+        </member>
+        <member name="P:mesure.XmlAvException.XmlAvType">
+            <summary>
+            renvoie le type dexception
+            </summary>
+        </member>
+        <member name="T:mesure.XMLAvElement">
+            <summary>
+            element pour lire/enregistrer le xml
+            </summary>
+        </member>
+        <member name="M:mesure.XMLAvElement.chkelement(mesure.XMLAvElement,System.String,System.String[])">
+            <summary>
+            checke l'en tete d'un element : verification de type et de version
+            renvoie l'indice dans le tableau des types passes
+            </summary>
+            <param name="?"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.XMLAvElement.getxmlver(System.String[])">
+            <summary>
+            renvoie la derniere version disponible pour le tableau tabver
+            </summary>
+            <param name="tabver">tableau de la liste des versions existantes</param>
+            <returns>la version la plus recente (la derniere)</returns>
+        </member>
+        <member name="M:mesure.XMLAvElement.decodever(System.String[],System.String)">
+            <summary>
+            fonctions utiles pour le xml : renvoie l'index1 de stringver dans le tablea tabver 
+            0 si pas trouve
+            </summary>
+            <param name="tabver">tableau de strings contenant toutes les versions du bag</param>
+            <param name="stringver">string de la version a trouver</param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.XMLAvElement.#ctor(System.Xml.XmlDocument,mesure.XMLAvElement,System.Xml.XmlElement)">
+            <summary>
+            cree un xmlavelement a partir d'un element lu dans le doc
+            </summary>
+            <param name="ledoc"></param>
+            <param name="Parent"></param>
+            <param name="newelement"></param>
+        </member>
+        <member name="M:mesure.XMLAvElement.#ctor(System.Xml.XmlDocument)">
+            <summary>
+            constructeur
+            </summary>
+            <param name="ledoc"></param>
+        </member>
+        <member name="M:mesure.XMLAvElement.#ctor(mesure.XMLAvElement,System.String)">
+            constructeur en arborescence : recoit un tr sur le doc
+            
+        </member>
+        <member name="M:mesure.XMLAvElement.SetAttribute(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="nomattrib"></param>
+            <param name="valeur"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.XMLAvElement.GetAttribute(System.String,System.String@)">
+            <summary>
+            
+            </summary>
+            <param name="nomattrib"></param>
+            <param name="valeur"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.XMLAvElement.GetAttribute(System.String,System.String@,System.String)">
+            <summary>
+            le meme avec une valeur par defaut possible
+            </summary>
+            <param name="nomattrib"></param>
+            <param name="valeur"></param>
+            <param name="valdef"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.XMLAvElement.SetAttribute(System.String,System.Double)">
+            <summary>
+            ecriture d'un double        
+            </summary>
+            <param name="nomattrib">nom attribut</param>
+            <param name="valeur">valeur a ecrire</param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.XMLAvElement.GetAttribute(System.String,System.Double@)">
+            <summary>
+            lit la valeur d'un attribut si pas trouve, la valeur est inchangee
+            </summary>
+            <param name="nomattrib">nom de l'attribut</param>
+            <param name="valeur">valeur double a remplir</param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:mesure.XMLAvElement.GetAttribute(System.String,System.Double@,System.Double)">
+            <summary>
+            lit la valeur double d'un attribut, si pas trouve  : ca lui donne la valeur valdef
+            </summary>
+            <param name="nomattrib">nom de l'attribut</param>
+            <param name="valeur">double out a remplir</param>
+            <param name="valdef">valeur par defaut</param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.XMLAvElement.GetAttribute(System.String,System.Double@,System.Double,System.Boolean)">
+            <summary>
+            get attribute prive : 
+            </summary>
+            <param name="nomattrib"></param>
+            <param name="valeur"></param>
+            <param name="valdef"></param>
+            <param name="setvaldef"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.XMLAvElement.SetAttribute(System.String,System.Int32)">
+             <summary>
+            lecture ecritutre d'un int
+             </summary>
+             <param name="nomattrib"></param>
+             <param name="valeur"></param>
+             <returns></returns>
+        </member>
+        <member name="M:mesure.XMLAvElement.GetAttribute(System.String,System.Int32@)">
+            <summary>
+            get attribute d'un int sans modifier valeur en cas d'echec
+            genere xmlavexceptiontype.noattrib si le nom est pas trouve
+            xmlavexceptiontype.formaterror si mauvais codage
+            </summary>
+            <param name="nomattrib"></param>
+            <param name="valeur"></param>
+            <returns>1 si ok</returns>
+        </member>
+        <member name="M:mesure.XMLAvElement.GetAttribute(System.String,System.Int32@,System.Int32)">
+            <summary>
+            get attribute d'un int 
+            en cas d'echec :
+            genere xmlavexceptiontype.noattrib si le nom est pas trouve
+            valeur recoit defval
+            </summary>
+            <param name="nomattrib"></param>
+            <param name="valeur"></param>
+            <param name="defval"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.XMLAvElement.GetAttribute(System.String,System.Int32@,System.Int32,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="nomattrib"></param>
+            <param name="valeur"></param>
+            <param name="defval"></param>
+            <param name="usedef"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.XMLAvElement.SetText(System.String)">
+            <summary>
+            positionne la propriete texte d'un elemnt
+            </summary>
+            <param name="letext">texte</param>
+            <returns>1 toujours </returns>
+        </member>
+        <member name="M:mesure.XMLAvElement.GetText">
+            <summary>
+            renvoie la propriete texte d'un elemnt
+            </summary>
+            <returns>renvoie le texte de l'element vide si pas de texte</returns>
+        </member>
+        <member name="M:mesure.XMLAvElement.CreateNode(System.String)">
+            <summary>
+            cree un nouveau node sous cet element 
+            </summary>
+            <param name="nomnode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.XMLAvElement.GetFirstElement(System.String)">
+            <summary>
+            renvoie le premier element fils portant ce nom
+            lance une exception xmlavexceptiontype.missingnode si node pas trouve
+            </summary>
+            <param name="Name">nom du node a trouver</param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.XMLAvElement.GetFirstElement(System.String,System.Int32@)">
+            <summary>
+            renvoie le premier element avec ce nom et positionne le nombre de'elements dans cette liste
+            </summary>
+            <param name="Name">nmo de l'element a trouver</param>
+            <param name="nbelems">nbombre d'elments dans cette section</param>
+            <returns>retourne null ou l'element</returns>
+        </member>
+        <member name="M:mesure.XMLAvElement.GetNextElement">
+            <summary>
+             renvoie l'element suivant le precedent getnext ou getfirst et de meme nom
+            lance une exception xmlavexceptiontype.missingnode si node pas trouve
+            </summary>
+            <param name="parent"></param>
+            <param name="Name"></param>
+            <returns></returns>
+        </member>
+        <member name="P:mesure.XMLAvElement.Text">
+            <summary>
+             positionne le texte de l'element
+            </summary>
+            <param name="?"></param>
+            <returns></returns>
+        </member>
+        <member name="P:mesure.XMLAvElement.Document">
+            <summary>
+            get le XML document
+            </summary>
+        </member>
+        <member name="T:mesure.XMLEngine">
+            <summary>
+            XMLEngine : tout le stuff qui permet de creer un document xml et de l'enregistrer, le lire etc etc
+            </summary>
+        </member>
+        <member name="M:mesure.XMLEngine.initDoc">
+            <summary>
+            init le doc et cree la base de l'arborescence        
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.XMLEngine.SaveDoc(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="nomfich"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.XMLEngine.LoadDoc(System.String)">
+            <summary>
+            charge un doc sur le disque et renvoie son root
+            </summary>
+            <param name="nomfich"></param>
+            <returns></returns>
+        </member>
+        <member name="P:mesure.XMLEngine.Document">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:mesure.XMLEngine.Root">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:mesure.TwainDevice.SaveDisk(mesure.XMLAvElement)">
+            <summary>
+            
+            </summary>
+            <param name="element"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.TwainDevice.LoadDisk(mesure.XMLAvElement)">
+            <summary>
+            
+            </summary>
+            <param name="element"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.TwainDevice.SignalToStop">
+            <summary>
+            Stop receiving video frames
+            </summary>
+        </member>
+        <member name="M:serialcode.protectionclass.#ctor">
+            <summary>
+            constructeur
+            </summary>
+        </member>
+        <member name="M:serialcode.protectionclass.savkeyfile(System.String)">
+            <param name="name"></param>
+            <param name="md5cod"></param>
+            <returns></returns>
+        </member>
+        <member name="M:serialcode.protectionclass.savevariables(System.IO.StreamWriter)">
+            <summary>
+            fonction sachant lire et ecrire un fichier
+            // sait ecrire un fichier de 2 manieres : 
+            // soit avec le numero de serie windows
+            dans ce cas le fichier n'est pas utilisable
+            sot avec un md5 pour utilisation apres decodage
+            s'il y a un md5 en plus du numero de serie windows ca le verifie et ca charge.
+            </summary>
+            <param name="name"></param>
+            <param name="cansavmd5"></param>
+            <returns></returns>
+        </member>
+        <member name="M:serialcode.protectionclass.loadlicfile(System.String)">
+            <summary>
+            charge un fichier lic
+            on lit le md5, on le compare avec le numero de licence :
+            si c'est bon on lit tout
+            sinon on sort
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:serialcode.protectionclass.CreateDES(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:serialcode.protectionclass.Encryption25(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="PlainText"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:serialcode.protectionclass.cutstring(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="txtin"></param>
+            <returns></returns>
+        </member>
+        <member name="M:serialcode.protectionclass.Decryption25(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="CypherText"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:serialcode.protectionclass.computehash(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="txtin"></param>
+            <returns></returns>
+        </member>
+        <member name="M:serialcode.protectionclass.setnomuser(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="nomuser"></param>
+            <returns></returns>
+        </member>
+        <member name="M:serialcode.protectionclass.getnomuser">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:serialcode.protectionclasswrite.loadkeyfile(System.String)">
+            <summary>
+            enregisre un ficheir de licence a partir du code windows lu dans le fichier
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+            ///lecture d'un fichier de clef 
+            // on lit le wcode
+            et on le compare au md5 du fichier
+            si c'est ok : on charge les variables du fichier
+            sinon on ne charge rien
+        </member>
+        <member name="M:serialcode.protectionclasswrite.savlicfile(System.String)">
+            <summary>
+            creee u n fichier de licence
+            </summary>
+            <param name="name"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:serialcode.protectionclasswrite.setversion(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="nomuser"></param>
+            <returns></returns>
+        </member>
+        <member name="M:serialcode.protectionclasswrite.getversion">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:serialcode.protectionclasswrite.getwcode(System.String@)">
+            <summary>
+            renvoie le wcode s'il y en a 1
+            c a dire le code windows lu dans le fichier
+            </summary>
+            <param name="wcode"></param>
+            <returns></returns>
+        </member>
+        <member name="T:serialcode.licdoublon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:VideoSource.VideoFileSource">
+            <summary>
+            VideoFileSource
+            </summary>
+        </member>
+        <member name="M:VideoSource.VideoFileSource.SaveDisk(mesure.XMLAvElement)">
+            <summary>
+            enregistre la config sur disque
+            </summary>
+            <param name="element"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VideoSource.VideoFileSource.LoadDisk(mesure.XMLAvElement)">
+            <summary>
+            
+            </summary>
+            <param name="element"></param>
+            <returns></returns>
+        </member>
+        <member name="T:mesure.TDPanel">
+            <summary>
+            Class definition of the TDPanel
+            </summary>	
+        </member>
+        <member name="M:mesure.TDPanel.#ctor(System.Boolean)">
+            <summary>
+            TDPanel Constructor
+            </summary>	
+        </member>
+        <member name="M:mesure.TDPanel.PaintFrame(System.Drawing.Bitmap)">
+            <summary>
+            dessine la bitmap sur ce panel si c'est un panel video
+            marche comme pour le draw mais on prend simplemtn la bitmap de la video 
+             et on la compie dans le buffer de la texture disponible pour ecriture
+            </summary>
+            <param name="vBitmap"> bitmap a envoyer dans le plan video</param>
+            <returns>retourn 0 si une erreur</returns>
+        </member>
+        <member name="M:mesure.TDPanel.updatetexture">
+            <summary>
+            fonction mettant a jour la texture graphique a partir de la bitmap de dessin en memoire
+            appelée au moment du render pour eviter de manger le cpu avec des copies jamais affichées
+            et en plus n'est appelée que si qqchose a ete change dans le graphisme (par un getgraphics/release graphics)
+            c'est ptet pas tres thread safe tout ca
+            </summary>
+        </member>
+        <member name="M:mesure.TDPanel.GetGraph">
+            <summary>
+            cree et libere un graphic sur le plan graphique de ce panel
+            sasn effacer le plan
+            (si c'est un panel graphique)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.TDPanel.GetGraph(System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="erase"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.TDPanel.GetGraph2(System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="erase"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.TDPanel.GetGraph1(System.Boolean)">
+            <summary>
+            cree et libere un graphic sur le plan graphique de ce panel
+            efface le plan
+            </summary>
+            <param name="erase"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.TDPanel.Releasegraph(System.Drawing.Graphics)">
+            <summary>
+            dispose le graphe et envoie la bitmap dans le plan graphique 
+            </summary>
+            <param name="graph"></param>
+        </member>
+        <member name="M:mesure.TDPanel.Releasegraph2(System.Drawing.Graphics)">
+            <summary>
+            
+            </summary>
+            <param name="graph"></param>
+        </member>
+        <member name="M:mesure.TDPanel.Releasegraph1(System.Drawing.Graphics)">
+            <summary>
+            
+            </summary>
+            <param name="graph"></param>
+        </member>
+        <member name="M:mesure.TDPanel.FreeResourcesVertexBuffer">
+            <summary>
+            libere les ressources de vertex buffer
+            </summary>
+        </member>
+        <member name="M:mesure.TDPanel.CreateVertexBuffer(System.Int32,System.Int32)">
+            <summary>
+            cre les vertex de la texture video        
+            </summary>
+            <param name="width"></param>
+            <param name="height"></param>
+        </member>
+        <member name="M:mesure.TDPanel.OnCreateVertexBuffer(System.Object,System.EventArgs)">
+            <summary>
+            en reponse a l'event createvertexbuffer : creation vertex projection plan video
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.TDPanel.preptexture">
+            <summary>
+            prepare le panel pour qu'il soit pret a affciher sa texture
+            a l abase ca servait a switcher les textures mais ca ne semble plus necessaire depuis qu'on fricotte avec les surfaces direct3D
+            </summary>
+        </member>
+        <member name="P:mesure.TDPanel.IsVideo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:mesure.TDPanel.TDDevice">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:mesure.TDPanel.PanelVertexBuffer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:mesure.TDPanel.PanelTexture">
+            <summary>
+            modif : on swap la texture sur une nouvelle texture juste faite 
+            </summary>
+        </member>
+        <member name="P:mesure.TDPanel.LocalMatrix">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:mesure.TDPanel.XOffset">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:mesure.TDPanel.YOffset">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:mesure.TDPanel.ZOffset">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:mesure.TDPanel.RotateDimension">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SplashScreenThreaded.SplashScreenForm.CloseSplashScreenFlag">
+            <summary>
+            To ensure splash screen is closed using the API and not by keyboard or any other things
+            </summary>
+        </member>
+        <member name="M:SplashScreenThreaded.SplashScreenForm.#ctor">
+            <summary>
+            Base constructor
+            </summary>
+        </member>
+        <member name="M:SplashScreenThreaded.SplashScreenForm.ShowSplashScreen">
+            <summary>
+            Displays the splashscreen
+            </summary>
+        </member>
+        <member name="M:SplashScreenThreaded.SplashScreenForm.CloseSplashScreen">
+            <summary>
+            Closes the SplashScreen
+            </summary>
+        </member>
+        <member name="M:SplashScreenThreaded.SplashScreenForm.UdpateStatusText(System.String)">
+            <summary>
+            Update text in default green color of success message
+            </summary>
+            <param name="Text">Message</param>
+        </member>
+        <member name="M:SplashScreenThreaded.SplashScreenForm.UdpateLicenceText(System.String)">
+            <summary>
+            mise a jour du texte de licence
+            </summary>
+            <param name="Text"></param>
+        </member>
+        <member name="M:SplashScreenThreaded.SplashScreenForm.UdpateStatusTextWithStatus(System.String,SplashScreenThreaded.TypeOfMessage)">
+            <summary>
+            Update text with message color defined as green/yellow/red/ for success/warning/failure
+            </summary>
+            <param name="Text">Message</param>
+            <param name="tom">Type of Message</param>
+        </member>
+        <member name="M:SplashScreenThreaded.SplashScreenForm.SplashForm_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+            <summary>
+            Prevents the closing of form other than by calling the CloseSplashScreen function
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:SplashScreenThreaded.SplashScreenForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SplashScreenThreaded.SplashScreenForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SplashScreenThreaded.SplashScreenForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:mesure.Résultats.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:mesure.Résultats.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:mesure.Résultats.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:mesure.Résultats.saveToolStripButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            clic sur icon enregistrer sous xls
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.Résultats.copyToolStripButton_Click(System.Object,System.EventArgs)">
+            <summary>
+             clic sur icon copier
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:mesure.Camera">
+            <summary>
+            Camera class
+            </summary>
+        </member>
+        <member name="M:mesure.Camera.Reglage(System.Windows.Forms.Control)">
+            <summary>
+            appelle la boite de ialogue reglage de la source
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.Camera.#ctor(System.Windows.Forms.Control,VideoSource.IVideoSource)">
+            <summary>
+            constructeur general
+            </summary>
+            <param name="control">controle ou est affice la video</param>
+            <param name="source">dource de la video</param>
+            <param name="detector">detecteur utilise</param>
+        </member>
+        <member name="M:mesure.Camera.IsFreezed">
+            <summary>
+            demarrage de la video source
+            </summary>
+        </member>
+        <member name="M:mesure.Camera.Freeze(System.Boolean)">
+            <summary>
+             gele la video
+            </summary>
+        </member>
+        <member name="M:mesure.Camera.SignalToStop">
+            <summary>
+            ordre envoye a la video source de s'arreter
+            </summary>
+        </member>
+        <member name="M:mesure.Camera.WaitForStop">
+            <summary>
+            attend arret de la video source apres ordre d'arret
+            </summary>
+        </member>
+        <member name="M:mesure.Camera.Stop">
+            <summary>
+            arret immediat d ela video source : jamais utilise ?
+            </summary>
+        </member>
+        <member name="M:mesure.Camera.Lock">
+            <summary>
+            lock de thread pour acces a la camera
+            </summary>
+        </member>
+        <member name="M:mesure.Camera.Unlock">
+            <summary>
+            unlock de thread pour acces a la camera
+            </summary>
+        </member>
+        <member name="M:mesure.Camera.video_Resize(System.Object,VideoSource.SourceResizeArgs@)">
+            <summary>
+            handler de onresize de la source video
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.Camera.video_NewFrame(System.Object,VideoSource.CameraEventArgs)">
+            <summary>
+            action a realiser sur une nouvelle image
+            en particulier, si la dmension cahnge : on recaclule cliprect et sourcerect
+            puis on appelle les evenements lies a Newframe
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mesure.Camera.getTabVers">
+            <summary>
+            interface : renvoie La liste des vesions xml         
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.Camera.SaveDisk(mesure.XMLAvElement)">
+            <summary>
+            enregistre la camera dans le fichier de config
+            </summary>
+            <param name="elem"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.Camera.LoadDisk(mesure.XMLAvElement)">
+            <summary>
+            initialise la camera avec les donnees du fichier de configuration
+            </summary>
+            <param name="elem"></param>
+            <returns>0 si pas d'erreur</returns>
+        </member>
+        <member name="M:mesure.Camera.LoadDiskEtals(mesure.XMLAvElement)">
+            <summary>
+            charge les etalonnages du fichier xml
+            </summary>
+            <param name="elem"></param>
+            <returns></returns>
+        </member>
+        <member name="P:mesure.Camera.LastFrame">
+            <summary>
+            get : renvoie la bitmap de la derniere trame acquise
+            </summary>
+        </member>
+        <member name="P:mesure.Camera.Width">
+            <summary>
+            get : width de l'image
+            </summary>
+        </member>
+        <member name="P:mesure.Camera.Height">
+            <summary>
+            get : height de l'image
+            </summary>
+        </member>
+        <member name="P:mesure.Camera.FramesReceived">
+            <summary>
+            nombres d'images recues depuis l'ouverture du flux
+            </summary>
+        </member>
+        <member name="P:mesure.Camera.BytesReceived">
+            <summary>
+            nombre de bytes recus depuis l'ouverture du flux
+            </summary>
+        </member>
+        <member name="P:mesure.Camera.Running">
+            <summary>
+            Running get
+            </summary>
+        </member>
+        <member name="T:mesure.AboutForm">
+            <summary>
+            Summary description for AboutForm.
+            </summary>
+        </member>
+        <member name="F:mesure.AboutForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:mesure.AboutForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:mesure.AboutForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:VideoSource.JPEGStream">
+            <summary>
+            JPEGSource - JPEG downloader
+            </summary>
+        </member>
+        <member name="M:VideoSource.JPEGStream.SaveDisk(mesure.XMLAvElement)">
+            <summary>
+            
+            </summary>
+            <param name="element"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VideoSource.JPEGStream.LoadDisk(mesure.XMLAvElement)">
+            <summary>
+            
+            </summary>
+            <param name="element"></param>
+            <returns></returns>
+        </member>
+        <member name="T:mesure.Resource1">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:mesure.Resource1.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:mesure.Resource1.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="M:mesure.Config.SaveDisk(mesure.XMLAvElement)">
+            <summary>
+            savedisk ne fait rien. on verra plus tard s'il enregistre qqchose en code
+            </summary>
+            <param name="elem"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.Config.LoadDisk(mesure.XMLAvElement)">
+            <summary>
+            lecture de la config dans son fichier xml
+            </summary>
+            <param name="elem"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.Config.LoadSources(mesure.XMLAvElement)">
+            <summary>
+            lecture des configs ds sourcesv 
+            </summary>
+            <param name="elem"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mesure.Config.LoadUrlJpg(mesure.XMLAvElement)">
+            <summary>
+            charle une section urljpg contenant 
+            available pour dire si cette sorte de source est dispo
+            et la liste des raccourcis ves les urls
+            </summary>
+            <param name="elem"></param>
+            <returns></returns>
+        </member>
+        <member name="P:mesure.Config.SrcUrlMpgAvail">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:mesure.Config.SrcUrlJpgAvail">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:VideoSource.ByteArrayUtils">
+            <summary>
+            Some array utilities
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,14 @@
+D:\essais\mesure2C\vfw\bin\Debug\vfw.dll
+D:\essais\mesure2C\vfw\bin\Debug\vfw.pdb
+D:\essais\mesure2C\vfw\obj\Debug\ResolveAssemblyReference.cache
+D:\essais\mesure2C\vfw\obj\Debug\vfw.Properties.Resources.resources
+D:\essais\mesure2C\vfw\obj\Debug\vfw.csproj.GenerateResource.Cache
+D:\essais\mesure2C\vfw\obj\Debug\vfw.dll
+D:\essais\mesure2C\vfw\obj\Debug\vfw.pdb
+D:\essais\mesure2C\vfw\bin\x86\Release\vfw.dll
+D:\essais\mesure2C\vfw\bin\x86\Release\vfw.pdb
+D:\essais\mesure2C\vfw\obj\x86\Release\ResolveAssemblyReference.cache
+D:\essais\mesure2C\vfw\obj\x86\Release\vfw.Properties.Resources.resources
+D:\essais\mesure2C\vfw\obj\x86\Release\vfw.csproj.GenerateResource.Cache
+D:\essais\mesure2C\vfw\obj\x86\Release\vfw.dll
+D:\essais\mesure2C\vfw\obj\x86\Release\vfw.pdb

@@ -1,0 +1,1003 @@
+﻿v1.0.91
+
+correction exception a l'ouverture de la boite de reglage video
+il semble que m_basefilter n'est pas rattaché a son objet COM, il faut sauvegarder le device dans le choix de la source et refaire le bind sur un nouvel objet avant d'appeler la fenetre de dialogue
+
+en fait il faut liberer le m_FilterGraph avec marshalreleasecomobject dns le unbuild
+ca libere le m_graphfilter et tout ce qui y est rattache par des 'as'
+il y a du nettoyage a faire mais ca marche
+
+
+
+v1.0.90
+++ les reglages image auto sont mises dans la boite de dilaogue sont utilissees par la prog, et rappelées a la prochaine ouverture de la boite
+++ l'edit de choix sufixe nom fichier sauvegarde est coorectment posiotnne au dessus de la listbox
+
+
+
+v1.88
+
+
+++ les images sont ok dans les toolstips :
+dans le toolstrip 
+mettre image autosize : true, size and fit =1 et urtiliser une image des ressources avec 
+
+++ correction en tete ficher export
+-- les derniers choix n'apparaissent pas dans la liste des choix image auto et res auto
+-- une MRU des config serait bien
+-- revoir 'ipression d'image
+
++ok+ reinit ne vide pas le tableau des resultats
+
++ok+ quand on clique sur la barre outils ca demarre pas le mesureur courant
+
+++ ajout de invalidate dans le opensource pour mise a la taille de la fenetre video
+++ install contient un desinstalleur en vbs. ca marche
+++ install cree un dossier motion dans le menu programmes.
+
++ok+ la premiere mesure en ligne plante ! le resutlat etait passe en fianl au lieu interactif
+
+v1.87 rc
+++ ok ca marche l'ajout de colonnes, sauf que pour que les donnees soient bien rangees, il faut creer des type de colonnes :
+	- legende de debut de ligne
+	-legende de fin de ligne
+	- resultats
+
++ok+ annulation dernier resultat ne marche pas ?
++ok+ pas de modif des colonnes apres dialogue resultats
+	la modif des colonnes du getionnaire de sreultats est faite au chargemetn du xml et la la sortie du dial de paramtetrage des resultats
+
+
+
+
+v1.87 
+
+fin remplacemetn gestion tableau resultatas, ca plante la ligne courante n'est pas initiaisee quand on l'ecrit
+sinon j'ajout de colonnes est ok
+
+
+v1.86
+remplacement gestion des resultats pour permettrtre la gestion de l'ajout de colonnes en cours de mesure.
+
+
+!!
+mainform.pDialMesure est nul parfois dans paramGUI SetParams(MainForm mainform) si on teste pas le ptr ca fait une exception
+
+
+v1.85
+
+!! il y a un sac sdans le row count du tableau mesure, insert et delete
+
+++ plus d'efacement du tableau au changement de mesureur
+
+++ le tableau mesure record est ajuste a la taille de la fenetre ppale.
+
+++ gestion raz des resultats sur box de reglage res ok ca marche et c'est sauvegarde dans le xml
+++ le tableau des resultats a le bon nombre de colonnes et ca depend de si on enregistre param et obj
+
+!! penser a griser param si ca sert pas.
+
+
+!! voir si le fichier export est ok
+
+
+-- couleur trace pas sauvegardee et a refaire au chaque changement de mesureur !!!
+
+
+la commutation marche avec euresys pour laquelle la fenetre de reglage ne s'ouvre pas. donc le probleme viendrait de l'ouverture de cette fenetre ?
+
+tostring de coresystem fonctionne avec le format de string "00.00"
+attention, on risque des surprises en changeant de payscar ca recherche la virgule et non pas le point decimal du pays...iv a falloir comprendre comment ca marche !!
+
+en mode mesure horiz ou vert la statusbar est pas mise a jour qd ondeplace le curseur alors que c'est le cas dans ligne. idem pour les mesures instantanees
+
+correction de la grid d'etalonnage : le clic est sensible sur toute la ligne : plus besoin du bouton qui faisait moche
+
+parametres mesure : 
+
+++ ajout d'un panel pour faire marcher les radioboutons de separateur automatiquement
+++ nb decimales et format virgule sont geres
+++ le clone de parametres resultat est ok il doit contenir tous les champs a copier
+
+
+-- pas de liste des derniers suffixes saisis pour init la listbox des suffixes (et pas de place pour l'enregistrer dans les params)
+
+
+
+!!! attention, pour l'instant tous les calculateurs ont le meme format de sortie, mais si ca change le initgridcalculator ne fonctionne qu'avec le caclculateur courant , ca fva faire bizarre
+
+
+-ok- selection enregistrement des paprametres de oite dialogue reglage mesure
+-ok- raz es colonnes tableau mesure record en cas de modification des chams exportes
+
+
+1.84
+
+probleme dans l'arret de capturedevice ce qui fait que ca reemarre pas et on ne peut pas changer la resolution
+par contre ca marche si on demarre le programme en image et qu'on change, ou quand ca demarre direct dans ue resolution pas par defaut.
+
+revoir le circuit de fermeture du filtre
+
+
+v 1.83
+
+++la boite reglage parameters mesure contient tou  : les directories,; la precision, etc etc
+reglagemesure va remplacer  enregifichierparam
+
+++les parametres res et img sont mis dans le core. on n'y accede qu'en get sauf une fonction qui permet de les recycler en sortie de dialogue edit
+
+++modi des xmlsystems :
+les strings commencent par :
+possibilite de mettre des int en clair, c'est surtout utile pour l'edition manuelle de settings qui n'est modifiable qua la main
+
+++creation de settings et config du core : c'est lu des le debut du main, et ca definit les menus et les options dispos. impossible a modifier en cours de fonctionnement (sauf reboot)
+
+++ca permet de cacher deja les menus url , et de charger des raccourcis url par defaut
+il faudra aussi rajouter ds raccourcis url utilisateur
+
+
+version1.82 
+possibilite d'initailiser les parametres d'acquisition capturdevice (width, heigt)
+reste a les mettre dans le xml et les sauvegarder
+
+
+version 1.81
+
+creation de coresystem qui contient le modele central avec les classes camera, etals et calculateur
+
+!! il reste a gerer l'annulation des etalonnages quand la resolution change
+
+on va mettre tout de suite la gestion des resolutions a la creation dela source + sauvegarde des valeurs choisies
+
+
+
+version 1.80a
+
+version 1.76
+
+++ correction sauvegarde etalonnage pas correcte
+++ sauvegarde erreur extension fichier xml dans fichier enregistrer
+
+++ quand la camera ne demarre pas : on garde l'etalonnage et le type de camera pour permettre de relancer le soft sans perdre les etlaonnages
+
+-ok- prevoir de ne pas effacer les etalons quand on perd une cam ou qu'on recharge la meme source video
+
+-??- pas de rafraichissement des etlonnages quand on les perd
+
+
+
+-- si le chargement de la camera echoue, l'etalonnage est annulé, mais le default le perd et on a tout perdu !
+
+-ok- pas de serialisation de parametres image auto
+-ok- serialisation parametres resultas a faire + colonnes en plus ds resultats
+
+++ menu impression  image ok
+
+version74
+
++++ lecture enregistrement su xml ok :
+++ position fenetres main et mesure
+++ capture, urljpg , urlmjpeg
+++ parametres sauvegarde auto. verifier que tout revient mais ca a l'ai
+++ parametres de capture auto image : pas tout ok
+++ correction legendes haut larg
+
+-- couleur trace pas sauvegardee
+-- action sur icone disquette
+-- dialogue reglage fenetre acuqistion
+
+-- taille impression image
+-- si pas d'image, imprimer attend qu'elle apparaisse !!!
+
+-- pas de mise a jour des rulers ( et de l'echelle) apres creation etalonnage ???
+
+
+version 73 
+
+++ passage de tous les reglages en ibagxml pour structurerl'enregistrement des parametres a l'avenir
+  cad camera + etalonnage + paramsauvauto
+++ mise a jour boite about
+
+
+
+version 72 
+
+++ ajout de installeur microsoft qui prend en charge l'installation des dll de reference 
+--- pas de desinstalleur. 
+** la question du redist ne semble plus d'actualite, ca a marche sur un ordi sans redist
+
+++ debut d'ecriture de gestion des parametres sauv auto
+++ gestion sauv auto/visualisation en fin de resultat
+
+-- changer les legendes des icones mesure
+-- sauvegarder les position fenetre taille et position mesureur
+-- faire marcher sauvegarde auto
+-- attention taille image dans impression
+-- 
+
+
+version 71
+
+++ correction erreur etalonnage : on utilisait deux fois le meme x
+++ correction erreur etlonnage : betalok est parfois a false sans raison.
+++ correction passage left et top en arguiment, (test avec 0,0 uniquement)
+
+++ corection affichage rulers : on a tous les ticks sur toute la longueur de l'image
+++ ajout d'un ecart de tics de 0.25 pour certains cas ou c'etait moche
+++ redessin des rulers et position rectangle par un appel a resize dans le paint
+ca permet a un simple invalidate de retablir une ilmage correcte
+
+-- au changement de source;, les etlonnages sont vides mais pas a l'ecran
+
+-- passage des arguments top et left dasn les copies pour essais de zoom/clip . ca marche avec webcam mais plus avec les bitmaps
+
+
+version 70 24 mai 2009
+++ compil avec nsis 1.67 : ; les dll modifiees semblent etre bien passees
++ modif de script nsis pour que le redistribuable soit dans un repertoire redist a meme niveau que release ou debug
+
+++ ajout de dialogue reglage resolution par lecture de la property page de pinout du grabber
+il faut mettre un resize en sortie pour que ce soit pris en compte. donc on arrete l'acquisition pour cette propertypage la
+
++++ utilisation clsimgutil pour reduction image, au lieu de drawbitmap. 
+	ca va peut etre + vite....
+	ca fait une modifi de clsimgutil(class library c#) et une modif de clrclassimgutil(c++) dll pour avoir une fonction de copie avec zoom
+
++++ correction plante sur rappel mesure apres femeture dialogue mesure:
+	on detruisait le dialogue avec le clic sur export. il faut juste le minimiser car apres le open plante
++++ correction legende haut/larg
++++ gestion images plus grandes que 2048 : on les paint en reduction (sous echantillonnage du drawimage) dans la texture
++++ la ligne de gauche de mesure horizontale n'allait pas au bout de l'image
+
++++ essai d'acceleration en changeant le drawimage qui est sans doute la cause du ralentissemnt
+il faudrait passer a BufferedGraphics ca peut accelerer, ou ecrire une copie de bits avec zoom dans la dll utils
+
+version 66b (pas de modif sauf pour essai twain : chargement de parismatch.jpg dans c;\tmp))
+
+en mode twain , en plus de ne pas avor d'image au demarrage de 'appli, il n'y en a plus en cas de refresh. en effet
+le newframe n'est pas rappelé et donc l'image n'est jamais rafraichie. a la difference de image fixe qui rafraichit l'image toutes les 40 ms avec son workerthread.
+
+il va falloir mettre aussi un workerthread qui renvoie la derniere image recue .
+(d'ailleurs idem sans doute pour l'image fixe qui doit aller la relire sur le disque ???)
+
+on a le meme probleme quand un URL rame.
+
+-- ca plante toujours quand on fait sortie des resultats et lemise en route d'un calculateur.
+
+** prevoir le chargement d'une nouvelle image sas detruire le videosource, ca evitera de RAZ es etalonnages.
+
+-- permettre la modif de la resolution cmera
+
+-- voir le chargement des textures plus petites que l'image
+
+*** pour le twain, il va falloir voir le cas ou il y a repetition des scan, ca depand si c'est une cam ou pas 
+
+*** pour les ipcam : prevoir un menu ipcam avec boite de dialogue de choix :
+- IP
+- nom
+- mot de passe
+- type de camera
+- numero de camera
+-> jpg/mjpg choisi automatiqument
+tout ca rangé dans un xml en ressource
+
+
+*** faire sauvegarde de tout , tailles etc etc dans default.xml
+
+
+
+version 66
+
+les rulers changent d'echelle avec l'etalonnae, mais les vleurs affichees sont deux fois trop grandes parfois...
+
+version 65 
+
++++ installer marche
+
++++ ca met toujours viewpoint !!! -> correigé
+
++++ enregistrement automatique resultats sans affichage tableau
++++ enregistremetn manuel resultats sans affichage tableau
++++ division reglage enreg auto image / resu
++++ boite de dialogue parametres sauf autoclear
++++ format xls, csv, etc...
++++ gestion legende etalonnage courant dans scroll de tooltips + actionclic sur tooltips
++++ plus d'icon dans tooltip etalonnage
++++ protocole new fait un reboot qui raz tous les reglages et revient au defaut
+
+
+--- sauvegarde des dimensions dans le xml
+--- sauvegarde des noms autosave dans le xml
+--- porposition de suffixes selon dernier choix dans dial reglage autosave
+--- taille impression image : image partielle
+--- l'echelle autour de l'image ne change pas avec l'etalonnage
+--- camera 1.3 mpixels ne marche pas
+--- videomesureur ne marche pas ? 
+--- plante quand on selectionne un mesureur apres sortie des resultats (depuis boite mesure)
+
+*** mettre nom objectif dans resultats
+*** mettre nom echantillon dans resultat selon reglages mesure (boite de dial a faire ?)
+
+*** passer en enrgeistremetn auto sur clique dans mesure / enregistrer
+*** gerer le autoclear selon boite de dialogue parametres
+
+version 64 00:22 11/05/2009
+
++++ le dernier resultata est le courant dans la boite de dialogue
++++ ajout effacement ligne resultat
++++ ajouts boutons boite de mesure : suppression derniere ligne et export -> fermture de la boite et affichage tableau export
++++ mesure ligne ok
+
+
+
++++ correction probleme affichages menus et toolbar mesureur
++++ bouto suppresion objectif OK
++++ reaffichage lignes apres resize ok
+
+++ resultats instantannes ok
+
+
+
+*** ajouter la longueur en ligne de status
+
+
+--- quand on change le mesureur les resultats cumules sont raz
+--- quand on change la source, les etalonnages sont annules mais ca apparait pas dans la liste
+--- quand on recharge une source avec le mesureur en marche : on a des valeurs infinies dans les positions x ou y
+
+--- pas de resultats instantanes
+--- les resultas cumules contiennent des cracteres bidons
+
+--- il y a eu un reaffichage apres resize ou une seule ligne est apparue
+--- dasn etalform : un des edits est partiellement caché
+---- ok n'ajoute pas d'etalonnage corrigé
+
+
+
+version 63 
+
++++ ajout de reboot permettant un redemarrage (a supprimer des menus)
++++ gestion correcte de l'ordre des etalonnages : pixel toujours en premier
+
+--- trop de changement de taille = BSOD
+
+-- ajout changement de source en mesure : ca fait des trucxs bizarres (etalonnage vide)
+
+--- pas de mesures dans les tableaux (en ligne, voir si c'est idem en hauteur)
+
+il faut un etat global de l'appli contenant :
+- l'etat du calcul mesure, a utiliser en retour d'etalonnage pour remettre le trace qui va bien
+
+
+version 62 18:08 05/07/2009
+derivee de 60
+
+
++++ amelioration boite dialogue etalonnage : mise a jour icones + controle valeurs 
+	sortie de diaogue avec le quit
+	touts les valeurs du dial sont passes a l'etalonnage courant
+	
++++ gestion icones liste etalonnage 
+
++++ reorganisation boite saisie etalonnage
+
++++ deplacement reglages camera dans les options
+
++++ deplacement mesure courante vers tab 2
+
++++ plus de selsction en bleu de l'obectif courant. 
+l'effacement porte sur l'objectif actuel (reste a gerer l'objectif courant qui passe a null)
+
+
+*** ajouter mesure reglage dans tab parametres
+
+
+
+version 60
+
++++la mesure ligne est corrigee
++++un peu de nettoyage da et la
+
+---le twain ne marche plus mais c'estpeut etre du au pc
+
+
+version 59 18:52 05/05/2009
+sauvegarde automtique : dial de reglage plus mise en place de sauvegarde auto
+
+bug : le bas de l'image est parfois foireux (avec sourc URL)
+
+a faire : controler que les noms sont corrects en sorte de boite de dialogue reglage sauv auto 
+et eventuellement vider la serie de fichiers correspondant a ce suffixe + index
+
+
+vesion 58 01:41 05/05/2009
+enregistrement images
+ajout etalonnage pixels
+amelioration gestion icones mesure et etalonnage
+
+
+version 57 : modifs demandees par denis
+
+- gestion couleur ligne. ajour boite de dialogue de choix de la couleur
+- pour eviter de reecrire toutn le code pour les mesureurs, on fait une classe generique GenericMesureur qui contient les membres necessaires ax calculateurs
+et on derivera les cacluateurs de cette classe et de ICalculator qui contient les fonctions necessaies en plus
+ca doit pouvoir etre regle autrement par une classe abstraite, d'ailleurs il a fallu faire une clase abstraite ppour tout faire marcher...
+voir si tout ca est bien dans les regles de l'art, interface et classe abstraite ont l'air de faire doublme empli
+en tout ca ca change de couleur
+on pourrait s'insiprer de colorpicker de codeproject pour meubler le defninr une couleur personnalisee de la boite de selesction coueur
+
+*** debiut correction trace ligne pour avoir des resultats. il va falloir reflechir aux resultats qu'on sort en interactif et a la validation de la mesure
+pour l'instant ca sort des xy a hue et a dia mais tout ca n'est aps vraiment traite
+--- errur sur le ploint de debut en mode ligne
+
+
+version 56 
+
+ca marchait bien su un ordi et l ca ne marche plus. en fait le surface.getgraphics renvoie une exception avec les surfaces A8R8G8B8 car GDI ne gere pas la transparence
+pourtant ca marchait sur l'autre ordi ......
+
+bref : il faut tracer avec alpha dans une bitmap et la copier dans la texture
+pour que ce soit fluide : on fait le transferte uniquement dans le render, lequel render esst appelé par un timer de la mainform. ca marche pas mal, a noter que:
+- pour que l'alpha marche corectement il a fallu laisser le legraphic.CompositingMode = System.Drawing.Drawing2D.CompositingMode.SourceCopy; qui permet de copier la transaprence dans la bitmap
+- dans tdpânel : on fait la copie du plan graphique (avec alpha) avec l'utility.coy32bit. il y a aussi un marshallcopy qui pourrait aller
+c'est fait dans un updatetexture, qui copie le plan graphique dans la texture (une fois par timer)
+- dans paintframe qui copie le plan video, on utilise le graphics sur la surface car il n'y a pas de alpha. d'ailleurs ca doit permettre de se passer du traitement du alpha dans le render.
+
+le render appelle le update(pour le plan graphique avec alpha), puis le present. il n'y a pas d'autre appel du render. 
+
+A VOIR
+il doit y avoir du multithread du cote de paintframe. verifier que ca fait pas des problemes avec buffercb et autres
+
+
+ca plante quand on relance un filtre direct show. le connect ne marche pas
+
+nettoyage d'une bitmap qui servait plus dans le camwindow
+
+
+version55 19:18 04/24/2009
+
+YESSSS ! ca y est l'overlay marche bien de direct3D sans copie en assembleur, avec 1 plan graphique et 1 plan video
+il fallait mettre alphablending au device
+alphaoperation
+et aussi compositemode au dessin pour que l'alpha n'intervienne pas dans le dessin des lignes
+
+
+
+version 54 08:46 24/04/2009
+
+essais sur textures : overlay directX sasn traitement de la transparence
+ca ne marche pas tout est HS
+
+
+
+
+version 52b 01:08 20/04/2009
+
+* coorection probleme flip flop textures de la video
+* essai de video dans texture 0 et superpostiion des textures. 
+ca ne marche pas meme a vec une seule texture .......
+
+
+
+
+version 52 01:08 20/04/2009
+
+++ correction probleme composant -lien vers c++ mal defini : utilisation de framework2 il etait en 3.5 d'ou impossible a installer ? 
+++ recompilé en release ce qui doi arranger les problemes de dll vus a l'install
+++ supression affichage carre vert dans le panel qu relaentit tout
+++ essai  de passer en 3 textures avec operation au lieu de 3 panels. a revoir.....
+
+
+++ ca devrait etre installable n'importe ou
+
+version 51 01:15 14/04/2009
+
+++ correction boite dialogue ouvrir image
+++ gestion des icones ligne/vert/hor meme dans la toolbar
+++ ajout echantillon (non fonctionnel) dans dialogue mesure
+++ gestion reglage dans la camera
+++ ggrise des menus inactifs
+++ copier coller resultats
+++ export resultats en xls/csv
+++ legende dialogue mesure en francais
+
+
+** reste a faire
+
+
+-- bugs
+-- probleme si on ouvre un fichier/avi qui n'existe plus en autoload
+-- activer mesureur au demarrage en default
+-- une ligne sautee dans fichier csv
+-- twain n'affiche rien
+-- pas de message si avi illisible
+
+
+
+
+
+version 50 18:08 13/04/2009
+
+++ est ok : lecture / enregistrement auto au demarrage, 
+++ lecture / enregistrement config
+++ boite dialogue mesure
+++ boite visualisation resultats
+++ modif menus pour source en 1 seul menu
+++ icones mesureur vertical et ligne
+++ impression rapport rudimentaire
+++ compilation en visual express
+
+** reste a faire :
+** copier coller resultats
+** impression enregistremeetn image
+** enregistrer resultats en xls
+** sensibilite clavier a space pour mesure
+** resultats ligne
+** ligne horizontale
+** faire marcher les icones toolbar
+** mettre a jour icones toolbar
+** activer mesureur au chargement config
+
+
+
+
+version 42 01:32 07/04/2009
+
+++ est ok : gestion bouton click de boite dialogue mesure
+
+
+** a finir : remplir le datagrid quand on clique sur ce bouton
+
+
+
+
+
+version 41 :
++++ est ok : gestion fermeture boite dialogue etalonnage
+
+--- bugs
+
+
+
+** a faire : envoi des resultats sur barre espace, double-clic ouune touche de la toolbox
+
+
+
+
+version 40 11:44 05/04/2009 : 
+
++++ est ok : l'etalonnage marche avec ligne vert
+
+a voir : avec ligne
+
+
+
+
+
+version 39  : reparation problemes decalages divers et varies
+++++ est ok : 
+le principal probleme venait du fait qu'on redimensionnait le picvideo dans le onresize de  camerawindow.
+d'autre part ca marche mieux de recuperer la taille du parent que la taille de camerawindow, pourtant en dock = fill ca devrait etre pareil. 
+
+enfin, pour le moment, on recupere la position de la souris en lisant cursor et en le convertissant en screen coords puis en clientrect de la picvideo.
+
+avec tout ca la video est entiere et les curseurs ne se decalent pas.
+
+$$$ bugs
+
+$$ sur un resize : les traits de vert reviennent a une position bizarre
+$$ l'etalonnage ne marche pas : mesure est en pixels
+
+
+---- a voir : 
+
+---- il reste le probleme du curseur qui est aprfois tout noir, et qui revient de temps en temps de default. on verar ca apres.
+
+---- il faudrait que le bord de la video soit unpeu a droite du separateur de panels, ca touche de trop pres
+
+
+version37 : cosmetique 09:37 30/03/2009
+
+
+version 36 : cosmetique suite 19:21 03/27/2009
+
+
+
+version 35 18:06 03/26/2009
+un peu de cosmetique + appel de changement taille source quand on change la taille du clippper. ca ameliore pas le probleme du zoom intempesif quand on resize.
+
+
+version 34 08:14 26/03/2009
+- BUG : en trace ligne, on a un decalage entre la croix et la ligne. soit la croix est plus haute que la ligne, soit elle est a gauche. ca a l'air de dependre du rapport d'ecran de l'image et de la fenetre de visu
+c'esst ca : si l'image tient dans la hauteur de la fenetre, ca decale horizontalement, si elle tient dans la largeur de la fenetre, ca decale verticalement
+plus le frame est eloigne du bord de l'image, plus le trait est loin de la croisx. on dirait que le x et y de la souris est celui du panel?
+
+d'autre part l'image est tronquee.
+quand on agrandit la fenetre, ca change la taille du rectangle source. c'est pas ce qu'on veut ca devrait laisser l'image entiere a l'ecran
+c'est a dire pas de modif de la taille clippe de source
+
+
+
+mesure33 17:41 03/25/2009
+
+ca va mieux cote etalonnage : quand il y a pas d'etalonnage on convertit les coords en coords camera, ca permaet de faire revenir les lignes en place en cas de redim de l'ecan.
+ca marche presque, a corriger un peu
+
+
+
+- probleme avec la gestion ec conversions par evenet : si une conversion est impossible, ce qui est le cas avec fromconv quand les coords clipp sortent du rectangle de clipping
+on ne peut pas retourner un code d'erreur. 
+si on met une exception : est ce que en cas d'installation de plulsieurs handlers ca continue a traiter les autres handlers si un des handlers leve une exception ?
+donc il faut rajouter un champ erreur dans la structure passee en argument
+dans MainFrmInvConvHandler ou est appele invetalonne de la camera, on regarde la coddode de sortie et on le charge dans la struct
+
+- il faut avoir un etalonnage qui convertit de fenetre en coords source si onn'a pas d'etalonnage predefini
+
+
+
+version 32 00:12 25/03/2009
+ne marche pas. reste a finir l'inverse de l'etalonnage pour redessiner les traits de mesure apres un redim de l'ecran
+
+ !!! gestion du rediensionnement de la fenetre ca pose le probleme du reaffichage des traits du mesureur, dont la position doivent etre recalcules en fonction de leurs coordonnees source. 
+donc : 
+il faut toujours garder les coordonnees source des 2 lignes dans le mesureeur, meme si on gere les deplacements a partir des coordonees ecran pour eviter les probelmes d'arrrondi. 
+d'ou creation de nouvelles fonctions : quand le mesureur a besoinde recalculer la position de ses traits, a la suite d'une changemet de taille de l'ecran
+
+en cas de zoom : il peut arriver que les coordonnees des mlignes du mesureur soient en dehors de la zone de clipping. dans ce cas, pour l'instant ca sature les valeurs a la zone de clipping mais en fait il faudrait que ca les calcule qd meme, en mettant un retour d'erreur, pour permettre le calcul de droites atteignat d ces points.
+
+le mesureur declenche un evenement fromconv dans lequel le main rame a installe une fonction mainconvinvfrmhandler qui appelle la fonction invEtalonne de la camera qui appelle la fonction conversionInv de 'etalonnage pour transformer le point passe dans les champs source en un point en coordonnees clipping passe dans les champs out.
+
+
+
+version 31 17:52 03/24/2009
+
+- lecture des sources dans le fichier : ok. une fonction qui resseeble a poenveideosource fait un open a partir du fichier de config, avec aussi demarrage de la source
+
+- la source mjpeg est ok en lecture et ecriture.
+
+- pour le caclulator, il va falloir trouver une solution pour checker le bon menu
+
+- il faut revoir l'init de l'affichage du calculator
+
+- pour la source, il faut traiter le cas ou la source n'existe pas. aussi bien depuis la liste des sources (ce qui n'arrive jamais en principe) que depuis le fichier de config
+
+- il faut que les ruler aient leurs lmiites positionnees en fonction de l'etalonnage
+
+- ajout de redessin de l'etalonnage en cas de modif de la fenetre visu
+
+- il reste a faire l'evenement de resize de la camwin, pour que les caclulateurs redessinent les traits avec les nouvelles coordonnees ecran
+
+
+
+
+version 30 : 00:47 24 03 09
+derivee de 28b
+
+relecture et allocation dynamique des types semble marcher, mais il reste des problemes:
+- seul le capture devince est implemente. implemetner les autres
+- enregistremetn de la source n'est pas correct : rechatgement de n'impot quoi et ca fait planter
+
+par contre si la camera est   nulle au cas ou le chargement de qqchose foire : ca plante.
+
+il va falloir traiter les exceptions de retae de la lecture....
+
+
+
+version 29 00:22 23/03/2009
+
+lecture des etalonnages sur disque OK. le principe ecriture lecture de la config semble marcher.
+il reste a sauvegarder les camset les mesures.
+
+a faire : definir un tableau de mesures qu'on peut utiliser au choix.
+
+
+
+version 28a 15:21 21 03 09
+protype d'enregistremetn du systeme ok : 
+on enreistre les etalonnages en enregistrant la camera
+les types int, double et string sont enregistres enchar64
+
+il reste a faire marcher la relecture d'une config. surveiller en particumier que tous les elements alloues pour le xml sont correctemetn liberes a un moment ou un autre. 
+il y a beaucoup de structures allouees dans tout ca pour faire une config.
+
+
+
+version 28 18:46 03/20/2009
+enregisdtrement xml est ok, lecture xml ne marche pas
+
+reste a faire ensuite : sauveegarde complete de la config et rappel
+
+
+
+version 27 17:36 03/19/2009
+
+xml commence a marcher
+
+
+version 26 00:49 19/03/2009
+
+non fonctionnelle : debut de creation des classes de l'arboresnce de XML
+
+
+
+version 25 00:23 18/03/2009
+
+- double resize au chargement videosourec pour avoir tout de suite une image
+- correction de la liste des entrees video en capturedevice.
+- correction probleme dans mesure ligne : toresu null : il n'est pas initaliseet pas teste si null
+- reste a voir pourquoi la video est tronquee quand elle retrecit et pourquoi elle est agrandie quand ell est agrandie. 
+- question du curseur de souris transparent
+il reste a faire :
+- enregistrement eds variables
+- suavegarde des resultats
+
+
+
+version 24b  17:46 03/13/2009
+utilisee pour trouver la plante pure virtual call :
+ca plante parce que le connect des 2 pins avec la carte euresys fait planter
+ca plante pas si on deconnect immeiatement
+ca plante pas si on connecte pas.
+ca plante si on connecte les 2 pins et retour de pure virtual call
+
+est ce qu'elle met d'autres connections ?
+
+
+version24 17:45 03/11/2009
+
+le controle video passe dans un panel pour eviter qu'il se redimensionne lui meme en permanence, debut de trace des regles 
+
+
+version23 01:08 11/03/2009
+
+ajout regles et barre icones au dessus fenetre
+
+les onevent ne marchent plus
+il y a un decalage entre souris et traces
+voir comment faire overlay des curseurs sur les regles + dessin des regles
+verifier l'etalonnage
+
+deplacement de fenetre mesures en temps reel dans le meme cuseur que l'etalonnage
+
+
+
+
+version 22 18:24 03/09/2009
+
+correction probleme d'une des lignes qui ne faisait pas de reultat
+
+conversion des coordonnees par l'echelle ok
+
+
+version 21
+
+
+fin etalonnage:
+la boite de dialogue controle les champs et active le boutonos quit quand c'est bon. 
+clique sur bouton Ok finit par appeler onclosetal de mainfrm via des events. 
+onclosetal desinstalle le calcultateur d'etaolonnage, 
+recupere l'etalonnage de l'etalform (qui a ete mis a jour avant d'appeler l'event de quit
+ferme la fenetre d'etalonnage
+remet les coches et les enable des calculateurs
+
+detruit la boite de dialogue etalonnage
+si la camera est nulle : on sort. impossible de faire un etalonnage avec une camera nulle
+
+on enleve de la pile des event l'event changingvariable utilise en reponse aux mouvements soiris dans la fenetre 
+on replit le datagridview avec les noms des objedctifs et on positonne les icones pour l'objectif courant. 
+la ca plante : lors du remplissage du datagridview il a ya des plantes au rajout de ligne ca venait du alowuser adddligne : si on lemet a zero on peut metre les rowsa zerosimplemetn en l'afectant a zero. 
+
+mise en place interfacce de la selection etalonnage vourant. il reste a verifier que ca marche et corriger le bug de mesure vertical : une des lignes ne marche pas. 
+
+AFAIRE : 
+curseur croix pour l'etalonnage
+verifier mesure
+toolbar
+sauvegarde definition et status
+
+
+
+et volia
+
+
+version 20 02:02 07/03/2009 
+
+reincorporation de etalonnage
+
+- correction d'u probleme memoire dans capturedevice : le dispose de la bitmap ne libere pas tout. donc ca finit pas tout arreter. 
+on recycle donc la bitmap tant qu'elle change pas de taille.
+
+
+-travail sur l'etalonnage : 
+
+sur le clic menu :
+on ouvre la boite de dialogue etalonnage
+
+on charge dedans l'etalonnage courant, ou un nouveau
+
+on inactive les menus mesure
+on active l'event etalokhandler CliqueFin sur fermeture de la boite etalonnage qui remet le fonctionnement normal
+
+qui appelle etalok de mainform, qui ajoute l'etalonnage a la liste des etalons
+mystere de l'autodestruction de la boite : qui desinstalle l'event ???
+
+toconv qui converti les coords visu en coord source est appele
+
+le calculateur d'etalonnage est linecalculator modifie : etalcalculator . il renvoie 4 variables qui sont les 2 points des 2 extremites de la ligne
+l'evenement onresu est redirige vers la boite de dialogue etalform qui les traite pour les afficher (en coords source) et calculer la longueur de la ligne
+tacee a lecran. 
+
+il reste a afficher ces resultats dansle dialogue et verifier que l'object sender et bien le calculator!!!
+
+il reste a controler tout ca dals etalform, remplir correctemetn l'eetalonnage et enregistrer l'etalonnage dans les etlaonnages de l'application
+
+
+
+la boite de dialogue etalform est non modal : on la montre avec show et pas showdialog
+
+a verifier : pendant l'etalonnage on peut changer la source, c'est normal on risque de vouloir deplacer l'objet ou zoomer 
+mais ca risque de modifier des mesures. 
+
+attention : le calcul de la longueur de la ligne en coords source doit etre mis a jour.
+
+
+
+
+
+version19a 22:37 06/03/2009 : fusion avec 17c
+
+
+essaie  de peinture dans un plan autre : 
+deplacemetn du plan video dans 0 : rien ne change
+on peut peindre independamment dans plan 1 et 2 : ca se superpose sans sourciller
+cf mainform.onpaint() mais la ransparence ne fonctionne pas
+
+
+
+- debut echelle
+pas encore de nom, ec, juste mesure d'echelle et une exception si la mesure est debile. 
+la fonction SetEtal fait tout en un coup a partir de la ligne dessinee en coords source et la valeur saisie
+return true si c'est bon, false si c'est faux
+la fonction convert renvoie un point correspondant a au point entre converti. si pas d'etalonnage : ca renvoie le meem point
+
+les etalonnages sont dans la camera. un etalonnage courant est celui utilise pour les mesures
+la fonction convert de la camera relaie directement la fonction convert de l'etalonnage courant
+ajout de cameraetal.cs qui va contenir tous les elements de la calsse camera (classe partielle) lies a l'etalonnage
+la camera fait addetlaonnage et deleteetalonnage, et renvoie la liste des noms d'etalonnage avec un flag pour le courant
+
+quand on passe en etalonnage, les autres mesures sont annulees et l'event de mesure est oriente vers une procedure d'etalonnage
+
+
+version18 09:06 06/03/2009
+
+- le resultat de la mesure est envoye dans le grid resultats . ca marche quand cam est encore null (pas d'image a l'ecran)
+
+bigs vertmesure:
+- le resultat n'est pas modifie quand on bouge une des 2 lignes
+- quand on bouge une ligne, c'est toujours elle qui bouge tant qu'on n'a pas clique exactement sur l'autre -> sur le up la ligne courant n'est aps annulee
+
+- inquietude sur la vitesse d'affichage des images
+
+
+
+
+
+
+versio 17 17:48 03/05/2009
+
+- ajout du getgraph avec erase
+
+-recuperation vertmesure de 14b ajout du constructeur dans menu, plus annule calculator avant d'en creer un nouveau
+appel de setactive du calculator dans mainfrm ca marche
+
+- l'affichage des lignes vert est ok
+
+- ajout de l'event calibrate qui passe un xy et recoit la valeur etalonnee dans une structure qui va bien
+  l'event uutilise une structure MesureEventArgs qui fait la connexion entre xy client et xy etalonne
+  on pourra plus tard rajouter des elements a cette structure
+  cet event est declenche quand on a besoin d'une conversion
+  cette classe est instanciee par par le mesureur, l'application se charge de remplir les cjhamps de conversion
+  
+  ok c'est bon quand la souris bouge ca appelle l'event du mainframe avec le x,y d la droite
+ il reste a limiter les deplacements de la droite en dans le cadre , sans limiter la souris pour permettre d'aller cliquer sur les icones
+
+penser a enregistrer un undo
+
+
+pour la conversion en coords source : 
+on appelle le clippingengine de la camera depuis la fonction de traitement des conversions de la mainfrm, 
+cette fonction est dans un event installe avec le mesureur et qui va interroger le clipper et renvoie les coords source
+il rete alors a convertir ces coords sources par l'etalonnage
+
+les resultats sont passes du mesureur a l'application par un autre ezvent qui envoie au mainfrm la liste des ID de resultats fabriques.
+le mainfrm interroge alors le mesureur sur ces resultats et les affiche
+
+
+
+version 16 23:46 03/03/2009
+
+correction probleme texture, redressement de l'image.
+maintenant l'image a la bonne taille en cas de redimensionnement, pour toutes les sources. 
+c'est gris si la source est une image trop grande (plus grande que la texture ?)
+
+reste a faire fonctionner les zooms, le mesureur et les echelles.
+plus les icones.
+
+essi de corrextion des buffers de draw de la bitmap qui semblent a l'envers dans les listings (to present apres dessin de bitmap video est a l'envers ) : le remede est pire que le mal....
+
+
+
+version 15 23:10 02/03/2009
+
+le clipping marche un peu, y compris en videodevice. en mpg ca marche mal. mais il y a un probleme entre fenetre d'affichage et fenetre parent. il faut que le controle d'affichage recupere la taille de la fenetre parent, et se redimensionne, sinon ca boucle et ca rame ou pire, ca change de taille tout seul. 
+
+ca commence a etre corrige mais la dimension est assez farfelue.
+
+
+
+version 14 17:55 03/02/2009
+
+ajout du clipper et suppression de l'appel a paint qui fait clignoter
+
+ca compile et ca tourne mais le redim ne fonctionne pas correctemetn bien qu'un rect enciombrement soit defini
+
+
+
+VERSION 13 01:16 02/03/2009
+
+on retire le workerthread de capturedevice car ca fait planter la boite de reglage de la cam
+plus de thread on demarre l'acquisition avec un run. les fonctions de test si l'acquisition est en marche renvoient n'importe quoi pour cette source.
+
+debut de codage de vertmesureur
+
+
+version 12 21:27 28/02/2009
+
+marche en webcam et en rz300C en mettant le nom de la cam dans le source
+pas encore de boite der eglage
+par contre l'affichage se fait avec des carres alors que c'est pas le cas avec amcap voir la difference de programamtion (double buffer ?)
+
+en fait ca marche une fois sur 2 avec la cam rz300, mystere. (on est tout en 24 bits)
+
+adaptation auto a la taille grace a la gestion de width et height du grabber a partir des tailles retournees par la cam
+
+version 11 17:18 02/27/2009
+
+remplacement du code imgutilities par une dll en c++ manage clrclassimgutil
+
+ca permet d'allouer la classe au lancement du programme et ensuite l'acces a la dll est plus rapide
+on peut meme faire de l'assembleur dans ce c manage!!!
+il y avait aussi moyen de faire une classe managee qui appelait les fonctions de la dll d'origine. avantage : les fonctions sont chargees a l'alloc et non plus a l'appel de la fonction
+
+
+rajouter une exception dans le new de la classe si la dll n'est pas la
+
+
+compile en 2005
+
+elimiantion des fichier de v10 inutilises
+
+
+
+version 10- 27 02 09
+
+code dans mesure 6
+
+------- etat : 
+
+utilise directshowlib
+utilise les alpha keycolor mais l'ecriture du plan overlay ne marche que si 
+transparence geree a la main.
+
+camera 3mpix ok
+
+ligne mesures pas faite
+
+zoom a faire
+
+imgutility envoie la dll dans un mauvais repertoire
+
+
+-------- a faire enpriorite :
+integrer les lignes
+integrer le zoom
